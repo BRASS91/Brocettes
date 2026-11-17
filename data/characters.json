@@ -1110,11 +1110,11 @@
     "id": "caine",
     "name": "Caine",
     "aliases": [],
-    "status": "departed",
+    "status": "active",
     "class": "Cleric",
     "ancestry": null,
     "level": 3,
-    "summary": "A healer from a monastery who prays to the Earth Mother. He left the party after Wyvern Tor to help rebuild his monastery, and took Glasstaff's correspondence with him.",
+    "summary": "A healer from a monastery who prays to the Earth Mother. He left the party after Wyvern Tor to help rebuild his monastery, and took Glasstaff's correspondence with him. He is returning to the campaign.",
     "backstory": [
       {
         "text": "Dreamed of a monastery courtyard collapsing into smoke, with an ember in his palm: \"follow the ember.\"",
@@ -1140,7 +1140,12 @@
       }
     ],
     "first_session": 1,
-    "last_session": 14
+    "last_session": 14,
+    "tokens": {
+      "standing": "assets/tokens/caine-standing.webp",
+      "action": "assets/tokens/caine-action.webp",
+      "down": "assets/tokens/caine-down.webp"
+    }
   },
   {
     "id": "craig",

@@ -75,7 +75,8 @@ a.card:hover { border-color: var(--red-2); }
 .obj.done svg { stroke: var(--ok); }
 .obj svg { stroke: var(--muted); }
 
-.party { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 8px; }
+.party { --cols: 4; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 8px; }
+.party > .pc { flex: 0 0 calc((100% - (var(--cols) - 1) * 8px) / var(--cols)); min-width: 0; }
 .pc { display: flex; flex-direction: column; align-items: center; gap: 2px; text-decoration: none; color: var(--ink); text-align: center; }
 .pc img { width: 84px; height: 84px; object-fit: contain; }
 .pc b { font-size: 15px; }
@@ -102,8 +103,8 @@ mark { background: var(--rumour-bg); color: inherit; border-radius: 3px; padding
 @media (min-width: 640px) {
   main { padding-top: 40px; }
   h1 { font-size: 40px; }
-  .party { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-  .party.big { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .party { --cols: 7; }
+  .party.big { --cols: 4; }
 }
 
 /* Character sheet on PC profiles */
