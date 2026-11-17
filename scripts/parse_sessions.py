@@ -9,6 +9,8 @@ SUB = re.compile(r"^## \*\*(.+?)\*\*\s*$")
 
 def clean(s):
     s = re.sub(r"\\([!*_])", r"\1", s)
+    s = re.sub(r"\bBrockettes\b", "Brocettes", s)
+    s = re.sub(r"\bBrock\b", "Broc", s)  # the notes bot sometimes misspells Broc
     return re.sub(r"\s+", " ", s).strip()
 
 def norm_date(d):

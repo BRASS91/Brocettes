@@ -42,6 +42,14 @@ def drop_summary_sections(body):
         out.append(part)
     return "".join(out)
 
+# Names the notes bot gets wrong. Broc is never "Brock".
+NAME_FIXES = [(re.compile(r"\bBrockettes\b"), "Brocettes"), (re.compile(r"\bBrock\b"), "Broc")]
+
+def fix_names(s):
+    for pat, rep in NAME_FIXES:
+        s = pat.sub(rep, s)
+    return s
+
 def split(text):
     sessions, cur = {}, None
     for line in text.splitlines():
@@ -56,6 +64,7 @@ def split(text):
     for n, lines in sessions.items():
         body = "\n".join(lines)
         body = re.sub(r"\\([!*_#>\-.()\[\]])", r"\1", body)
+        body = fix_names(body)
         body = drop_summary_sections(body.strip() + "\n")
         body = re.sub(r"\n{3,}", "\n\n", body).strip()
         out[n] = body + "\n"

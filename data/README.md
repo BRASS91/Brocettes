@@ -20,6 +20,6 @@ sessions 1–39 (through 11/10/26). Every fact cites the session number(s) it ca
 IDs are unique across all files, so any `related`, `holder`, `giver`, `location` or `factions`
 value can point at anything. Run `python3 scripts/validate.py` after editing to check references.
 
-Known inconsistencies in the source notes are kept as other spellings: Broc/Brock, Allyanna/Eliana,
+Known inconsistencies in the source notes are kept as other spellings: Allyanna/Eliana,
 Torra/Cora Ironwell, Toblen/Toblin, Trilena/Trelenna, Lenine Graywind/Greywind,
 and Bowgentle's buyer "Tsarnaev" vs "Samber" of Erebor.

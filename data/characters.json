@@ -2,14 +2,12 @@
   {
     "id": "broc",
     "name": "Broc",
-    "aliases": [
-      "Brock"
-    ],
+    "aliases": [],
     "status": "active",
     "class": "Sorcerer (Wild Magic)",
     "ancestry": "Elf (has darkvision and Fey Ancestry)",
     "level": 5,
-    "summary": "A wild magic sorcerer and former opera performer. He speaks Goblin from past dealings with the Cragmaws and does most of the party's talking. He proposed the company name \"Brock and the Brockettes\".",
+    "summary": "A wild magic sorcerer and former opera performer. He speaks Goblin from past dealings with the Cragmaws and does most of the party's talking. He proposed the company name \"Broc and the Brocettes\".",
     "backstory": [
       {
         "text": "Won over a skeptical opera-house crowd with a soliloquy, then threw up from nerves. Stage manager Tavros and colleague Selise were proud of him.",
@@ -72,7 +70,7 @@
     "tokens": {
       "standing": "assets/tokens/broc-standing.webp",
       "action": "assets/tokens/broc-action.webp",
-      "moving": "assets/tokens/broc-moving.webp"
+      "down": "assets/tokens/broc-down.webp"
     },
     "sheet": {
       "source": "D&D Beyond, Nov 6, 2026",
