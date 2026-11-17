@@ -4,16 +4,18 @@ A player-facing companion for our *Phandelver and Below: The Shattered Obelisk* 
 searchable characters, NPCs, quests, mysteries, lore and session recaps, built from the
 session notes our bot writes to Google Docs.
 
-**Live site:** https://ransdell91.github.io/Brocettes/
+**Live site:** https://brocettesjournal.ransdell91.workers.dev/
+
+**Repo:** https://github.com/BRASS91/Brocettes
 
 ## How it works
 - `index.html`, `app.css` and `app.js` are the whole app: no build step. It reads `data/*.json` in the browser.
 - `data/` holds the campaign data (see [`data/README.md`](data/README.md)); `assets/tokens/` holds character tokens.
 - Edit a JSON file, push, and the site updates within a minute or two.
 
-## Turning on GitHub Pages (one time)
-Repo **Settings → Pages → Build and deployment**: Source **Deploy from a branch**, Branch
-**`claude/dnd-campaign-companion-sca7i1`**, folder **`/ (root)`**, then **Save**.
+## Deploying
+Cloudflare Workers is connected to this repo and redeploys the live site on every push to
+**`claude/dnd-campaign-companion-sca7i1`**.
 
 ## Running it locally
 ```
