@@ -107,7 +107,7 @@
         <summary>Full session notes</summary>
         <div class="notes" aria-live="polite"><p class="sub">Loading notes…</p></div>
       </details>
-      ${section("Scenes", s.scenes.length ? `<ul style="margin:0;padding-left:20px">${s.scenes.map((x, i) => `<li><button type="button" class="linkish" data-scene="${i}" title="Jump to this scene in the full notes">${esc(x)}</button></li>`).join("")}</ul>` : "")}
+      ${section("Scenes", s.scenes.length ? `<ul style="margin:0;padding-left:20px">${s.scenes.map((x, i) => `<li><button type="button" class="linkish" data-scene="${esc(x)}" title="Jump to this scene in the full notes">${esc(x)}</button></li>`).join("")}</ul>` : "")}
       ${order.filter((t) => groups[t]).map((t) => section(KIND[t] === "Party" ? "Party" : KIND[t] + (t === "mystery" ? " threads" : t === "lore" ? "" : "s"), `<div class="chips">${groups[t].map((id) => chip(id)).join("")}</div>`)).join("")}
       <div class="between">${prev ? `<a href="#/s/${prev.number}">‹ Session ${prev.number}</a>` : "<span></span>"}${next ? `<a href="#/s/${next.number}">Session ${next.number} ›</a>` : ""}</div>`;
   }
@@ -120,15 +120,13 @@
     const out = []; let para = [], list = [];
     const flushP = () => { if (para.length) out.push(`<p>${inline(para.join(" "))}</p>`); para = []; };
     const flushL = () => { if (list.length) out.push(`<ul>${list.map((x) => `<li>${inline(x)}</li>`).join("")}</ul>`); list = []; };
-    let scene = 0;
     for (const raw of md.split("\n")) {
       const line = raw.trimEnd();
       const h = line.match(/^#{2,6}\s+(.*)$/);
       if (h) {
         flushP(); flushL();
         const title = plain(h[1]);
-        const isScene = !/^(Overview|End of Session)$/i.test(title);
-        out.push(`<h3${isScene ? ` data-scene-head="${scene++}"` : ""}>${esc(title)}</h3>`);
+        out.push(`<h3 data-title="${esc(title)}">${esc(title)}</h3>`);
       } else if (/^\s*[-*]\s+/.test(line) || /^\s+\S/.test(line)) {
         flushP(); list.push(line.replace(/^\s*(?:[-*]\s+)?/, ""));
       } else if (!line.trim()) { flushP(); flushL(); }
@@ -154,7 +152,9 @@
     if (!fold) return;
     fold.open = true;
     loadNotes(fold).then(() => {
-      const h = fold.querySelector(`[data-scene-head="${b.dataset.scene}"]`);
+      const want = b.dataset.scene, alt = want.replace(/^recap and /i, "");
+      const heads = [...fold.querySelectorAll("h3[data-title]")];
+      const h = heads.find((x) => x.dataset.title === want) || heads.find((x) => x.dataset.title === alt);
       (h || fold).scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
