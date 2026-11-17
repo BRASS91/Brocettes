@@ -23,6 +23,9 @@ The bot writes polished session *summaries*, not raw transcripts. The newest ses
 heading like `Session 38 – Title – 11/03/26`. Each session has an **Overview**, several scene sections
 (combat as bullet lists), and an **End of Session** cliffhanger. `scripts/parse_sessions.py` turns
 that structure into `data/sessions.json`. A new session = a heading number we haven't seen.
+`scripts/export_notes.py notes.md 40` writes that session's full text to `data/notes/40.md`, which the
+session page shows behind a "Full session notes" fold. Run both scripts on the whole export, not a slice of it,
+so a session's text stops cleanly at the next session heading.
 
 ## Why a review step
 Transcripts mishear names and an LLM will occasionally invent a connection.

@@ -43,5 +43,7 @@ def walk(o, where):
         for x in o: walk(x, where)
 for n, coll in [("characters", chars), ("npcs", npcs), ("quests", quests), ("mysteries", myst), ("items", items), ("locations", locs), ("factions", facs), ("lore", lore), ("ledger", ledger)]:
     walk(coll, n)
+for s in sessions:
+    if not (D / "notes" / f"{s['number']}.md").exists(): errs.append(f"session {s['number']}: missing data/notes/{s['number']}.md")
 print("\n".join(errs) or f"OK: {len(sessions)} sessions, {len(chars)} characters, {len(npcs)} NPCs, {len(quests)} quests, {len(myst)} mysteries, {len(items)} items, {len(locs)} locations, {len(facs)} factions, {len(lore)} lore entries")
 sys.exit(1 if errs else 0)

@@ -103,10 +103,61 @@
       <div class="stack" style="gap:4px"><span class="eyebrow">Session ${s.number} · ${fmtDate(s.date)}</span><h1>${esc(s.title)}</h1></div>
       ${s.overview ? `<div class="card"><p class="prose">${esc(s.overview)}</p></div>` : ""}
       ${s.where_we_left_off ? `<div class="inset"><span class="eyebrow">Where we left off</span><span>${esc(s.where_we_left_off)}</span></div>` : ""}
-      ${section("Scenes", s.scenes.length ? `<ul style="margin:0;padding-left:20px">${s.scenes.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>` : "")}
+      <details class="sheet-fold notes-fold" data-notes="${s.number}">
+        <summary>Full session notes</summary>
+        <div class="notes" aria-live="polite"><p class="sub">Loading notes…</p></div>
+      </details>
+      ${section("Scenes", s.scenes.length ? `<ul style="margin:0;padding-left:20px">${s.scenes.map((x, i) => `<li><button type="button" class="linkish" data-scene="${i}" title="Jump to this scene in the full notes">${esc(x)}</button></li>`).join("")}</ul>` : "")}
       ${order.filter((t) => groups[t]).map((t) => section(KIND[t] === "Party" ? "Party" : KIND[t] + (t === "mystery" ? " threads" : t === "lore" ? "" : "s"), `<div class="chips">${groups[t].map((id) => chip(id)).join("")}</div>`)).join("")}
       <div class="between">${prev ? `<a href="#/s/${prev.number}">‹ Session ${prev.number}</a>` : "<span></span>"}${next ? `<a href="#/s/${next.number}">Session ${next.number} ›</a>` : ""}</div>`;
   }
+
+  // ---------- full session notes (data/notes/<n>.md, loaded on demand) ----------
+  const NOTES = new Map(); // session number -> Promise<string>
+  const inline = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/(^|[^*])\*([^*\s][^*]*?)\*(?!\*)/g, "$1<em>$2</em>");
+  const plain = (s) => s.replace(/\*\*/g, "").trim();
+  function renderNotes(md) {
+    const out = []; let para = [], list = [];
+    const flushP = () => { if (para.length) out.push(`<p>${inline(para.join(" "))}</p>`); para = []; };
+    const flushL = () => { if (list.length) out.push(`<ul>${list.map((x) => `<li>${inline(x)}</li>`).join("")}</ul>`); list = []; };
+    let scene = 0;
+    for (const raw of md.split("\n")) {
+      const line = raw.trimEnd();
+      const h = line.match(/^#{2,6}\s+(.*)$/);
+      if (h) {
+        flushP(); flushL();
+        const title = plain(h[1]);
+        const isScene = !/^(Overview|End of Session)$/i.test(title);
+        out.push(`<h3${isScene ? ` data-scene-head="${scene++}"` : ""}>${esc(title)}</h3>`);
+      } else if (/^\s*[-*]\s+/.test(line) || /^\s+\S/.test(line)) {
+        flushP(); list.push(line.replace(/^\s*(?:[-*]\s+)?/, ""));
+      } else if (!line.trim()) { flushP(); flushL(); }
+      else { flushL(); para.push(line.trim()); }
+    }
+    flushP(); flushL();
+    return out.join("");
+  }
+  function loadNotes(fold) {
+    const n = Number(fold.dataset.notes), box = fold.querySelector(".notes");
+    if (fold.dataset.loaded) return Promise.resolve();
+    if (!NOTES.has(n)) NOTES.set(n, fetch(`data/notes/${n}.md`).then((r) => { if (!r.ok) throw new Error(r.status); return r.text(); }));
+    return NOTES.get(n).then((md) => { box.innerHTML = renderNotes(md) + `<button type="button" class="linkish" data-hide-notes>Hide full notes ▴</button>`; fold.dataset.loaded = "1"; })
+      .catch(() => { NOTES.delete(n); box.innerHTML = `<p class="sub">Couldn't load the full notes for this session. Try again in a moment.</p>`; });
+  }
+  app.addEventListener("toggle", (e) => { if (e.target.matches?.(".notes-fold") && e.target.open) loadNotes(e.target); }, true);
+  app.addEventListener("click", (e) => {
+    const hide = e.target.closest?.("[data-hide-notes]");
+    if (hide) { const f = hide.closest(".notes-fold"); f.open = false; f.scrollIntoView({ block: "nearest" }); return; }
+    const b = e.target.closest?.("[data-scene]");
+    if (!b) return;
+    const fold = app.querySelector(".notes-fold");
+    if (!fold) return;
+    fold.open = true;
+    loadNotes(fold).then(() => {
+      const h = fold.querySelector(`[data-scene-head="${b.dataset.scene}"]`);
+      (h || fold).scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
 
   function search(q = "") {
     setTimeout(() => {
