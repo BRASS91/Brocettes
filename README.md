@@ -4,7 +4,7 @@ A player-facing companion for our *Phandelver and Below: The Shattered Obelisk* 
 searchable characters, NPCs, quests, mysteries, lore and session recaps, built from the
 session notes our bot writes to Google Docs.
 
-**Live site:** https://brocettesjournal.ransdell91.workers.dev/
+**Live site:** https://brocettes.phandelin.workers.dev/
 
 **Repo:** https://github.com/BRASS91/Brocettes
 
