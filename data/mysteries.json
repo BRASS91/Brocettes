@@ -1,12 +1,43 @@
 [
   {
-    "id": "francis-ichor", "question": "What is the ichor on Francis, and how is it cured?", "status": "open", "raised": 37,
+    "id": "phandalin-burning", "question": "Was the night Phandalin burned an omen, a shared premonition, or something else?", "status": "open", "raised": 40,
+    "clues": [
+      { "session": 40, "text": "A single bell woke the party to smoke and a dull red sky with no moon or stars. The inn was empty, with Toblen, Trilena and Pip gone. Blue's Detect Magic found nothing but her own pan flute." },
+      { "session": 40, "text": "Caine sensed a dreadful evil presence that Paul said was not the same as the skeletons in the crypt." },
+      { "session": 40, "text": "The fire started at the farm north of town. Tall, faceless figures of soot and ash walked down the north road. Web passed through them like smoke, but a cold Chromatic Orb shattered one." },
+      { "session": 40, "text": "When the bell rang a second time everything stopped. Toblen, Trilena, Elsa, Elmina and Sister Garaele stood watching from the square, and a voice spoke all seven names. Broc, Caine, Allyanna, Francis and Vexhar held their tongues; Levon answered loudly and Blue answered to her true name." },
+      { "session": 40, "text": "The ground in the square split open and soundless white light rose. The party woke in their beds at the Stonehill Inn to morning light, a faint smell of smoke and an untouched town." }
+    ],
+    "theories": [{ "by": "The table", "text": "An omen, or a premonition the whole party shared." }],
+    "related": ["phandalin", "the-listener", "solas"]
+  },
+  {
+    "id": "the-listener", "question": "What is the listener that has been listening to Phandalin, and what is wicked under the ground?", "status": "open", "raised": 40,
+    "clues": [
+      { "session": 40, "text": "Solas told Allyanna a listener stood between them when she called for Francis. It has been listening to Phandalin for a long time and let the party hear it back that night." },
+      { "session": 40, "text": "Solas said something wicked lies under the ground and inside some people, and that some people Allyanna loves will change." }
+    ],
+    "theories": [], "related": ["solas", "phandalin-burning", "allyanna-solas"]
+  },
+  {
+    "id": "black-stone-crater", "question": "What is the black stone in the destroyed village's crater, and is it what destroyed Caine's monastery?", "status": "open", "raised": 40,
+    "clues": [
+      { "session": 40, "text": "A crater 30 ft across and 5 ft deep, with a black stone about 10 ft long at its center. Caine's Investigation told him nothing, and he couldn't tell whether it resembled what happened at his monastery." },
+      { "session": 40, "text": "Caine later told Francis the village, about six days away, had been destroyed in a way similar to his monastery." },
+      { "session": 40, "text": "A puddle nearby gave Caine a warm blessing of healing and good health (Religion 17). He asked whether it was his goddess's doing and got no answer." }
+    ],
+    "theories": [], "related": ["ruined-village", "caine"]
+  },
+  {
+    "id": "francis-ichor", "question": "What is the ichor on Francis, and how is it cured?", "status": "resolved", "raised": 37, "resolved": 40,
+    "answer": "An otherworldly, mucus-like curse that only water eased. Caine lifted it with Remove Curse.",
     "clues": [
       { "session": 37, "text": "Pale, slick, clinging skin. It won't wash off and blocks rest and nonmagical healing." },
       { "session": 37, "text": "Blue's Detect Magic showed Francis glowing, but Broc's showed no magic from his body." },
       { "session": 37, "text": "Healing Light works. Lesser Restoration fought it and failed." },
       { "session": 38, "text": "Recurring 1d12 acid pain. Medicine checks (DC 15) found no cause." },
-      { "session": 39, "text": "Repeated acid hits left him bloodied by day's end. Mud on bare skin stopped the itching (Medicine 11), but it's unclear whether the water matters, and the mud was 19–27% horse manure." }
+      { "session": 39, "text": "Repeated acid hits left him bloodied by day's end. Mud on bare skin stopped the itching (Medicine 11), but it's unclear whether the water matters, and the mud was 19–27% horse manure." },
+      { "session": 40, "text": "Caine's Medicine 23 identified an otherworldly curse that would stay unless cured, and only water eased the pain. His Remove Curse broke the ichor into beads that crumbled to dust." }
     ],
     "theories": [
       { "by": "Allyanna", "text": "Needs something stronger than Lesser Restoration." },
@@ -66,7 +97,8 @@
     "id": "pan-flute", "question": "Where did the Drowned Pan Flute come from, and what is its unfinished tune?", "status": "open", "raised": 37,
     "clues": [
       { "session": 37, "text": "Found in the aboleth's wreckage. It mixes abjuration, transmutation, illusion and conjuration." },
-      { "session": 38, "text": "Keeps humming when Blue isn't playing it." }
+      { "session": 38, "text": "Keeps humming when Blue isn't playing it." },
+      { "session": 40, "text": "It was the only magic Blue's Detect Magic found during the vision of the fire." }
     ],
     "theories": [], "related": ["drowned-pan-flute"]
   },

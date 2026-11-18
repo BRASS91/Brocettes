@@ -64,6 +64,24 @@
         "sessions": [
           39
         ]
+      },
+      {
+        "text": "Ate the small, shriveled apple turnover Trilena baked just for him (Investigation 2). Means to apologize to her for not recognizing Toblen's wife while drunk.",
+        "sessions": [
+          40
+        ]
+      },
+      {
+        "text": "Cast Astral Flood to wash Francis, which left him radiating bright light again and blinding anyone within 5 ft for one minute.",
+        "sessions": [
+          40
+        ]
+      },
+      {
+        "text": "Said he suggested the name \"Broc and the Brocettes\" while drunk.",
+        "sessions": [
+          40
+        ]
       }
     ],
     "first_session": 1,
@@ -198,7 +216,7 @@
     "class": "Paladin (Vow of Enmity: Oath of Vengeance)",
     "ancestry": null,
     "level": 5,
-    "summary": "A paladin and former soldier of the Ironmark Legion who swore to always be there for his people. He wields Talon and the Shield of Tyr. He is currently afflicted by the aboleth's ichor.",
+    "summary": "A paladin and former soldier of the Ironmark Legion who swore to always be there for his people. He wields Talon and the Shield of Tyr. Caine lifted the aboleth's curse in session 40.",
     "backstory": [
       {
         "text": "Captain Varron Maelor abandoned the signal for reinforcements and left Francis's squad to die. Francis stayed and saved Sergeant Aldric Voss, Edden and Davan.",
@@ -229,11 +247,12 @@
     ],
     "notes": [
       {
-        "text": "Ichor from the aboleth clings to him. Only magical healing works, he cannot rest, and he takes recurring acid damage (1d12).",
+        "text": "Ichor from the aboleth clung to him until Caine lifted the curse. Only magical healing worked, he could not rest, and he took recurring acid damage (1d12).",
         "sessions": [
           37,
           38,
-          39
+          39,
+          40
         ]
       },
       {
@@ -265,6 +284,18 @@
         "text": "Rolled a 26 and tore a whole apple tree out of the ground.",
         "sessions": [
           35
+        ]
+      },
+      {
+        "text": "Cured: Caine's Remove Curse shook the ichor free and it crumbled to dust. Only water had eased the pain, which is why the mud helped.",
+        "sessions": [
+          40
+        ]
+      },
+      {
+        "text": "Toblen gave him a room at the Stonehill Inn on condition he keep the mud on. Broc later washed him with Astral Flood, which Paul ruled did no damage.",
+        "sessions": [
+          40
         ]
       }
     ],
@@ -444,6 +475,12 @@
         "text": "Requested a woodshop at Tresendar Manor stocked with its broken mahogany furniture.",
         "sessions": [
           36
+        ]
+      },
+      {
+        "text": "Answered the voice calling the party's names out loud in the vision of Phandalin burning. Chopped the Sleeping Giant's door in half with Choppy and flew water barrels over the fires.",
+        "sessions": [
+          40
         ]
       }
     ],
@@ -627,6 +664,12 @@
         "sessions": [
           25,
           35
+        ]
+      },
+      {
+        "text": "About 75% through copying the Remove Curse scroll, which no longer has a deadline now that Caine has cured Francis.",
+        "sessions": [
+          40
         ]
       }
     ],
@@ -819,6 +862,18 @@
         "sessions": [
           39
         ]
+      },
+      {
+        "text": "In the shared vision of Phandalin burning, she answered the voice calling the party's names with her true name after counting to three.",
+        "sessions": [
+          40
+        ]
+      },
+      {
+        "text": "Used the Drowned Pan Flute to give Levon a 60 ft flying speed with tiny ethereal wings.",
+        "sessions": [
+          40
+        ]
       }
     ],
     "first_session": 15,
@@ -993,6 +1048,12 @@
         "sessions": [
           39
         ]
+      },
+      {
+        "text": "Alone in a white void, Solas told her he couldn't answer her call for Francis because a listener had stood between them, that his light is thin where the party is going, and that he might not answer next time.",
+        "sessions": [
+          40
+        ]
       }
     ],
     "first_session": 15,
@@ -1114,7 +1175,7 @@
     "class": "Cleric",
     "ancestry": null,
     "level": 5,
-    "summary": "A healer from a monastery who prays to the Earth Mother. He left the party after Wyvern Tor to help rebuild his monastery, and took Glasstaff's correspondence with him. He is returning to the campaign.",
+    "summary": "A healer from a monastery who prays to Chauntea, the Earth Mother. He left the party after Wyvern Tor to help rebuild his monastery, then turned back on the road and rejoined the party at the Stonehill Inn, where he lifted Francis's curse.",
     "backstory": [
       {
         "text": "Dreamed of a monastery courtyard collapsing into smoke, with an ember in his palm: \"follow the ember.\"",
@@ -1124,7 +1185,9 @@
       }
     ],
     "notable_items": [],
-    "personal_quests": [],
+    "personal_quests": [
+      "find-killthorn-harrow"
+    ],
     "notes": [
       {
         "text": "Killed the bugbear leader Nosk with a single mace blow.",
@@ -1137,10 +1200,45 @@
         "sessions": [
           14
         ]
+      },
+      {
+        "text": "Turned aside on the road toward the Star Mounts to a destroyed village with a crater and a 10-foot black stone at its center. He couldn't tell whether it resembled what happened to his monastery, which he later told Francis was a similar destruction about six days away.",
+        "sessions": [
+          40
+        ]
+      },
+      {
+        "text": "Prayed to Chauntea over seven fresh graves, healed Nell Harrow's burned arm with Cure Wounds, declined her father's iron nails as payment and asked only that she live her life to the fullest. Promised to pass word to her brother Killthorn if he saw him.",
+        "sessions": [
+          40
+        ]
+      },
+      {
+        "text": "Washed in a puddle in the ruined village and felt a warm blessing of healing and good health, like an aura holding sickness back. He saw Levon, Francis, Vexhar and Craig behind his reflection, decided the monastery would be rebuilt without him, and came back to Phandalin.",
+        "sessions": [
+          40
+        ]
+      },
+      {
+        "text": "Apologized for leaving, said the party's shared dangers and sacrifices reflected Chauntea's teachings, and asked to rejoin. Broc said the empty chair at the table was now filled.",
+        "sessions": [
+          40
+        ]
+      },
+      {
+        "text": "Diagnosed Francis's otherworldly curse (Medicine 23) and lifted it with Remove Curse.",
+        "sessions": [
+          40
+        ]
+      },
+      {
+        "text": "Reminded Francis of a promise to live a long life.",
+        "sessions": [
+          40
+        ]
       }
     ],
     "first_session": 1,
-    "last_session": 14,
     "tokens": {
       "standing": "assets/tokens/caine-standing.webp",
       "action": "assets/tokens/caine-action.webp",

@@ -42,7 +42,7 @@
   { "id": "hat-of-wizardry", "name": "Hat of Wizardry", "type": "Wondrous item", "holder": "vexhar", "magical": true,
     "description": "A wizard focus that gives a chance to cast a wizard cantrip he doesn't know.", "found": { "session": 14, "where": "Wyvern Tor chest" } },
   { "id": "scroll-of-remove-curse", "name": "Scroll of Remove Curse", "type": "Spell scroll (3rd level)", "holder": "vexhar", "magical": true, "plot": true,
-    "description": "From Garaele's contacts, meant for Francis. Vexhar is trying to copy it, and the scroll is destroyed either way.", "found": { "session": 38, "where": "Sister Garaele" } },
+    "description": "From Garaele's contacts, meant for Francis. Vexhar is about 75% through copying it, and the scroll is destroyed either way. Caine cured Francis himself, so there's no longer a deadline.", "found": { "session": 38, "where": "Sister Garaele" } },
   { "id": "potion-of-invisibility", "name": "Potion of invisibility", "type": "Potion", "holder": "vexhar", "magical": true,
     "description": "From the cistern satchel under Tresendar Manor.", "found": { "session": 8, "where": "Tresendar cistern" } },
   { "id": "drowned-pan-flute", "name": "Drowned Pan Flute", "type": "Wondrous item (attuned)", "holder": "blue", "magical": true, "plot": true,

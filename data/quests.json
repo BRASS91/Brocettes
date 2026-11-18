@@ -1,22 +1,35 @@
 [
   {
+    "id": "find-killthorn-harrow", "title": "Pass word to Killthorn Harrow", "type": "personal", "character": "caine", "storyline": null,
+    "status": "active", "giver": "nell-harrow", "started": 40,
+    "summary": "Caine promised Nell Harrow he'd pass on word if he sees her brother Killthorn: an older man with short brown hair and green eyes who has been on the road for a year. A drunk at the Stonehill Inn matched the description but said he had no sister.",
+    "objectives": [
+      { "text": "Find Killthorn Harrow", "done": false },
+      { "text": "Pass on word from Nell", "done": false }
+    ],
+    "reward": null, "sessions": [40]
+  },
+  {
     "id": "cure-francis", "title": "Cure Francis's affliction", "type": "party", "storyline": "tresendar-manor",
-    "status": "active", "giver": null, "started": 37,
-    "summary": "Aboleth ichor clings to Francis. He can't rest, only magical healing works, and the acid pain keeps coming back. Mud on his skin stops the itching for now, but it dries out and needs reapplying.",
+    "status": "completed", "giver": null, "started": 37, "completed": 40,
+    "summary": "Done. Caine came back, diagnosed an otherworldly curse, and lifted it with Remove Curse. The ichor shook free, broke into beads and crumbled to dust. Only water had eased the pain, which is why the mud helped.",
     "objectives": [
       { "text": "Get Sister Garaele's clergy findings (expected 2–4 nights after session 37)", "done": false },
-      { "text": "Vexhar copies the Remove Curse scroll (6 hrs, 150 gp, DC 13, then a day to prepare it). About halfway as of session 39", "done": false },
+      { "text": "Vexhar copies the Remove Curse scroll (6 hrs, 150 gp, DC 13, then a day to prepare it). About 75% done as of session 40, no longer needed for Francis", "done": false },
       { "text": "Find or make mud without manure to learn whether the mud, water or manure is helping", "done": false },
-      { "text": "Lift the affliction", "done": false }
+      { "text": "Lift the affliction (Caine's Remove Curse)", "done": true }
     ],
-    "reward": null, "sessions": [37, 38, 39]
+    "reward": null, "sessions": [37, 38, 39, 40]
   },
   {
     "id": "meet-the-harpers", "title": "Sit down with the Harpers", "type": "faction", "storyline": "harpers",
     "status": "active", "giver": "sister-garaele", "started": 38,
     "summary": "The Harpers have taken an interest in the party and want to talk with Francis about joining or working alongside them. Francis agreed to meet. Keep Garaele's secret.",
-    "objectives": [{ "text": "Meet the Harpers", "done": false }],
-    "reward": null, "sessions": [38, 39]
+    "objectives": [
+      { "text": "Meet Sister Garaele (set for the day after the festival)", "done": false },
+      { "text": "Meet the Harpers", "done": false }
+    ],
+    "reward": null, "sessions": [38, 39, 40]
   },
   {
     "id": "phandalin-festival", "title": "Phandalin's festival", "type": "side", "storyline": null,
@@ -112,12 +125,12 @@
   {
     "id": "glasstaff-letters", "title": "Get Glasstaff's letters to Sildar", "type": "side", "storyline": "the-spider",
     "status": "available", "giver": "sildar-hallwinter", "started": 24,
-    "summary": "Sildar asked to see the letters recovered from Glasstaff's chambers, but Caine took the correspondence with him when he left for his monastery.",
+    "summary": "Sildar asked to see the letters recovered from Glasstaff's chambers, but Caine took the correspondence with him when he left for his monastery. Caine rejoined the party in session 40.",
     "objectives": [
       { "text": "Get the letters back from Caine", "done": false },
       { "text": "Show them to Sildar", "done": false }
     ],
-    "reward": null, "sessions": [24]
+    "reward": null, "sessions": [24, 40]
   },
   {
     "id": "owlbear-cubs", "title": "The owlbear cubs' cave", "type": "side", "storyline": null,
@@ -240,7 +253,7 @@
   {
     "id": "allyanna-solas", "title": "Allyanna's pact with Solas", "type": "personal", "character": "allyanna", "storyline": null,
     "status": "active", "giver": null, "started": 27,
-    "summary": "A herald of Lathander made her false promises real. Solas went silent when she called for Francis.",
-    "objectives": [], "reward": null, "sessions": [27, 37]
+    "summary": "A herald of Lathander made her false promises real. Solas went silent when she called for Francis, then appeared to her in a white void: a listener had stood between them, his light is thin where the party is going, and he might not answer next time.",
+    "objectives": [], "reward": null, "sessions": [27, 37, 40]
   }
 ]

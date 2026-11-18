@@ -1,7 +1,7 @@
 # Campaign data
 
 Built from the session-notes Google Doc *Phandelver and Below: The Shattered Obelisk (Tuesdays)*,
-sessions 1–39 (through 11/10/26). Every fact cites the session number(s) it came from.
+sessions 1–40 (through 11/17/26). Every fact cites the session number(s) it came from.
 
 | File | What's in it |
 |---|---|

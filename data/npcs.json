@@ -51,9 +51,11 @@
       { "text": "Took a sample of Francis's ichor to the clergy and expects answers in two to four nights.", "confidence": "confirmed", "sessions": [37] },
       { "text": "Is secretly a Harper sent to investigate Phandalin. She asked the party to keep it quiet.", "confidence": "confirmed", "sessions": [38] },
       { "text": "Delivered a scroll of Remove Curse for Francis.", "confidence": "confirmed", "sessions": [38] },
-      { "text": "Lit the paper lanterns released at the festival's close.", "confidence": "confirmed", "sessions": [39] }
+      { "text": "Lit the paper lanterns released at the festival's close.", "confidence": "confirmed", "sessions": [39] },
+      { "text": "The party has a meeting with her the day after the festival. Caine asked how she was doing.", "confidence": "confirmed", "sessions": [40] },
+      { "text": "Stood in the town square watching the party when the bell rang a second time in the vision of Phandalin burning.", "confidence": "confirmed", "sessions": [40] }
     ],
-    "first_session": 6, "last_session": 39
+    "first_session": 6, "last_session": 40
   },
   {
     "id": "harbin-wester", "name": "Harbin Wester", "aliases": [],
@@ -74,18 +76,22 @@
     "role": "Owner of the Stonehill Inn", "status": "alive", "attitude": "friendly", "location": "stonehill-inn", "factions": ["phandalin-folk"],
     "facts": [
       { "text": "Comps the party's drinks and asks them to keep magic in the inn to a minimum.", "confidence": "confirmed", "sessions": [35] },
-      { "text": "Judged the festival cooking contest and will serve Levon's winning dish at the inn.", "confidence": "confirmed", "sessions": [38] }
+      { "text": "Judged the festival cooking contest and will serve Levon's winning dish at the inn.", "confidence": "confirmed", "sessions": [38] },
+      { "text": "Gave Francis a room on the condition that he keep the mud on, and brought out Trilena's apple desserts.", "confidence": "confirmed", "sessions": [40] },
+      { "text": "Stood in the town square watching the party when the bell rang a second time in the vision of Phandalin burning.", "confidence": "confirmed", "sessions": [40] }
     ],
-    "first_session": 6, "last_session": 38
+    "first_session": 6, "last_session": 40
   },
   {
     "id": "trilena-stonehill", "name": "Trilena Stonehill", "aliases": ["Trelenna", "Toblen's wife"],
     "role": "Toblen's wife", "status": "alive", "attitude": "neutral", "location": "stonehill-inn", "factions": ["phandalin-folk"],
     "facts": [
       { "text": "Saw Redbrands kill a man in the street.", "confidence": "claimed", "claimed_by": "Trilena", "sessions": [6, 7] },
-      { "text": "Was offended when Broc winked at her. Broc's sparking magic sent her back to her seat at the cooking contest.", "confidence": "confirmed", "sessions": [35, 37, 38] }
+      { "text": "Was offended when Broc winked at her. Broc's sparking magic sent her back to her seat at the cooking contest.", "confidence": "confirmed", "sessions": [35, 37, 38] },
+      { "text": "Baked apple desserts from the Edermath Orchard apples, including a small, shriveled turnover made just for Broc, then ducked back into the kitchen when people looked for her.", "confidence": "confirmed", "sessions": [40] },
+      { "text": "Stood in the town square watching the party when the bell rang a second time in the vision of Phandalin burning.", "confidence": "confirmed", "sessions": [40] }
     ],
-    "first_session": 6, "last_session": 38
+    "first_session": 6, "last_session": 40
   },
   {
     "id": "torra-ironwell", "name": "Torra Ironwell", "aliases": ["Cora Ironwell"],
@@ -97,13 +103,14 @@
     "first_session": 36, "last_session": 38
   },
   {
-    "id": "elmina", "name": "Elmina", "aliases": [],
+    "id": "elmina", "name": "Elmina", "aliases": ["Elmina Barthen"],
     "role": "Runs Barthen's Provisions", "status": "alive", "attitude": "friendly", "location": "barthens-provisions", "factions": ["phandalin-folk"],
     "facts": [
       { "text": "Paid for Gundren's delivered supplies and kept his wagon and oxen safe.", "confidence": "confirmed", "sessions": [5, 23] },
-      { "text": "Took the captured Redbrand Johnny as a stable hand for months as penance.", "confidence": "confirmed", "sessions": [8] }
+      { "text": "Took the captured Redbrand Johnny as a stable hand for months as penance.", "confidence": "confirmed", "sessions": [8] },
+      { "text": "Stood in the town square watching the party when the bell rang a second time in the vision of Phandalin burning.", "confidence": "confirmed", "sessions": [40] }
     ],
-    "first_session": 5, "last_session": 23
+    "first_session": 5, "last_session": 40
   },
   {
     "id": "lenine-graywind", "name": "Lenine Graywind", "aliases": ["Lenine Greywind"],
@@ -117,8 +124,11 @@
   {
     "id": "daran-edermath", "name": "Daran Edermath", "aliases": [],
     "role": "Orchard owner", "status": "alive", "attitude": "friendly", "location": "edermath-orchard", "factions": ["phandalin-folk"],
-    "facts": [{ "text": "Let the party pick six baskets of apples at 1 sp each. Francis uprooted (and replanted) a tree.", "confidence": "confirmed", "sessions": [35] }],
-    "first_session": 35, "last_session": 35
+    "facts": [
+      { "text": "Let the party pick six baskets of apples at 1 sp each. Francis uprooted (and replanted) a tree.", "confidence": "confirmed", "sessions": [35] },
+      { "text": "In the vision of Phandalin burning, ran out of his house shouting for help as the orchard caught fire. Levon saved the trees but not the house.", "confidence": "confirmed", "sessions": [40] }
+    ],
+    "first_session": 35, "last_session": 40
   },
   {
     "id": "alvin-tostig", "name": "Alvin Tostig", "aliases": [],
@@ -206,9 +216,40 @@
     "id": "pip-stonehill", "name": "Pip Stonehill", "aliases": [],
     "role": "Phandalin child", "status": "alive", "attitude": "unknown", "location": "phandalin", "factions": [],
     "facts": [
-      { "text": "Handed out paper lanterns with other children at the festival's close.", "confidence": "confirmed", "sessions": [39] }
+      { "text": "Handed out paper lanterns with other children at the festival's close.", "confidence": "confirmed", "sessions": [39] },
+      { "text": "Missing from the Stonehill Inn, along with Toblen and Trilena, when the party woke to the bell in the vision.", "confidence": "confirmed", "sessions": [40] }
     ],
-    "first_session": 39, "last_session": 39
+    "first_session": 39, "last_session": 40
+  },
+  {
+    "id": "mildra-merkel", "name": "Mildra Merkel", "aliases": [],
+    "role": "Phandalin resident", "status": "alive", "attitude": "unknown", "location": "phandalin", "factions": ["phandalin-folk"],
+    "facts": [{ "text": "Allyanna carried her and her younger brother Jensen out of their burning home south of Alderleaf Farm in the vision of Phandalin burning.", "confidence": "confirmed", "sessions": [40] }],
+    "first_session": 40, "last_session": 40
+  },
+  {
+    "id": "jensen-merkel", "name": "Jensen", "aliases": ["Jensen Merkel"],
+    "role": "Mildra Merkel's younger brother", "status": "alive", "attitude": "unknown", "location": "phandalin", "factions": ["phandalin-folk"],
+    "facts": [{ "text": "Carried out of his burning home by Allyanna in the vision of Phandalin burning.", "confidence": "confirmed", "sessions": [40] }],
+    "first_session": 40, "last_session": 40
+  },
+  {
+    "id": "hovnar-tartesh", "name": "Hovnar Tartesh", "aliases": [],
+    "role": "Phandalin resident", "status": "alive", "attitude": "unknown", "location": "townmasters-hall", "factions": ["phandalin-folk"],
+    "facts": [{ "text": "Trapped in the burning Townmaster's Hall in the vision until Vexhar opened the door and freed him.", "confidence": "confirmed", "sessions": [40] }],
+    "first_session": 40, "last_session": 40
+  },
+  {
+    "id": "narth", "name": "Narth", "aliases": [],
+    "role": "Phandalin resident", "status": "alive", "attitude": "unknown", "location": "phandalin", "factions": ["phandalin-folk"],
+    "facts": [{ "text": "Blue's Charm Person got him to start the bucket brigade that put out the fires at the Townmaster's Hall and the Lion's Shield Coster in the vision.", "confidence": "confirmed", "sessions": [40] }],
+    "first_session": 40, "last_session": 40
+  },
+  {
+    "id": "elsa", "name": "Elsa", "aliases": [],
+    "role": "Phandalin resident", "status": "alive", "attitude": "unknown", "location": "phandalin", "factions": ["phandalin-folk"],
+    "facts": [{ "text": "Stood in the town square watching the party when the bell rang a second time in the vision of Phandalin burning.", "confidence": "confirmed", "sessions": [40] }],
+    "first_session": 40, "last_session": 40
   },
   {
     "id": "scringle-mcgruffle", "name": "Scringle McGruffle", "aliases": [],
@@ -346,10 +387,14 @@
     "first_session": 34, "last_session": 35
   },
   {
-    "id": "solas", "name": "Solas", "aliases": ["Solace"],
+    "id": "solas", "name": "Solas", "aliases": ["Solace", "Solus"],
     "role": "Herald of Lathander; Allyanna's patron", "status": "unknown", "attitude": "friendly", "location": null, "factions": [],
-    "facts": [{ "text": "Answered Allyanna's fake blessing and made it real. Did not answer her call for Francis.", "confidence": "confirmed", "sessions": [27, 37] }],
-    "first_session": 27, "last_session": 37
+    "facts": [
+      { "text": "Answered Allyanna's fake blessing and made it real. Did not answer her call for Francis.", "confidence": "confirmed", "sessions": [27, 37] },
+      { "text": "Appeared to Allyanna in a white void. Said he couldn't answer her call for Francis because a listener that has been listening to Phandalin for a long time stood between them, and that she shouldn't see it as a failure because other hands lifted the curse.", "confidence": "claimed", "claimed_by": "Solas", "sessions": [40] },
+      { "text": "Warned that his light is thin in the places the party is going, that something wicked lies under the ground and inside some people, that he might not answer her next call, and that some people she loves will change and she should not look away.", "confidence": "claimed", "claimed_by": "Solas", "sessions": [40] }
+    ],
+    "first_session": 27, "last_session": 40
   },
   {
     "id": "lintri", "name": "Lintri", "aliases": [],
@@ -362,5 +407,24 @@
     "role": "Francis's former Ironmark Legion captain", "status": "unknown", "attitude": "unknown", "location": null, "factions": ["ironmark-legion"],
     "facts": [{ "text": "Abandoned Francis's squad in the field. Francis never fully lost his trust in him.", "confidence": "confirmed", "sessions": [27] }],
     "first_session": 3, "last_session": 27
+  },
+  {
+    "id": "nell-harrow", "name": "Nell Harrow", "aliases": [],
+    "role": "Survivor of a destroyed village on the way to the Star Mounts", "status": "alive", "attitude": "friendly", "location": "ruined-village", "factions": [],
+    "facts": [
+      { "text": "Buried her father and the other dead (seven graves) in her destroyed village. Her father made iron nails, which she offered Caine as payment.", "confidence": "confirmed", "sessions": [40] },
+      { "text": "Caine healed a clean burn from her wrist almost to her elbow with Cure Wounds and shared his last loaf of bread with her.", "confidence": "confirmed", "sessions": [40] },
+      { "text": "Asked Caine to pass word to her brother Killthorn if he sees him.", "confidence": "confirmed", "sessions": [40] }
+    ],
+    "first_session": 40, "last_session": 40
+  },
+  {
+    "id": "killthorn-harrow", "name": "Killthorn Harrow", "aliases": [],
+    "role": "Nell Harrow's brother", "status": "unknown", "attitude": "unknown", "location": null, "factions": [],
+    "facts": [
+      { "text": "An older man with short brown hair and green eyes who has been on the road for a year.", "confidence": "claimed", "claimed_by": "Nell Harrow", "sessions": [40] },
+      { "text": "A drunk man at the Stonehill Inn matched the description but said he had no sister.", "confidence": "confirmed", "sessions": [40] }
+    ],
+    "first_session": 40, "last_session": 40
   }
 ]

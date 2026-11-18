@@ -603,5 +603,30 @@
       "Novelty Tent Spending Spree",
       "Festival Awards and Closing Fireworks"
     ]
+  },
+  {
+    "number": 40,
+    "title": "Caine Returns and Phandalin Burns",
+    "date": "2026-11-17",
+    "overview": "The session opened with the Question of the Day, a Foundry server restart, and a recap of the Phandalin festival before Caine rejoined the table. Caine, traveling alone toward the Star Mounts, investigated a destroyed village, healed a grieving woman named Nell Harrow, and decided to return to Phandalin. He reunited with the party at the Stonehill Inn and cured Francis’s otherworldly curse with Remove Curse. After a night of food and drink, a bell, smoke, and a red sky woke the party to Phandalin on fire, with figures of soot and ash walking in from the north. The party split up to rescue townsfolk and fight the flames until the bell rang again and a voice called each of them by name. Allyanna met Solas in a white void and then woke in her bed to morning light, with Phandalin appearing untouched.",
+    "where_we_left_off": "Allyanna sat up in bed at the Stonehill Inn as morning light came through the windows, with a faint smell of smoke in the room and Phandalin appearing untouched. The party remains in their rooms at the inn with sunlight through the windows. The table asked whether the fire was an omen or a shared premonition, and Caine’s promise to pass word to Killthorn Harrow remains open.",
+    "scenes": [
+      "Festival Recap",
+      "Caine Reaches a Ruined Village",
+      "Caine Meets Nell Harrow",
+      "Puddle Blessing and Caine’s Decision",
+      "Reunion at the Stonehill Inn",
+      "Caine Cures Francis’s Curse",
+      "Apple Treats from Trilena",
+      "Washing Francis in the Yard",
+      "Caine Asks About Killthorn",
+      "Bell, Smoke, and a Red Sky",
+      "Phandalin Burns and Initiative Begins",
+      "Soot Figures and Early Rescues",
+      "The Fire Spreads West",
+      "Bucket Brigade Contains the Fire",
+      "The Bell Rings and a Voice Calls",
+      "Allyanna Meets Solas"
+    ]
   }
 ]

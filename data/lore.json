@@ -24,5 +24,7 @@
   { "id": "lore-talon-tresendar", "topic": "Talon and the Tresendars", "category": "history",
     "text": "Talon is a legendary blade tied to Aldith Tresendar of the family whose manor the party now owns.", "confidence": "confirmed", "sessions": [10] },
   { "id": "lore-gods", "topic": "Gods mentioned", "category": "religion",
-    "text": "Lathander (Solas is his herald, and his statue stands in Cragmaw's shrine), Tyr (Francis's shield), and the Earth Mother/Chauntea (Caine).", "confidence": "confirmed", "sessions": [3, 8, 10, 21, 27, 34] }
+    "text": "Lathander (Solas is his herald, and his statue stands in Cragmaw's shrine), Tyr (Francis's shield), and the Earth Mother/Chauntea (Caine).", "confidence": "confirmed", "sessions": [3, 8, 10, 21, 27, 34, 40] },
+  { "id": "lore-solas-warning", "topic": "Solas's warning", "category": "religion",
+    "text": "Solas's light is thin in the places the party is going. Something wicked lies under the ground and inside some people, and a listener has been listening to Phandalin for a long time.", "confidence": "claimed", "claimed_by": "Solas", "sessions": [40] }
 ]

@@ -1,6 +1,6 @@
 [
   { "id": "harpers", "name": "The Harpers", "type": "Secret network", "standing": "interested in the party",
-    "description": "Loosely linked cells that oppose tyranny. Sister Garaele is a member. They've taken an interest in the party after the goblins, the lost mine and the creature beneath the manor.", "members": ["sister-garaele"], "sessions": [23, 38] },
+    "description": "Loosely linked cells that oppose tyranny. Sister Garaele is a member. They've taken an interest in the party after the goblins, the lost mine and the creature beneath the manor.", "members": ["sister-garaele"], "sessions": [23, 38, 40] },
   { "id": "lords-alliance", "name": "Lords' Alliance", "type": "Political alliance", "standing": "friendly",
     "description": "Sent Sildar to meet Iarno. Sildar is asking it to aid Phandalin.", "members": ["sildar-hallwinter", "glasstaff"], "sessions": [5, 24] },
   { "id": "rockseekers", "name": "The Rockseeker brothers", "type": "Family", "standing": "allied",
@@ -16,7 +16,7 @@
   { "id": "lionshield-coster", "name": "Lion's Shield Coster", "type": "Merchant company", "standing": "friendly (10% discount)",
     "description": "Its blue lion sigil was on the stolen crates.", "members": ["lenine-graywind"], "sessions": [5, 6, 9, 24] },
   { "id": "phandalin-folk", "name": "Townsfolk of Phandalin", "type": "Town", "standing": "grateful",
-    "description": "Free drinks, a manor deed, and a man at the bar who thanked them for dealing with the Redbrands.", "members": ["harbin-wester", "toblen-stonehill", "trilena-stonehill", "elmina", "daran-edermath", "torra-ironwell"], "sessions": [24, 35, 36] },
+    "description": "Free drinks, a manor deed, and a man at the bar who thanked them for dealing with the Redbrands.", "members": ["harbin-wester", "toblen-stonehill", "trilena-stonehill", "elmina", "daran-edermath", "torra-ironwell", "mildra-merkel", "jensen-merkel", "hovnar-tartesh", "narth", "elsa"], "sessions": [24, 35, 36, 40] },
   { "id": "festival", "name": "The traveling festival", "type": "Circus", "standing": "neutral",
     "description": "Red and cream wagons and a striped tent. It arrived at dusk in session 37. Its tug of war crew had not lost in seven towns until Phandalin beat them.", "members": ["madame-vane", "phelan-the-red", "albrek", "fenwick-fingers-toll", "big-hollis", "corwin-thistlewick"], "sessions": [37, 38, 39] },
   { "id": "ironmark-legion", "name": "Ironmark Legion", "type": "Army", "standing": "unknown",

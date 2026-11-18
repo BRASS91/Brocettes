@@ -1,5 +1,5 @@
 {
-  "party_name": { "value": null, "note": "Broc proposed \"Broc and the Brocettes\". The rest of the party objected, and it remains an unresolved joke.", "sessions": [25] },
+  "party_name": { "value": null, "note": "Broc proposed \"Broc and the Brocettes\". The rest of the party objected, and it remains an unresolved joke. The group joked again that they've become the Brocettes, a name Broc says he suggested while drunk.", "sessions": [25, 40] },
   "level": { "value": 5, "history": [ { "level": 3, "session": 11 }, { "level": 4, "session": 23 }, { "level": 5, "session": 33 } ] },
   "in_game_date": { "value": "19th of Hammer, 1491 DR", "sessions": [34, 38] },
   "gold_log": [
@@ -24,6 +24,9 @@
     { "from": "harbin-wester", "text": "An apology, in the party's opinion", "sessions": [35] }
   ],
   "party_owes": [
+    { "to": "nell-harrow", "text": "Caine promised to pass on word to her brother Killthorn Harrow if he sees him", "sessions": [40] },
+    { "to": "caine", "text": "Caine reminded Francis of a promise to live a long life", "sessions": [40] },
+    { "to": "trilena-stonehill", "text": "Broc means to apologize for not recognizing her while drunk", "sessions": [40] },
     { "to": "vexhar", "text": "Francis owes Vexhar a favor for the Remove Curse scroll: keep him alive", "sessions": [38] },
     { "to": "blue", "text": "Broc and Levon promised nobody will drag Blue back to the Feywild", "sessions": [35] },
     { "to": "sister-garaele", "text": "Keep her Harper identity secret", "sessions": [38] },
