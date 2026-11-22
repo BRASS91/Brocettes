@@ -103,11 +103,11 @@
       <div class="stack" style="gap:4px"><span class="eyebrow">Session ${s.number} · ${fmtDate(s.date)}</span><h1>${esc(s.title)}</h1></div>
       ${s.overview ? `<div class="card"><p class="prose">${esc(s.overview)}</p></div>` : ""}
       ${s.where_we_left_off ? `<div class="inset"><span class="eyebrow">Where we left off</span><span>${esc(s.where_we_left_off)}</span></div>` : ""}
+      ${section("Scenes", s.scenes.length ? `<ul style="margin:0;padding-left:20px">${s.scenes.map((x, i) => `<li><button type="button" class="linkish" data-scene="${esc(x)}" title="Jump to this scene in the full notes">${esc(x)}</button></li>`).join("")}</ul>` : "")}
       <details class="sheet-fold notes-fold" data-notes="${s.number}">
         <summary>Full session notes</summary>
         <div class="notes" aria-live="polite"><p class="sub">Loading notes…</p></div>
       </details>
-      ${section("Scenes", s.scenes.length ? `<ul style="margin:0;padding-left:20px">${s.scenes.map((x, i) => `<li><button type="button" class="linkish" data-scene="${esc(x)}" title="Jump to this scene in the full notes">${esc(x)}</button></li>`).join("")}</ul>` : "")}
       ${order.filter((t) => groups[t]).map((t) => section(KIND[t] === "Party" ? "Party" : KIND[t] + (t === "mystery" ? " threads" : t === "lore" ? "" : "s"), `<div class="chips">${groups[t].map((id) => chip(id)).join("")}</div>`)).join("")}
       <div class="between">${prev ? `<a href="#/s/${prev.number}">‹ Session ${prev.number}</a>` : "<span></span>"}${next ? `<a href="#/s/${next.number}">Session ${next.number} ›</a>` : ""}</div>`;
   }
