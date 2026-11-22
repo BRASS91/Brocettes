@@ -1489,11 +1489,19 @@
         ],
         [
           "1st (4 slots)",
-          "Bless, Create or Destroy Water, Guiding Bolt, and more not shown in the screenshots"
+          "Bless, Create or Destroy Water, Cure Wounds, Guiding Bolt, Healing Word, Sanctuary, Shield of Faith"
         ],
         [
-          "2nd and 3rd",
-          "Not in the screenshots yet"
+          "2nd (3 slots)",
+          "Aid, Hold Person, Lesser Restoration, Prayer of Healing"
+        ],
+        [
+          "3rd",
+          "Mass Healing Word, Remove Curse, Revivify, Spirit Guardians"
+        ],
+        [
+          "Healing at base level",
+          "Cure Wounds 2d8+6 · Healing Word 2d4+6 · Aid 5 HP · Prayer of Healing 2d8+4 · Mass Healing Word 2d4+8 · Revivify 1 HP"
         ]
       ],
       "features": [
