@@ -1300,8 +1300,8 @@
     "name": "Caine",
     "aliases": [],
     "status": "active",
-    "class": "Cleric",
-    "ancestry": null,
+    "class": "Cleric (Life Domain)",
+    "ancestry": "Human",
     "level": 5,
     "summary": "A healer from a monastery who prays to Chauntea, the Earth Mother. He left the party after Wyvern Tor to help rebuild his monastery, then turned back on the road and rejoined the party at the Stonehill Inn, where he lifted Francis's curse.",
     "backstory": [
@@ -1342,7 +1342,9 @@
         ]
       }
     ],
-    "notable_items": [],
+    "notable_items": [
+      "periapt-of-wound-closure"
+    ],
     "personal_quests": [
       "caine-falling-fire",
       "find-killthorn-harrow"
@@ -1402,6 +1404,105 @@
       "standing": "assets/tokens/caine-standing.webp",
       "action": "assets/tokens/caine-action.webp",
       "down": "assets/tokens/caine-down.webp"
+    },
+    "sheet": {
+      "source": "D&D Beyond screenshots, Nov 22, 2026",
+      "url": "https://www.dndbeyond.com/characters/155868036",
+      "ancestry": "Human",
+      "ac": "16",
+      "ac_note": "Chain shirt and shield",
+      "hp": 43,
+      "speed": "30 ft",
+      "initiative": "+1",
+      "prof": "+3",
+      "passive": {
+        "perception": 13,
+        "investigation": 10,
+        "insight": 16
+      },
+      "abilities": {
+        "str": [
+          10,
+          0
+        ],
+        "dex": [
+          12,
+          1
+        ],
+        "con": [
+          16,
+          3
+        ],
+        "int": [
+          10,
+          0
+        ],
+        "wis": [
+          16,
+          3
+        ],
+        "cha": [
+          12,
+          1
+        ]
+      },
+      "saves": {
+        "str": "+0",
+        "dex": "+1",
+        "con": "+3",
+        "int": "+0",
+        "wis": "+6",
+        "cha": "+4"
+      },
+      "save_notes": [
+        "Advantage on death saves"
+      ],
+      "skills": [
+        "Animal Handling +6",
+        "Insight +6",
+        "Medicine +6",
+        "Survival +6",
+        "Nature +3",
+        "Arcana +3",
+        "Religion +3",
+        "Perception +3"
+      ],
+      "senses": "No darkvision",
+      "proficiencies": "Light and medium armor, shields · Simple weapons · Alchemist's Supplies, Cobbler's Tools, Cook's Utensils, Herbalism Kit",
+      "languages": "Common, Common Sign Language, Dwarvish",
+      "spellcasting": {
+        "ability": "WIS",
+        "attack": "+6",
+        "dc": 14,
+        "extra": "Channel Divinity 2 per long rest (regain 1 on a short rest)"
+      },
+      "attacks": [
+        "Mace: +3, 1d6 bludgeoning; Sap: target has disadvantage on its next attack",
+        "Guiding Bolt (1st): +6, 120 ft, 4d6 radiant",
+        "Unarmed Strike: +3, 1 bludgeoning",
+        "Channel Divinity: Sear Undead, 1d8 radiant"
+      ],
+      "spells": [
+        [
+          "Cantrips",
+          "Flowering (Divine Order), Guidance, Mending, Spare the Dying, Word of Radiance"
+        ],
+        [
+          "1st (4 slots)",
+          "Bless, Create or Destroy Water, Guiding Bolt, and more not shown in the screenshots"
+        ],
+        [
+          "2nd and 3rd",
+          "Not in the screenshots yet"
+        ]
+      ],
+      "features": [
+        "Divine Order: Thaumaturge. An extra cantrip (Flowering) and +3 to Arcana and Religion checks",
+        "Channel Divinity: 2 uses per long rest, regain 1 on a short rest, DC 14. Divine Spark, Turn Undead",
+        "Life Domain",
+        "Battle Medic: as a Utilize action, spend a use of a Healer's Kit so a creature within 5 ft can spend a Hit Die and regain that roll +3 HP"
+      ],
+      "gear": "Chain shirt, shield, mace, holy symbol, Periapt of Wound Closure (not attuned), map, traveler's clothes, backpack (contents not in the screenshots). 3 gp, 14 sp, 10 cp"
     }
   },
   {

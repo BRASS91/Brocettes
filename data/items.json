@@ -65,6 +65,8 @@
     "description": "From Klarg's chest.", "found": { "session": 5, "where": "Klarg's den" } },
   { "id": "poisoned-arrows", "name": "Three poisoned arrows", "type": "Ammunition", "holder": "francis", "magical": false,
     "description": "Greenish coating, taken from hobgoblins.", "found": { "session": 19, "where": "Bridge near Cragmaw Castle" } },
+  { "id": "periapt-of-wound-closure", "name": "Periapt of Wound Closure", "type": "Wondrous item (requires attunement)", "holder": "caine", "magical": true,
+    "description": "On Caine's D&D Beyond sheet, not attuned as of Nov 22, 2026. How he came by it isn't in the session notes.", "found": null },
   { "id": "flashback-rerolls", "name": "Flashback Reroll tokens", "type": "One-time reroll (one per character)", "holder": "party", "magical": false,
     "description": "Each is tied to specific skills from that character's flashback.", "found": { "session": 27, "where": "Flashbacks" } }
 ]
