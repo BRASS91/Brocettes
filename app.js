@@ -117,7 +117,7 @@
   const inline = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/(^|[^*])\*([^*\s][^*]*?)\*(?!\*)/g, "$1<em>$2</em>");
   const plain = (s) => s.replace(/\*\*/g, "").trim();
   function renderNotes(md) {
-    const out = []; let para = [], list = [];
+    const out = []; let para = [], list = [], inScene = false;
     const flushP = () => { if (para.length) out.push(`<p>${inline(para.join(" "))}</p>`); para = []; };
     const flushL = () => { if (list.length) out.push(`<ul>${list.map((x) => `<li>${inline(x)}</li>`).join("")}</ul>`); list = []; };
     for (const raw of md.split("\n")) {
@@ -126,13 +126,15 @@
       if (h) {
         flushP(); flushL();
         const title = plain(h[1]);
-        out.push(`<h3 data-title="${esc(title)}">${esc(title)}</h3>`);
+        if (inScene) out.push(`</section>`);
+        out.push(`<section class="scene" data-scene-title="${esc(title)}"><h3 data-title="${esc(title)}">${esc(title)}</h3>`); inScene = true;
       } else if (/^\s*[-*]\s+/.test(line) || /^\s+\S/.test(line)) {
         flushP(); list.push(line.replace(/^\s*(?:[-*]\s+)?/, ""));
       } else if (!line.trim()) { flushP(); flushL(); }
       else { flushL(); para.push(line.trim()); }
     }
     flushP(); flushL();
+    if (inScene) out.push(`</section>`);
     return out.join("");
   }
   function loadNotes(fold) {
@@ -155,7 +157,10 @@
       const want = b.dataset.scene, alt = want.replace(/^recap and /i, "");
       const heads = [...fold.querySelectorAll("h3[data-title]")];
       const h = heads.find((x) => x.dataset.title === want) || heads.find((x) => x.dataset.title === alt);
-      (h || fold).scrollIntoView({ behavior: "smooth", block: "start" });
+      const scene = h?.closest(".scene");
+      fold.querySelectorAll(".scene.is-target").forEach((x) => x.classList.remove("is-target"));
+      if (scene) { void scene.offsetWidth; scene.classList.add("is-target"); }
+      (scene || fold).scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
 
