@@ -160,7 +160,9 @@
       const scene = h?.closest(".scene");
       fold.querySelectorAll(".scene.is-target").forEach((x) => x.classList.remove("is-target"));
       if (scene) { void scene.offsetWidth; scene.classList.add("is-target"); }
-      (scene || fold).scrollIntoView({ behavior: "smooth", block: "start" });
+      // Center the scene on screen; a scene taller than the screen starts at the top so its heading stays visible.
+      const fits = scene && scene.offsetHeight < window.innerHeight - 120;
+      (scene || fold).scrollIntoView({ behavior: "smooth", block: fits ? "center" : "start" });
     });
   });
 
