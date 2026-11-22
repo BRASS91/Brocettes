@@ -13,6 +13,17 @@ def clean(s):
     s = re.sub(r"\bBrock\b", "Broc", s)  # the notes bot sometimes misspells Broc
     return re.sub(r"\s+", " ", s).strip()
 
+def scene_name(title):
+    """Recaps of the previous session aren't scenes. Mirrors export_notes.py, which drops
+    the same sections from the full notes: any heading with "Recap" is skipped, except
+    "Recap and X" (X being new events), which becomes "X"."""
+    if not re.search(r"recap", title, re.I):
+        return title
+    rest = re.match(r"recap and (.+)", title, re.I)
+    if rest and not re.search(r"recap|question of the day|inspiration", rest[1], re.I):
+        return rest[1].strip()
+    return None
+
 def norm_date(d):
     m, day, y = d.split("/")
     y = int(y); y = y + 2000 if y < 100 else y
@@ -42,7 +53,8 @@ def parse(text):
             "number": c["number"], "title": c["title"], "date": c["date"],
             "overview": get("Overview"),
             "where_we_left_off": get("End of Session"),
-            "scenes": [x["heading"] for x in secs if x["heading"] not in ("Overview", "End of Session")],
+            "scenes": [n for x in secs if x["heading"] not in ("Overview", "End of Session")
+                       for n in [scene_name(x["heading"])] if n],
         })
     return sorted(out, key=lambda x: x["number"])
 
