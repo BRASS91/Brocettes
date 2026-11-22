@@ -404,9 +404,14 @@
   },
   {
     "id": "varron-maelor", "name": "Captain Varron Maelor", "aliases": [],
-    "role": "Francis's former Ironmark Legion captain", "status": "unknown", "attitude": "unknown", "location": null, "factions": ["ironmark-legion"],
-    "facts": [{ "text": "Abandoned Francis's squad in the field. Francis never fully lost his trust in him.", "confidence": "confirmed", "sessions": [27] }],
-    "first_session": 3, "last_session": 27
+    "role": "Francis's former Ironmark Legion captain", "status": "alive", "attitude": "unknown", "location": null, "factions": ["ironmark-legion"],
+    "facts": [
+      { "text": "Respected and decorated, the kind of leader his soldiers would follow into hell.", "confidence": "confirmed", "sessions": [0] },
+      { "text": "Withdrew support without warning on a routine operation, leaving Francis's squad cut off and surrounded by raiders. The Legion called it a \"strategic miscalculation\" and promoted him for \"preserving resources\".", "confidence": "confirmed", "sessions": [0] },
+      { "text": "Took a bribe to let the raiders pass.", "confidence": "rumoured", "sessions": [0] },
+      { "text": "Abandoned Francis's squad in the field. Francis never fully lost his trust in him.", "confidence": "confirmed", "sessions": [27] }
+    ],
+    "first_session": 0, "last_session": 27
   },
   {
     "id": "lillith", "name": "Lillith", "aliases": [],

@@ -22,5 +22,5 @@
   { "id": "silver-needle", "name": "The Silver Needle", "type": "Healing sect of Chauntea", "standing": "Caine's sect",
     "description": "Monks of the Monastery of the Dawnstar Path. Their creed: help those who ask, take payment before healing (whatever form it takes), and look down on no one. The monastery was destroyed.", "members": ["caine"], "sessions": [0] },
   { "id": "ironmark-legion", "name": "Ironmark Legion", "type": "Army", "standing": "unknown",
-    "description": "Francis's former unit.", "members": ["varron-maelor"], "sessions": [27] }
+    "description": "Francis's former unit, a disciplined force that keeps the frontier secure. It called the loss of his squad a \"strategic miscalculation\" and promoted Captain Maelor. Francis walked away from it.", "members": ["varron-maelor"], "sessions": [0, 27] }
 ]

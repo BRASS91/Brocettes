@@ -239,14 +239,21 @@
   },
   {
     "id": "francis-varron-maelor", "title": "Captain Varron Maelor", "type": "personal", "character": "francis", "storyline": null,
-    "status": "active", "giver": null, "started": 3,
-    "summary": "\"Follow what he started or finish him.\"", "objectives": [], "reward": null, "sessions": [3, 10, 27]
+    "status": "active", "giver": null, "started": 0,
+    "summary": "Maelor abandoned Francis's squad to raiders and was promoted for it, and rumor says he was bribed. He lives beneath the shield of rank and reputation, and Francis means to break both. \"Follow what he started or finish him.\"",
+    "objectives": [{ "text": "Break Maelor's rank and reputation", "done": false }], "reward": null, "sessions": [0, 3, 10, 27]
   },
   {
     "id": "vexhar-voice", "title": "The voice behind Vexhar's sigil", "type": "personal", "character": "vexhar", "storyline": "the-spider",
     "status": "active", "giver": null, "started": 3,
-    "summary": "It answered his ritual, branded his hand, calls him \"little scholar\" and urged his first zombie. Knowledge isn't free. In his backstory, the voice that offered him power and knowledge was Lillith, and the price was his soul. He means to win it back one day.",
-    "objectives": [{ "text": "Win back his soul from Lillith, by force or cleverness", "done": false }], "reward": null, "sessions": [0, 3, 27, 30, 32]
+    "summary": "It answered his ritual, branded his hand, calls him \"little scholar\" and urged his first zombie. Knowledge isn't free.",
+    "objectives": [], "reward": null, "sessions": [3, 27, 30, 32]
+  },
+  {
+    "id": "vexhar-lillith", "title": "Vexhar's soul", "type": "personal", "character": "vexhar", "storyline": null,
+    "status": "active", "giver": null, "started": 0,
+    "summary": "Desperate after the arcane schools of Waterdeep rejected him, Vexhar sold his soul to Lillith for power and knowledge. He believes he'll win it back one day by force or cleverness.",
+    "objectives": [{ "text": "Win back his soul from Lillith", "done": false }], "reward": null, "sessions": [0]
   },
   {
     "id": "blue-feywild", "title": "Blue and the Coral Court", "type": "personal", "character": "blue", "storyline": null,

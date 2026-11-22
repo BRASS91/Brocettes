@@ -10,7 +10,7 @@
     "class": "Sorcerer (Wild Magic)",
     "ancestry": "Elf (has darkvision and Fey Ancestry)",
     "level": 5,
-    "summary": "A wild magic sorcerer and former opera performer. He speaks Goblin from past dealings with the Cragmaws and does most of the party's talking. He proposed the company name \"Broc and the Brocettes\".",
+    "summary": "A wild magic sorcerer and aspiring stage performer. He speaks Goblin from past dealings with the Cragmaws and does most of the party's talking. He proposed the company name \"Broc and the Brocettes\".",
     "backstory": [
       {
         "text": "Born Baruk Veykhoyz. His elf mother abandoned the family, and his elf father raised him alone on a turnip farm in a small village. His father's devotion to Mishakal rubbed off little on Broc, whose head was always in the clouds.",
@@ -244,13 +244,45 @@
   {
     "id": "francis",
     "name": "Francis",
-    "aliases": [],
+    "aliases": [
+      "Sir Francis Castiglione"
+    ],
     "status": "active",
     "class": "Paladin (Vow of Enmity: Oath of Vengeance)",
     "ancestry": null,
     "level": 5,
     "summary": "A paladin and former soldier of the Ironmark Legion who swore to always be there for his people. He wields Talon and the Shield of Tyr. Caine lifted the aboleth's curse in session 40.",
     "backstory": [
+      {
+        "text": "Sir Francis Castiglione served as a soldier of the Ironmark Legion, a disciplined unit that kept the frontier secure. Its captain, Varron Maelor, was respected, decorated and believed to be a leader worth following into hell. Francis trusted him. They all did.",
+        "sessions": [
+          0
+        ]
+      },
+      {
+        "text": "On what should have been a routine operation, Maelor withdrew support without warning, leaving the squad cut off and surrounded by raiders in a valley. They fought, bled and died there, all but Francis, who crawled out from beneath the bodies of friends he couldn't save.",
+        "sessions": [
+          0
+        ]
+      },
+      {
+        "text": "The Legion called it a \"strategic miscalculation\". Quiet rumors said Maelor had taken a bribe to let the raiders pass. No inquiry or justice followed: Maelor was promoted for \"preserving resources\", and the dead became numbers in a report.",
+        "sessions": [
+          0
+        ]
+      },
+      {
+        "text": "Francis walked away from the Legion that day but kept the oath that burns in his chest like iron. He serves no lord, only the memory of the fallen, and hunts corruption and cruelty, especially men like Maelor who hide their wickedness behind medals, polished boots and false honor.",
+        "sessions": [
+          0
+        ]
+      },
+      {
+        "text": "Maelor lives beneath the shield of rank and reputation. One day, Francis intends to break both.",
+        "sessions": [
+          0
+        ]
+      },
       {
         "text": "Captain Varron Maelor abandoned the signal for reinforcements and left Francis's squad to die. Francis stayed and saved Sergeant Aldric Voss, Edden and Davan.",
         "sessions": [
@@ -708,7 +740,8 @@
       "lucky-deck"
     ],
     "personal_quests": [
-      "vexhar-voice"
+      "vexhar-voice",
+      "vexhar-lillith"
     ],
     "companions": [
       {
