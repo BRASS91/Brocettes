@@ -327,7 +327,8 @@
           ${section("Personal quests", o.personal_quests.length ? `<div class="chips">${o.personal_quests.map((i) => chip(i)).join("")}</div>` : "")}
           ${section("Companions", (o.companions || []).map((c) => `<div class="fact"><b>${esc(c.name)}</b><span>${esc(c.text)} ${sess(c.sessions)}</span></div>`).join(""))}
           ${section("Notes", facts(o.notes))}
-          ${section("Appears in", `<p>${sess(appears)}</p>`)}`;
+          ${section("Appears in", `<p>${sess(appears)}</p>`)}
+          ${partyStepper(o.id)}`;
       }
       case "npc":
         return `${head}
@@ -410,6 +411,98 @@
 
   const notFound = () => `<h1>Lost in the dark</h1><p>That page doesn't exist. <a href="#/">Back home</a></p>`;
 
+  // ---------- swipe between party members ----------
+  // On a party member's page, swiping left/right (or the arrow keys, or the links at the
+  // bottom) flips to the next/previous active character with a sliding-card animation.
+  const cast = () => D.characters.filter((c) => c.status === "active");
+  const still = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let slideFrom = 0; // set before navigating: +1 = next page slides in from the right, -1 = from the left
+  function neighbours(id) {
+    const c = cast(), i = c.findIndex((x) => x.id === id);
+    return i < 0 || c.length < 2 ? null : { prev: c[(i - 1 + c.length) % c.length], next: c[(i + 1) % c.length] };
+  }
+  function partyStepper(id) {
+    const n = neighbours(id);
+    return n ? `<nav class="pc-step" aria-label="Party members">
+      <a href="#/e/${encodeURIComponent(n.prev.id)}" data-pc-step="-1">‹ ${esc(n.prev.name)}</a>
+      <span class="sub">Swipe to flip</span>
+      <a href="#/e/${encodeURIComponent(n.next.id)}" data-pc-step="1">${esc(n.next.name)} ›</a></nav>` : "";
+  }
+  function currentPC() {
+    const m = location.hash.match(/^#\/e\/([^/]+)$/), id = m && decodeURIComponent(m[1]);
+    return id && neighbours(id) ? id : null;
+  }
+  // Card follows the finger; the pivot is the middle of what's on screen so tall pages don't swing wildly.
+  const cardPose = (dx) => `translateX(${dx}px) rotate(${Math.max(-6, Math.min(6, dx / 60))}deg)`;
+  const pivot = () => { app.classList.add("flipping"); app.style.transformOrigin = `50% ${window.scrollY + innerHeight * 0.6 - app.offsetTop}px`; };
+  function flip(dir, fromX = 0) {
+    const id = currentPC();
+    if (!id) return;
+    const target = neighbours(id)[dir > 0 ? "next" : "prev"];
+    const go = () => { slideFrom = dir; location.hash = `#/e/${encodeURIComponent(target.id)}`; };
+    if (still()) return go();
+    pivot();
+    const w = innerWidth;
+    app.animate([{ transform: cardPose(fromX), opacity: 1 - Math.min(Math.abs(fromX) / w, 1) * 0.4 },
+                 { transform: cardPose(-dir * w * 0.9), opacity: 0 }],
+                { duration: 200, easing: "cubic-bezier(.4,0,1,1)", fill: "forwards" }).onfinish = go;
+    app.style.transform = ""; app.style.opacity = "";
+  }
+  function slideInIfFlipped() {
+    app.getAnimations().forEach((a) => a.cancel());
+    app.style.transform = ""; app.style.opacity = ""; app.classList.remove("flipping");
+    const dir = slideFrom; slideFrom = 0;
+    if (!dir || still()) return;
+    app.classList.add("flipping");
+    app.style.transformOrigin = `50% ${innerHeight * 0.6}px`;
+    app.animate([{ transform: `translateX(${dir * innerWidth * 0.6}px) rotate(${dir * 3}deg) scale(.96)`, opacity: 0 },
+                 { transform: "none", opacity: 1 }],
+                { duration: 320, easing: "cubic-bezier(.2,.8,.2,1)" }).onfinish = () => app.classList.remove("flipping");
+  }
+  let drag = null;
+  app.addEventListener("touchstart", (e) => {
+    drag = null;
+    if (e.touches.length !== 1 || !currentPC()) return;
+    const t = e.touches[0];
+    if (t.clientX < 24 || t.clientX > innerWidth - 24) return; // leave the screen edges to the browser's own back/forward swipe
+    drag = { x: t.clientX, y: t.clientY, at: Date.now(), dx: 0, axis: null };
+  }, { passive: true });
+  app.addEventListener("touchmove", (e) => {
+    if (!drag) return;
+    const t = e.touches[0], dx = t.clientX - drag.x, dy = t.clientY - drag.y;
+    if (!drag.axis) {
+      if (Math.abs(dx) < 10 && Math.abs(dy) < 10) return;
+      drag.axis = Math.abs(dx) > Math.abs(dy) * 1.2 ? "x" : "y";
+      if (drag.axis === "x") pivot();
+    }
+    if (drag.axis !== "x") return;
+    drag.dx = dx;
+    app.style.transform = cardPose(dx);
+    app.style.opacity = String(1 - Math.min(Math.abs(dx) / innerWidth, 1) * 0.4);
+  }, { passive: true });
+  const endDrag = () => {
+    const d = drag; drag = null;
+    if (!d || d.axis !== "x") return;
+    const fast = Math.abs(d.dx) / Math.max(1, Date.now() - d.at) > 0.5;
+    if (Math.abs(d.dx) > innerWidth * 0.25 || (fast && Math.abs(d.dx) > 40)) return flip(d.dx < 0 ? 1 : -1, d.dx);
+    const back = app.animate([{ transform: cardPose(d.dx), opacity: app.style.opacity || 1 }, { transform: "none", opacity: 1 }],
+                             { duration: still() ? 0 : 180, easing: "ease-out" });
+    app.style.transform = ""; app.style.opacity = "";
+    back.onfinish = () => { back.cancel(); app.classList.remove("flipping"); };
+  };
+  app.addEventListener("touchend", endDrag);
+  app.addEventListener("touchcancel", endDrag);
+  app.addEventListener("click", (e) => {
+    const a = e.target.closest?.("[data-pc-step]");
+    if (!a || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    e.preventDefault(); flip(Number(a.dataset.pcStep));
+  });
+  document.addEventListener("keydown", (e) => {
+    if ((e.key !== "ArrowLeft" && e.key !== "ArrowRight") || e.altKey || e.metaKey || e.ctrlKey) return;
+    if (e.target.closest?.("input, textarea, select, [contenteditable]")) return;
+    if (currentPC()) flip(e.key === "ArrowRight" ? 1 : -1);
+  });
+
   // ---------- router ----------
   function route() {
     const parts = location.hash.replace(/^#\/?/, "").split("/").map(decodeURIComponent);
@@ -432,6 +525,8 @@
       default: html = notFound();
     }
     app.innerHTML = html;
+    app.classList.toggle("swipeable", !!currentPC());
+    slideInIfFlipped();
     document.querySelectorAll(".tabs a").forEach((a) => a.setAttribute("aria-current", a.dataset.tab === tab ? "page" : "false"));
     const title = app.querySelector("h1")?.textContent;
     document.title = title && page ? `${title} · Brocettes` : "Brocettes Companion";
