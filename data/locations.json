@@ -30,6 +30,7 @@
   { "id": "thundertree", "name": "Thundertree", "type": "Village", "parent": null, "description": "Mirna Dendrar's family heirloom is hidden here. Not yet visited.", "sessions": [9] },
   { "id": "neverwinter", "name": "Neverwinter", "type": "City", "parent": null, "description": "Where Gundren hired the party, and where Vexhar ran errands in the underworld.", "sessions": [29, 32] },
   { "id": "alderleaf-farm", "name": "Alderleaf Farm", "type": "Farm", "parent": "phandalin", "description": "Caught fire in the vision of Phandalin burning. Francis pulled children from its second floor.", "sessions": [40] },
+  { "id": "dawnstar-monastery", "name": "Monastery of the Dawnstar Path", "type": "Monastery", "parent": null, "description": "Caine's home: a small, isolated ascetic monastery of the Silver Needle on the side of the Star Mounts. Flattened by something that fell from the sky, with no survivors.", "sessions": [0, 3, 14, 40] },
   { "id": "ruined-village", "name": "Destroyed village toward the Star Mounts", "type": "Ruined village", "parent": null, "description": "About six days from Phandalin. Roofless houses, a tipped cart, seven fresh graves and a crater 30 ft across and 5 ft deep with a 10-ft black stone at its center. Nell Harrow buried her dead here.", "sessions": [40] },
   { "id": "coral-court", "name": "Lintri's Coral Court", "type": "Feywild domain", "parent": null, "description": "Where Blue was held for ten years.", "sessions": [27] }
 ]

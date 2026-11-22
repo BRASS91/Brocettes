@@ -19,6 +19,8 @@
     "description": "Free drinks, a manor deed, and a man at the bar who thanked them for dealing with the Redbrands.", "members": ["harbin-wester", "toblen-stonehill", "trilena-stonehill", "elmina", "daran-edermath", "torra-ironwell", "mildra-merkel", "jensen-merkel", "hovnar-tartesh", "narth", "elsa"], "sessions": [24, 35, 36, 40] },
   { "id": "festival", "name": "The traveling festival", "type": "Circus", "standing": "neutral",
     "description": "Red and cream wagons and a striped tent. It arrived at dusk in session 37. Its tug of war crew had not lost in seven towns until Phandalin beat them.", "members": ["madame-vane", "phelan-the-red", "albrek", "fenwick-fingers-toll", "big-hollis", "corwin-thistlewick"], "sessions": [37, 38, 39] },
+  { "id": "silver-needle", "name": "The Silver Needle", "type": "Healing sect of Chauntea", "standing": "Caine's sect",
+    "description": "Monks of the Monastery of the Dawnstar Path. Their creed: help those who ask, take payment before healing (whatever form it takes), and look down on no one. The monastery was destroyed.", "members": ["caine"], "sessions": [0] },
   { "id": "ironmark-legion", "name": "Ironmark Legion", "type": "Army", "standing": "unknown",
     "description": "Francis's former unit.", "members": ["varron-maelor"], "sessions": [27] }
 ]

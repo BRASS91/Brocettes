@@ -11,7 +11,7 @@ for name, coll in [("character", chars), ("npc", npcs), ("quest", quests), ("mys
     for e in coll:
         if e["id"] in ids: errs_dup.append(f"duplicate id {e['id']} ({ids[e['id']]} / {name})")
         ids.setdefault(e["id"], name)
-nums = {s["number"] for s in sessions}
+nums = {s["number"] for s in sessions} | {0}  # 0 = session zero (backstories shared before play)
 errs = errs_dup
 def ref(x, where, ok=lambda v: v in ids):
     if x is not None and not ok(x): errs.append(f"{where}: unknown ref {x!r}")

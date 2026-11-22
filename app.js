@@ -12,7 +12,9 @@
   const nameOf = (id) => ALL.get(id)?.name ?? id;
   const link = (id, label) => (ALL.has(id) ? `<a href="#/e/${encodeURIComponent(id)}">${esc(label ?? nameOf(id))}</a>` : esc(label ?? id));
   const chip = (id, prefix = "") => (ALL.has(id) ? `<a class="chip" href="#/e/${encodeURIComponent(id)}">${esc(prefix)}${esc(nameOf(id))}</a>` : "");
-  const sess = (list) => (list || []).map((n) => `<a class="sess" href="#/s/${n}">S${n}</a>`).join(" ");
+  // Session 0 is character creation (backstories shared before play); it has no session page.
+  const sess = (list) => (list || []).map((n) => n === 0 ? `<span class="sess" title="Session 0: backstories shared before the campaign began">S0</span>` : `<a class="sess" href="#/s/${n}">S${n}</a>`).join(" ");
+  const sessTile = (label, n) => n === 0 ? `<div class="tile" title="Session 0: backstories shared before the campaign began"><span>${label}</span><b style="font-size:18px">S0</b></div>` : `<a class="tile" href="#/s/${n}"><span>${label}</span><b style="font-size:18px">S${n}</b></a>`;
   const badge = (text, kind) => `<span class="badge b-${esc(kind || text)}">${esc(cap(text))}</span>`;
   const section = (title, body) => (body ? `<section class="stack"><h2>${esc(title)}</h2>${body}</section>` : "");
   const lastSession = () => D.sessions[D.sessions.length - 1];
@@ -333,8 +335,8 @@
             ${o.aliases?.length ? `<span class="sub">Also written: ${o.aliases.map(esc).join(", ")}</span>` : ""}</div>
           <div class="tiles">
             <div class="tile"><span>Status</span><b style="font-size:18px">${esc(cap(o.status))}</b></div>
-            <a class="tile" href="#/s/${o.first_session}"><span>First seen</span><b style="font-size:18px">S${o.first_session}</b></a>
-            <a class="tile" href="#/s/${o.last_session}"><span>Last seen</span><b style="font-size:18px">S${o.last_session}</b></a>
+            ${sessTile("First seen", o.first_session)}
+            ${sessTile("Last seen", o.last_session)}
           </div>
           ${o.attitude ? `<p><span class="sub">Attitude toward us:</span> <b>${esc(cap(o.attitude))}</b></p>` : ""}
           ${o.location ? `<p><span class="sub">Usually found:</span> ${link(o.location)}</p>` : ""}
@@ -354,7 +356,7 @@
         return `${head}
           <div class="stack" style="gap:4px"><span class="eyebrow">${o.status === "open" ? `Open since Session ${o.raised}` : `Solved in Session ${o.resolved}`}</span><h1 style="font-size:28px">${esc(o.question)}</h1></div>
           ${o.answer ? `<div class="inset"><span class="eyebrow">Answer</span><span>${esc(o.answer)}</span></div>` : ""}
-          ${section("Clues", o.clues.length ? `<div class="card">${o.clues.map((c) => `<div class="fact"><a class="sess" href="#/s/${c.session}" style="min-width:32px">S${c.session}</a><span>${esc(c.text)}</span></div>`).join("")}</div>` : `<p class="empty">No clues yet.</p>`)}
+          ${section("Clues", o.clues.length ? `<div class="card">${o.clues.map((c) => `<div class="fact"><span style="min-width:32px">${sess([c.session])}</span><span>${esc(c.text)}</span></div>`).join("")}</div>` : `<p class="empty">No clues yet.</p>`)}
           ${section("Party theories", o.theories.map((t) => `<div class="inset"><b>${esc(t.by)}</b><span>${esc(t.text)}</span></div>`).join(""))}
           ${section("Related", o.related.length ? `<div class="chips">${o.related.map((r) => chip(r)).join("")}</div>` : "")}`;
       case "item":

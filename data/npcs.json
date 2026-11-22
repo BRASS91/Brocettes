@@ -409,6 +409,12 @@
     "first_session": 3, "last_session": 27
   },
   {
+    "id": "lillith", "name": "Lillith", "aliases": [],
+    "role": "The power Vexhar sold his soul to", "status": "unknown", "attitude": "unknown", "location": null, "factions": [],
+    "facts": [{ "text": "Offered Vexhar power and knowledge in Waterdeep in exchange for his soul. He agreed and means to win it back one day by force or cleverness.", "confidence": "confirmed", "sessions": [0] }],
+    "first_session": 0, "last_session": 0
+  },
+  {
     "id": "nell-harrow", "name": "Nell Harrow", "aliases": [],
     "role": "Survivor of a destroyed village on the way to the Star Mounts", "status": "alive", "attitude": "friendly", "location": "ruined-village", "factions": [],
     "facts": [

@@ -2,13 +2,46 @@
   {
     "id": "broc",
     "name": "Broc",
-    "aliases": [],
+    "aliases": [
+      "Broc Landers",
+      "Baruk Veykhoyz"
+    ],
     "status": "active",
     "class": "Sorcerer (Wild Magic)",
     "ancestry": "Elf (has darkvision and Fey Ancestry)",
     "level": 5,
     "summary": "A wild magic sorcerer and former opera performer. He speaks Goblin from past dealings with the Cragmaws and does most of the party's talking. He proposed the company name \"Broc and the Brocettes\".",
     "backstory": [
+      {
+        "text": "Born Baruk Veykhoyz. His elf mother abandoned the family, and his elf father raised him alone on a turnip farm in a small village. His father's devotion to Mishakal rubbed off little on Broc, whose head was always in the clouds.",
+        "sessions": [
+          0
+        ]
+      },
+      {
+        "text": "Caring and kind, but he dreamed of a life on the stage far from the plowed fields. His friends and teachers called him \"just alright\" in the village school plays, and he left home in search of fame anyway.",
+        "sessions": [
+          0
+        ]
+      },
+      {
+        "text": "Spent years in small background roles. His biggest early lead, the horror play \"The Dead are now Evil\", was so bad it closed after two runs and was re-released as a comedy. Ashamed of the now cult classic, he auditioned for every serious drama he could find.",
+        "sessions": [
+          0
+        ]
+      },
+      {
+        "text": "Finally landed the lead in a lavish production of Shudderlance's \"Hemlot\" alongside the world's most famous actors. At the climax he reached deeper into himself than ever and touched a hidden well of power: his voice vanished, and large, vibrant pink bubbles floated out of his mouth instead. The audience's stunned silence turned to laughter, the cast glared, and he walked off stage in disgrace.",
+        "sessions": [
+          0
+        ]
+      },
+      {
+        "text": "Set out to find magic users who could explain what was happening to him, so he can control the power and one day return to the stage, hopefully without incinerating himself or his companions on the way.",
+        "sessions": [
+          0
+        ]
+      },
       {
         "text": "Won over a skeptical opera-house crowd with a soliloquy, then threw up from nerves. Stage manager Tavros and colleague Selise were proud of him.",
         "sessions": [
@@ -422,6 +455,36 @@
     "summary": "A huge barbarian woodworker from his father Alvin's farm near Phandalin. He swings the greataxe Choppy, carries a glowing cheese on his belt for light, and owes a debt to a tree.",
     "backstory": [
       {
+        "text": "\"Levon, Levon like his money.\" Born a pauper on a cold winter's day and raised to follow in the footsteps of his father, Alvin, who always warned him never to take from the deep woods. It was an old family caution that some roots are better left undisturbed, and Alvin never said why.",
+        "sessions": [
+          0
+        ]
+      },
+      {
+        "text": "Worked the family fields near Phandalin, but his true passion was the workshop, where he developed a covetous eye for rare materials.",
+        "sessions": [
+          0
+        ]
+      },
+      {
+        "text": "Deep in the woods he found a tree of impossible beauty, with bark like iron and grain that seemed to swirl with starlight. Blinded by the masterpieces (and fortune) he could carve from it, he cut it down, and felt an immense weight fall on him as if from another plane: he had severed a mortal vessel of Yggdrasil.",
+        "sessions": [
+          0
+        ]
+      },
+      {
+        "text": "The World Tree's spirit did not die or go home. It burrowed into him. It is not malicious but anciently desperate, clinging to the nearest living vessel as its connection to the world falters. Its immense, alien, pleading thoughts sometimes surge through him, and he can't tell whether it seeks survival, rebirth or vengeance. When its magic swells inside him, it comes out as a terrifying rage he can barely control.",
+        "sessions": [
+          0
+        ]
+      },
+      {
+        "text": "Left home with a single penance: carry the spirit until he can plant it in a new host, and so redeem the moment he chose profit over the sacred.",
+        "sessions": [
+          0
+        ]
+      },
+      {
         "text": "Took wood from a forbidden part of the forest against his father's wishes and now \"owes that tree a debt\". His eyes have been changing. Alvin says it is a consequence, not a curse.",
         "sessions": [
           7
@@ -580,13 +643,45 @@
   {
     "id": "vexhar",
     "name": "Vexhar",
-    "aliases": [],
+    "aliases": [
+      "Vexhar Mortus"
+    ],
     "status": "active",
     "class": "Wizard (Necromancy)",
     "ancestry": "Drow",
     "level": 5,
     "summary": "A drow wizard drifting into necromancy. A sigil branded on his hand ties him to a voice that calls him \"little scholar\". The Spider's network had flagged him before the party ever arrived.",
     "backstory": [
+      {
+        "text": "Vexhar Mortus grew up among the drow of the Underdark. He had the talent and intelligence for magic but was never allowed to learn it, so he worked as a cleaner and fetcher while poring over stolen books, scrolls and forbidden knowledge.",
+        "sessions": [
+          0
+        ]
+      },
+      {
+        "text": "Spent his formative years traveling between manors and monasteries, doing odd jobs in exchange for access to their libraries and studying the lore of the multiverse and the rudiments of magic.",
+        "sessions": [
+          0
+        ]
+      },
+      {
+        "text": "Craving more, he left the drow for Waterdeep, but the arcane schools rejected him, and with no money or family he grew despondent.",
+        "sessions": [
+          0
+        ]
+      },
+      {
+        "text": "A voice offered him power and knowledge for a price: Lillith offered a deal for his soul. Desperate, he agreed, truly believing he will one day win it back by force or cleverness.",
+        "sessions": [
+          0
+        ]
+      },
+      {
+        "text": "Until then he works as a hired grunt for a crime family in the Neverwinter slums. He feels the work is beneath him, but it fills his belly and gives him contacts for information, rumors and uncommon spell components.",
+        "sessions": [
+          0
+        ]
+      },
       {
         "text": "Completed a forbidden summoning ritual in his hidden workshop. A voice answered, offering power and knowledge in exchange for future acknowledgment that knowledge isn't free. He copied the resulting sigil down for study.",
         "sessions": [
@@ -1178,6 +1273,36 @@
     "summary": "A healer from a monastery who prays to Chauntea, the Earth Mother. He left the party after Wyvern Tor to help rebuild his monastery, then turned back on the road and rejoined the party at the Stonehill Inn, where he lifted Francis's curse.",
     "backstory": [
       {
+        "text": "Raised at the Monastery of the Dawnstar Path, a small, isolated ascetic monastery on the side of the Star Mounts. Its monks served the Silver Needle, a lesser-known healing sect of Chauntea.",
+        "sessions": [
+          0
+        ]
+      },
+      {
+        "text": "The Silver Needle's creed: help those who ask, take payment before healing (whatever form the payment takes), and look down on no one. Caine grew up healing hunters, travelers and the odd adventurer, bartering for food, furs or even stories to keep the brotherhood fed in a poor frontier region where supply caravans were rare.",
+        "sessions": [
+          0
+        ]
+      },
+      {
+        "text": "While foraging for herbs and sap deep in the Neverwinter Wood, he saw a blazing object streak across the sky, roaring like a hundred warhorns, and crash with a blinding flash to the south, near the crags east of the High Road. A shockwave tore through the forest.",
+        "sessions": [
+          0
+        ]
+      },
+      {
+        "text": "He ran back to find the monastery flattened: charred stone, broken beams and the bodies of everyone he grew up with. There were no tracks, no survivors and no answers.",
+        "sessions": [
+          0
+        ]
+      },
+      {
+        "text": "Now wanders the Sword Coast healing those who ask, taking payment first and looking down on no one. He is searching for the truth of what fell from the sky and for a new purpose or home, and keeps to the edges of civilization, where rumors gather.",
+        "sessions": [
+          0
+        ]
+      },
+      {
         "text": "Dreamed of a monastery courtyard collapsing into smoke, with an ember in his palm: \"follow the ember.\"",
         "sessions": [
           3
@@ -1186,6 +1311,7 @@
     ],
     "notable_items": [],
     "personal_quests": [
+      "caine-falling-fire",
       "find-killthorn-harrow"
     ],
     "notes": [

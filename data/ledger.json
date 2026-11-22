@@ -33,7 +33,8 @@
     { "to": "gundren-rockseeker", "text": "Answer for any trouble caused by Craig's goblins guarding the mine", "sessions": [34] },
     { "to": "tharden-rockseeker", "text": "Levon promised to maintain the grave marker", "sessions": [38] },
     { "to": "the-tree", "text": "Levon owes a tree a debt", "sessions": [7] },
-    { "to": "the-voice", "text": "Vexhar owes future acknowledgment that knowledge isn't free", "sessions": [27] }
+    { "to": "the-voice", "text": "Vexhar owes future acknowledgment that knowledge isn't free", "sessions": [27] },
+    { "to": "lillith", "text": "Vexhar sold his soul to Lillith for power and knowledge, and means to win it back", "sessions": [0] }
   ],
   "property": [
     { "text": "Tresendar Manor (deed from the town; restoration underway)", "sessions": [36] }

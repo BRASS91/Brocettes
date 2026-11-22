@@ -1,5 +1,15 @@
 [
   {
+    "id": "caine-falling-fire", "title": "What fell from the sky", "type": "personal", "character": "caine", "storyline": null,
+    "status": "active", "giver": null, "started": 0,
+    "summary": "A blazing object fell from the sky and flattened the Monastery of the Dawnstar Path, killing everyone Caine grew up with. There were no tracks, survivors or answers. In session 40 he found a destroyed village with a black stone in a crater and said it had been destroyed in a way similar to his monastery.",
+    "objectives": [
+      { "text": "Learn the truth of what fell from the sky", "done": false },
+      { "text": "Find a new purpose or home", "done": false }
+    ],
+    "reward": null, "sessions": [0, 3, 40]
+  },
+  {
     "id": "find-killthorn-harrow", "title": "Pass word to Killthorn Harrow", "type": "personal", "character": "caine", "storyline": null,
     "status": "active", "giver": "nell-harrow", "started": 40,
     "summary": "Caine promised Nell Harrow he'd pass on word if he sees her brother Killthorn: an older man with short brown hair and green eyes who has been on the road for a year. A drunk at the Stonehill Inn matched the description but said he had no sister.",
@@ -224,8 +234,8 @@
   {
     "id": "levon-tree-debt", "title": "Levon's debt to the tree", "type": "personal", "character": "levon", "storyline": null,
     "status": "active", "giver": null, "started": 3,
-    "summary": "He took wood from a forbidden part of the forest. His eyes are changing, the carved sapling's pattern appeared in Choppy, and Choppy is now +1.",
-    "objectives": [], "reward": null, "sessions": [3, 7, 27, 31]
+    "summary": "He cut down a mortal vessel of Yggdrasil in the deep woods, and the World Tree's spirit burrowed into him. His penance is to carry it until he can plant it in a new host. His eyes are changing, the carved sapling's pattern appeared in Choppy, and Choppy is now +1.",
+    "objectives": [{ "text": "Find a new host and plant the World Tree's spirit in it", "done": false }], "reward": null, "sessions": [0, 3, 7, 27, 31]
   },
   {
     "id": "francis-varron-maelor", "title": "Captain Varron Maelor", "type": "personal", "character": "francis", "storyline": null,
@@ -235,8 +245,8 @@
   {
     "id": "vexhar-voice", "title": "The voice behind Vexhar's sigil", "type": "personal", "character": "vexhar", "storyline": "the-spider",
     "status": "active", "giver": null, "started": 3,
-    "summary": "It answered his ritual, branded his hand, calls him \"little scholar\" and urged his first zombie. Knowledge isn't free.",
-    "objectives": [], "reward": null, "sessions": [3, 27, 30, 32]
+    "summary": "It answered his ritual, branded his hand, calls him \"little scholar\" and urged his first zombie. Knowledge isn't free. In his backstory, the voice that offered him power and knowledge was Lillith, and the price was his soul. He means to win it back one day.",
+    "objectives": [{ "text": "Win back his soul from Lillith, by force or cleverness", "done": false }], "reward": null, "sessions": [0, 3, 27, 30, 32]
   },
   {
     "id": "blue-feywild", "title": "Blue and the Coral Court", "type": "personal", "character": "blue", "storyline": null,

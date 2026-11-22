@@ -22,11 +22,12 @@
   {
     "id": "black-stone-crater", "question": "What is the black stone in the destroyed village's crater, and is it what destroyed Caine's monastery?", "status": "open", "raised": 40,
     "clues": [
+      { "session": 0, "text": "Caine's backstory: a blazing object roared across the sky like a hundred warhorns and crashed to the south, near the crags east of the High Road. The shockwave flattened his monastery and left no tracks or survivors." },
       { "session": 40, "text": "A crater 30 ft across and 5 ft deep, with a black stone about 10 ft long at its center. Caine's Investigation told him nothing, and he couldn't tell whether it resembled what happened at his monastery." },
       { "session": 40, "text": "Caine later told Francis the village, about six days away, had been destroyed in a way similar to his monastery." },
       { "session": 40, "text": "A puddle nearby gave Caine a warm blessing of healing and good health (Religion 17). He asked whether it was his goddess's doing and got no answer." }
     ],
-    "theories": [], "related": ["ruined-village", "caine"]
+    "theories": [], "related": ["ruined-village", "caine", "caine-falling-fire", "dawnstar-monastery"]
   },
   {
     "id": "francis-ichor", "question": "What is the ichor on Francis, and how is it cured?", "status": "resolved", "raised": 37, "resolved": 40,
@@ -76,7 +77,8 @@
     "clues": [
       { "session": 11, "text": "Glasstaff's correspondence mentioned a \"drow arcanist\"." },
       { "session": 32, "text": "Nezznar said Vexhar was flagged running errands in the Neverwinter underworld." },
-      { "session": 32, "text": "Vexhar isn't sure he knows his employer's name." }
+      { "session": 32, "text": "Vexhar isn't sure he knows his employer's name." },
+      { "session": 0, "text": "Vexhar's backstory: he works as a hired grunt for a crime family in the Neverwinter slums." }
     ],
     "theories": [], "related": ["vexhar-voice"]
   },
