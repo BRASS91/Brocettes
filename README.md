@@ -9,7 +9,13 @@ session notes our bot writes to Google Docs.
 **Repo:** https://github.com/BRASS91/Brocettes
 
 ## How it works
-- `index.html`, `app.css` and `app.js` are the whole app: no build step. It reads `data/*.json` in the browser.
+- `index.html`, `app.css` and `app.js` are the app: no build step. It reads `data/*.json` in the browser.
+- `features/*.js` add the bigger pages through `window.Brocettes` (pages, hooks, home cards):
+  `web.js` (connections web), `map.js` (map with pins), `table.js` (table mode, beta),
+  `theories.js` (theory board) and `panzoom.js` (shared drag/pinch zoom).
+- Home also has the friendly "Last time on…" recap (`#/recap` for reading aloud), next-session
+  prep (`#/prep`) with promise ages, Questions of the Day and recaps (`#/qotd`), the quote wall
+  (`#/quotes`) and a per-device "New since your last visit" card.
 - `data/` holds the campaign data (see [`data/README.md`](data/README.md)); `assets/tokens/` holds character tokens.
 - Edit a JSON file, push, and the site updates within a minute or two.
 
@@ -26,3 +32,4 @@ then open http://localhost:8000.
 ## More
 - [`docs/data-model.md`](docs/data-model.md) — what we track and why
 - [`docs/ingestion.md`](docs/ingestion.md) — how the weekly Google Doc import will work
+- [`docs/theory-board.md`](docs/theory-board.md) — switching on shared theories (Cloudflare KV)

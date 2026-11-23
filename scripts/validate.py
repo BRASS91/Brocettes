@@ -43,6 +43,13 @@ def walk(o, where):
         for x in o: walk(x, where)
 for n, coll in [("characters", chars), ("npcs", npcs), ("quests", quests), ("mysteries", myst), ("items", items), ("locations", locs), ("factions", facs), ("lore", lore), ("ledger", ledger)]:
     walk(coll, n)
+mp = json.loads((D / "map.json").read_text(encoding="utf-8"))
+for kind in ("region", "town"):
+    for lid in mp.get(kind, {}):
+        if ids.get(lid) != "location": errs.append(f"map.json {kind}: {lid!r} isn't a location")
+for s in sessions:
+    for k in ("recap", "big_moments", "qotd", "recap_duty", "quotes"):
+        if k not in s: errs.append(f"session {s['number']}: missing {k!r}")
 for s in sessions:
     if not (D / "notes" / f"{s['number']}.md").exists(): errs.append(f"session {s['number']}: missing data/notes/{s['number']}.md")
 print("\n".join(errs) or f"OK: {len(sessions)} sessions, {len(chars)} characters, {len(npcs)} NPCs, {len(quests)} quests, {len(myst)} mysteries, {len(items)} items, {len(locs)} locations, {len(facs)} factions, {len(lore)} lore entries")

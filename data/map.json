@@ -1,0 +1,33 @@
+{
+  "note": "Schematic, not to scale. x/y are positions on a 1000×700 drawing; \"approx\": true marks a guess from the notes.",
+  "region": {
+    "neverwinter": [175, 105],
+    "thundertree": [318, 222],
+    "cragmaw-castle": [545, 205],
+    "conyberry": [665, 288],
+    "triboar-trail": [610, 338],
+    "cragmaw-hideout": [372, 418],
+    "phandalin": [420, 512],
+    "old-owl-well": [540, 418],
+    "glasstaff-cave": [600, 482],
+    "wyvern-tor": [730, 440],
+    "wave-echo-cave": [575, 585],
+    "dawnstar-monastery": [858, 92],
+    "ruined-village": { "at": [770, 190], "approx": true }
+  },
+  "town": {
+    "stonehill-inn": [480, 360],
+    "townmasters-hall": [600, 318],
+    "shrine-of-luck": [392, 262],
+    "barthens-provisions": [560, 232],
+    "lions-shield-coster": [418, 448],
+    "sleeping-giant": [770, 452],
+    "tresendar-manor": [812, 218],
+    "phandalin-cemetery": [880, 330],
+    "fairgrounds": { "at": [246, 470], "approx": true },
+    "old-mine-road": [905, 110],
+    "edermath-orchard": [222, 292],
+    "alderleaf-farm": [372, 128],
+    "tostig-farm": { "at": [110, 610], "approx": true }
+  }
+}

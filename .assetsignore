@@ -1,0 +1,12 @@
+.git
+.git/**
+worker
+worker/**
+scripts
+scripts/**
+docs
+docs/**
+wrangler.jsonc
+wrangler.jsonc.example
+.assetsignore
+node_modules

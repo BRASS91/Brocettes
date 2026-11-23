@@ -24,6 +24,21 @@
   const CHECK = `<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>`;
   const RING = `<svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/></svg>`;
 
+  // Shared with the feature files (features/*.js), which register pages, home cards and page hooks.
+  const B = window.Brocettes = {
+    D, ALL, app, esc, cap, nameOf, link, chip, sess, badge, section, lastSession, fmtDate, tokenOf, KIND,
+    pages: {},     // route name -> (arg, parts) => html
+    hooks: {},     // hook name -> [(obj) => html]
+    after: [],     // (page, arg) => void, run after every render
+    explore: [     // [href, title, subtitle] cards on the home page
+      ["#/prep", "Before next session", "Promises, live quests and who might turn up"],
+      ["#/qotd", "Questions & recaps", "Question of the Day and who gave each recap"],
+      ["#/quotes", "Quote wall", "Lines the notes caught word for word"],
+    ],
+    route: () => route(),
+  };
+  const hook = (name, obj) => (B.hooks[name] || []).map((f) => f(obj)).join("");
+
   function sessionsOf(obj) {
     const out = new Set();
     (function walk(o) {
@@ -50,6 +65,8 @@
     return hits;
   }
 
+  Object.assign(B, { sessionsOf: (o) => sessionsOf(o), backlinks: (id) => backlinks(id), describe: (e) => describe(e), store: { get: (k) => store.get(k), set: (k, v) => store.set(k, v) } });
+
   // ---------- views ----------
   function home() {
     const s = lastSession();
@@ -57,6 +74,10 @@
     const open = D.mysteries.filter((m) => m.status === "open").length;
     const seen = D.npcs.filter((n) => sessionsOf(n).includes(s.number)).map((n) => n.id);
     const pcs = D.characters.filter((c) => c.status === "active");
+    const promises = allPromises();
+    const waiting = promises.filter((p) => p.age >= 3 && p.last > 0).length;
+    const quotes = allQuotes();
+    const q = quotes.length ? quotes[Math.floor(Math.random() * quotes.length)] : null;
     return `
       <div class="stack" style="gap:4px">
         <span class="eyebrow">Next up · Session ${s.number + 1}</span>
@@ -64,20 +85,160 @@
         <span class="sub">${esc(D.ledger.in_game_date?.value || "")} · Level ${esc(D.ledger.level?.value ?? "")}</span>
       </div>
       <div class="party small">${pcs.map(pcLink).join("")}</div>
+      ${whatsNewCard()}
       <div class="card">
         <div class="between"><h3 style="color:var(--red)">Last time on…</h3><a class="sess" href="#/s/${s.number}">Session ${s.number} · ${fmtDate(s.date)}</a></div>
-        <p class="prose">${esc(s.overview)}</p>
+        <p class="prose">${esc(s.recap || s.overview)}</p>
+        ${bigMoments(s)}
         ${s.where_we_left_off ? `<div class="inset"><span class="eyebrow">Where we left off</span><span>${esc(s.where_we_left_off)}</span></div>` : ""}
-        <a href="#/s/${s.number}">Full session →</a>
+        <div class="between"><a href="#/recap">Recapping? Big-text version →</a><a href="#/s/${s.number}">Full session →</a></div>
       </div>
+      <a class="card prep-teaser" href="#/prep">
+        <div class="between"><h3>Before Session ${s.number + 1}</h3><span class="sub">Prep →</span></div>
+        <span>${promises.length} promise${promises.length === 1 ? "" : "s"} on the books${waiting ? `, <b class="warn">${waiting} waiting 3+ sessions</b>` : ""} · ${active} active quest${active === 1 ? "" : "s"} · ${open} open myster${open === 1 ? "y" : "ies"}</span>
+      </a>
       <div class="tiles">
         <a class="tile" href="#/quests"><b>${active}</b><span>Active quests</span></a>
         <a class="tile" href="#/codex/mysteries"><b>${open}</b><span>Open mysteries</span></a>
         <a class="tile" href="#/party"><b>${D.ledger.party_owes.length}</b><span>Promises owed</span></a>
       </div>
+      ${q ? `<a class="card quote" href="#/quotes"><blockquote>“${esc(q.text)}”</blockquote><span class="sub">${esc(q.who)}${q.context ? ", " + esc(q.context) : ""} · Session ${q.session}</span></a>` : ""}
+      ${section("Explore", `<div class="explore">${B.explore.map(([href, title, sub]) => `<a class="card" href="${href}"><b>${esc(title)}</b><span class="sub">${esc(sub)}</span></a>`).join("")}</div>`)}
       ${section("Seen last session", seen.length ? `<div class="chips">${seen.map((id) => chip(id)).join("")}</div>` : "")}
       ${section("Every session", `<a class="card" href="#/sessions"><span>All ${D.sessions.length} sessions, newest first →</span></a>`)}`;
   }
+
+  // ---------- recap helpers ----------
+  const STAR = `<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6-4.5-4.2 6.1-.7z"/></svg>`;
+  const bigMoments = (s, title = "Big moments") => (s.big_moments || []).length
+    ? `<div class="big"><span class="eyebrow">${esc(title)}</span><ul>${s.big_moments.map((m) => `<li>${STAR}<span>${esc(m)}</span></li>`).join("")}</ul></div>` : "";
+
+  // The big-text page for whoever lands the recap at the table.
+  function recapPage() {
+    const s = lastSession();
+    return `<a class="back" href="#/">‹ Home</a>
+      <div class="stack" style="gap:4px"><span class="eyebrow">Previously on… · Session ${s.number}</span><h1>${esc(s.title)}</h1></div>
+      <div class="read-aloud">
+        <p>${esc(s.recap || s.overview)}</p>
+        ${bigMoments(s, "Don't forget")}
+        ${s.where_we_left_off ? `<div class="inset"><span class="eyebrow">Where we left off</span><span>${esc(s.where_we_left_off)}</span></div>` : ""}
+      </div>
+      <p class="sub">Need more? <a href="#/s/${s.number}">Scenes and full notes</a> · <a href="#/qotd">Questions of the Day and past recaps</a></p>`;
+  }
+
+  // ---------- promises and how long they've waited ----------
+  // A promise's "last touched" is the newest session it cites; its age is how many sessions ago that was.
+  function allPromises() {
+    const last = lastSession().number, L = D.ledger;
+    const tag = (arr, dir, whoKey) => arr.map((p) => {
+      const lt = Math.max(...(p.sessions || [0]));
+      return { ...p, dir, who: p[whoKey], last: lt, age: last - lt };
+    });
+    return [...tag(L.party_owes, "we owe", "to"), ...tag(L.owed_to_party, "owed to us", "from")];
+  }
+  function ageBadge(p) {
+    if (p.last === 0) return `<span class="badge b-plain" title="From a session 0 backstory">Backstory</span>`;
+    if (p.age <= 0) return `<span class="badge b-confirmed">Last session</span>`;
+    const kind = p.age >= 6 ? "b-dead" : p.age >= 3 ? "b-rumoured" : "b-plain";
+    return `<span class="badge ${kind}" title="Last came up in session ${p.last}">${p.age} session${p.age === 1 ? "" : "s"} ago</span>`;
+  }
+  const promiseCard = (p) => `<div class="card"><div class="between"><b>${esc(p.text)}</b>${ageBadge(p)}</div>
+    <span class="sub">${p.who ? link(p.who) + " · " : ""}${sess(p.sessions)}</span></div>`;
+  const byAge = (a, b) => (a.last === 0) - (b.last === 0) || b.age - a.age;
+
+  // ---------- next-session prep ----------
+  function prepPage() {
+    const s = lastSession(), n = s.number;
+    const promises = allPromises();
+    const stale = promises.filter((p) => p.last > 0 && p.age >= 3).sort(byAge);
+    const fresh = promises.filter((p) => p.last > 0 && p.age < 3).sort(byAge);
+    const touched = (o) => sessionsOf(o).includes(n);
+    const live = D.quests.filter((q) => q.status === "active" || q.status === "available");
+    const hot = live.filter(touched), cold = live.filter((q) => !touched(q) && q.type !== "personal" && n - Math.max(...sessionsOf(q)) >= 4);
+    const myst = D.mysteries.filter((m) => m.status === "open");
+    const hotM = myst.filter(touched), coldM = myst.filter((m) => !touched(m) && n - Math.max(...sessionsOf(m)) >= 4);
+    const text = [s.where_we_left_off, s.recap].join(" ").toLowerCase();
+    const npcs = D.npcs.filter((x) => x.status !== "dead" && (x.last_session === n || [x.name, ...x.aliases].some((a) => a.length > 3 && text.includes(a.toLowerCase()))));
+    const givers = [...new Set(hot.map((q) => q.giver).filter((g) => g && ALL.get(g)?.type === "npc"))].filter((g) => !npcs.some((x) => x.id === g));
+    const personal = D.characters.filter((c) => c.status === "active").map((c) => [c, c.personal_quests.map((id) => ALL.get(id)?.obj).filter((q) => q && q.status === "active")]).filter(([, qs]) => qs.length);
+    const list = (arr) => arr.map((q) => `<a class="card" href="#/e/${q.id}"><div class="between"><b>${esc(q.title || q.question)}</b>${badge(q.status)}</div><span class="sub">Last came up in session ${Math.max(...sessionsOf(q))}</span></a>`).join("");
+    return `<a class="back" href="#/">‹ Home</a>
+      <div class="stack" style="gap:4px"><span class="eyebrow">Prep · Session ${n + 1}</span><h1>Before we sit down</h1></div>
+      ${s.where_we_left_off ? `<div class="inset"><span class="eyebrow">Where we left off</span><span>${esc(s.where_we_left_off)}</span></div>` : ""}
+      ${section("Promises gathering dust", stale.length ? stale.map(promiseCard).join("") : `<p class="empty">Nothing has waited more than two sessions. Nice.</p>`)}
+      ${section("Quests in play last session", list(hot))}
+      ${section("Mysteries that moved last session", list(hotM))}
+      ${section("Who might turn up", npcs.length || givers.length ? `<div class="chips">${[...npcs.map((x) => x.id), ...givers].map((id) => chip(id)).join("")}</div>` : "")}
+      ${section("Recent promises", fresh.map(promiseCard).join(""))}
+      ${section("Personal goals", personal.map(([c, qs]) => `<div class="card"><b>${esc(c.name)}</b><div class="chips">${qs.map((q) => chip(q.id)).join("")}</div></div>`).join(""))}
+      ${section("Loose threads (quiet for 4+ sessions)", (() => {
+        const all = [...cold, ...coldM].sort((a, b) => Math.max(...sessionsOf(b)) - Math.max(...sessionsOf(a)));
+        return all.length ? list(all.slice(0, 8)) + (all.length > 8 ? `<p class="sub">And ${all.length - 8} older ones on the <a href="#/quests/leads">quest board</a> and in <a href="#/codex/mysteries">mysteries</a>.</p>` : "") : "";
+      })())}`;
+  }
+
+  // ---------- Questions of the Day and recap duty ----------
+  function qotdPage() {
+    const rows = [...D.sessions].reverse().filter((s) => s.qotd || s.recap_duty);
+    const tally = {};
+    for (const s of D.sessions) if (s.recap_duty?.by && s.recap_duty.by !== "Paul") tally[s.recap_duty.by] = (tally[s.recap_duty.by] || 0) + 1;
+    return `<a class="back" href="#/">‹ Home</a><h1>Questions &amp; recaps</h1>
+      <p class="sub">The Question of the Day and who gave the recap, for every session where the notes mention them. The notes bot often skips the question itself, so some are blank.</p>
+      ${Object.keys(tally).length ? section("Recaps given", `<div class="chips">${Object.entries(tally).sort((a, b) => b[1] - a[1]).map(([who, k]) => `<span class="chip">${esc(who)} · ${k}</span>`).join("")}</div>`) : ""}
+      ${section("By session", rows.map((s) => `<a class="card" href="#/s/${s.number}">
+        <div class="between"><b>Session ${s.number}</b><span class="sub">${fmtDate(s.date)}</span></div>
+        ${s.qotd ? `<span><span class="sub">Question:</span> ${s.qotd.question ? esc(s.qotd.question) : `<i class="sub">not recorded</i>`}</span>${s.qotd.answers.map((a) => `<span class="sub">${esc(a.who)}: ${esc(a.answer)}</span>`).join("")}` : ""}
+        ${s.recap_duty?.by ? `<span><span class="sub">Recap:</span> ${esc(s.recap_duty.by)}${s.recap_duty.how ? ` <span class="sub">(${esc(s.recap_duty.how)})</span>` : ""}${s.recap_duty.inspiration ? ` · inspiration to ${esc(s.recap_duty.inspiration)}` : ""}</span>` : ""}
+      </a>`).join(""))}`;
+  }
+
+  // ---------- quote wall ----------
+  const allQuotes = () => D.sessions.flatMap((s) => (s.quotes || []).map((q) => ({ ...q, session: s.number })));
+  function quotesPage() {
+    const qs = allQuotes().reverse();
+    return `<a class="back" href="#/">‹ Home</a><h1>Quote wall</h1>
+      <p class="sub">Lines the session notes recorded word for word. ${qs.length} so far.</p>
+      <div class="quote-wall">${qs.map((q) => `<a class="card quote" href="#/s/${q.session}"><blockquote>“${esc(q.text)}”</blockquote><span class="sub">${esc(q.who)}${q.context ? ", " + esc(q.context) : ""} · S${q.session}</span></a>`).join("") || `<p class="empty">No quotes yet.</p>`}</div>`;
+  }
+
+  // ---------- what's new since your last visit (per device) ----------
+  // Each entity and session gets a content fingerprint; the device remembers the ones it has seen.
+  const SEEN_KEY = "bro.seen.v1";
+  const store = {
+    get(k) { try { return JSON.parse(localStorage.getItem(k)); } catch { return null; } },
+    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+  };
+  function fp(o) { let h = 2166136261; const s = JSON.stringify(o); for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return (h >>> 0).toString(36); }
+  let FP = null;
+  function fingerprints() {
+    if (FP) return FP;
+    FP = {};
+    for (const [id, e] of ALL) FP[id] = fp(e.obj);
+    for (const s of D.sessions) FP["s:" + s.number] = fp(s);
+    return FP;
+  }
+  // The first time a device opens the journal, everything counts as already seen.
+  function seenMap() { let s = store.get(SEEN_KEY); if (!s) { s = { ...fingerprints() }; store.set(SEEN_KEY, s); } return s; }
+  function changes() {
+    const now = fingerprints(), seen = seenMap();
+    return Object.keys(now).filter((k) => seen[k] !== now[k]).map((k) => ({ key: k, kind: seen[k] ? "Updated" : "New" }));
+  }
+  function markSeen(keys) {
+    const seen = seenMap(), now = fingerprints();
+    for (const k of keys || Object.keys(now)) seen[k] = now[k];
+    store.set(SEEN_KEY, seen);
+  }
+  function whatsNewCard() {
+    const ch = changes();
+    if (!ch.length) return "";
+    const label = (c) => c.key.startsWith("s:") ? `<a class="chip new" href="#/s/${c.key.slice(2)}"><i>${c.kind}</i> Session ${c.key.slice(2)}</a>`
+      : `<a class="chip new" href="#/e/${encodeURIComponent(c.key)}"><i>${c.kind}</i> ${esc(nameOf(c.key))}</a>`;
+    const order = (c) => (c.key.startsWith("s:") ? 0 : c.kind === "New" ? 1 : 2);
+    const shown = [...ch].sort((a, b) => order(a) - order(b)).slice(0, 18);
+    return `<div class="card whats-new"><div class="between"><h3>New since your last visit</h3><button type="button" class="linkish" data-mark-seen>Mark all read</button></div>
+      <div class="chips">${shown.map(label).join("")}${ch.length > shown.length ? `<span class="sub">and ${ch.length - shown.length} more</span>` : ""}</div></div>`;
+  }
+  app.addEventListener("click", (e) => { if (e.target.closest?.("[data-mark-seen]")) { markSeen(); route(); } });
 
   function pcLink(c) {
     const img = tokenOf(c);
@@ -103,8 +264,13 @@
     return `
       <a class="back" href="#/sessions">‹ All sessions</a>
       <div class="stack" style="gap:4px"><span class="eyebrow">Session ${s.number} · ${fmtDate(s.date)}</span><h1>${esc(s.title)}</h1></div>
-      ${s.overview ? `<div class="card"><p class="prose">${esc(s.overview)}</p></div>` : ""}
+      ${s.recap || s.overview ? `<div class="card"><p class="prose">${esc(s.recap || s.overview)}</p>${bigMoments(s)}</div>` : ""}
       ${s.where_we_left_off ? `<div class="inset"><span class="eyebrow">Where we left off</span><span>${esc(s.where_we_left_off)}</span></div>` : ""}
+      ${s.qotd || s.recap_duty?.by ? `<div class="card table-talk">
+        ${s.qotd ? `<span><span class="sub">Question of the Day:</span> ${s.qotd.question ? esc(s.qotd.question) : `<i class="sub">not recorded</i>`}</span>${s.qotd.answers.map((a) => `<span class="sub">${esc(a.who)}: ${esc(a.answer)}</span>`).join("")}` : ""}
+        ${s.recap_duty?.by ? `<span><span class="sub">Recap by:</span> ${esc(s.recap_duty.by)}${s.recap_duty.how ? ` <span class="sub">(${esc(s.recap_duty.how)})</span>` : ""}${s.recap_duty.inspiration ? ` · inspiration to ${esc(s.recap_duty.inspiration)}` : ""}</span>` : ""}
+      </div>` : ""}
+      ${section("Said at the table", (s.quotes || []).map((q) => `<div class="card quote"><blockquote>“${esc(q.text)}”</blockquote><span class="sub">${esc(q.who)}${q.context ? ", " + esc(q.context) : ""}</span></div>`).join(""))}
       ${section("Scenes", s.scenes.length ? `<ul style="margin:0;padding-left:20px">${s.scenes.map((x, i) => `<li><button type="button" class="linkish" data-scene="${esc(x)}" title="Jump to this scene in the full notes">${esc(x)}</button></li>`).join("")}</ul>` : "")}
       <details class="sheet-fold notes-fold" data-notes="${s.number}">
         <summary>Full session notes</summary>
@@ -288,8 +454,9 @@
       <span class="sub" style="margin-top:-10px">Level ${esc(L.level.value)} · ${esc(L.in_game_date.value)}</span>
       <div class="party big">${pcs.map(pcLink).join("")}</div>
       ${gone.length ? `<p class="sub">Former companions: ${gone.map((c) => link(c.id)).join(", ")}</p>` : ""}
-      ${section("Owed to us", list(L.owed_to_party, "from"))}
-      ${section("We owe", list(L.party_owes, "to"))}
+      ${section("Owed to us", allPromises().filter((p) => p.dir === "owed to us").sort(byAge).map(promiseCard).join(""))}
+      ${section("We owe", allPromises().filter((p) => p.dir === "we owe").sort(byAge).map(promiseCard).join(""))}
+      <p class="sub">Badges show how many sessions since a promise last came up: amber after 3, red after 6.</p>
       ${section("Property", L.property.map((p) => `<div class="card"><div class="between"><b>${esc(p.text)}</b><span>${sess(p.sessions)}</span></div></div>`).join(""))}
       ${section("Gold log", `<div class="card">${L.gold_log.map((g) => `<div class="between"><span>${esc(g.text)}</span><span style="white-space:nowrap;color:${g.amount_gp < 0 ? "var(--bad)" : "var(--ok)"}">${g.amount_gp > 0 ? "+" : ""}${g.amount_gp} gp <a class="sess" href="#/s/${g.session}">S${g.session}</a></span></div>`).join("")}</div>`)}
       ${L.party_name ? `<p class="sub">${esc(L.party_name.note)}</p>` : ""}`;
@@ -321,6 +488,7 @@
           <div class="stack" style="gap:4px"><h1>${esc(o.name)}</h1><span class="sub">${esc(o.class)}${o.ancestry ? " · " + esc(o.ancestry) : ""}${o.level ? " · Level " + o.level : ""}${o.status !== "active" ? " · " + cap(o.status) : ""}</span>
             ${o.aliases?.length ? `<span class="sub">Also written: ${o.aliases.map(esc).join(", ")}</span>` : ""}</div>
           <p class="prose">${esc(o.summary)}</p>
+          ${hook("character-top", o)}
           ${sheetView(o.sheet)}
           ${section("Backstory", facts(o.backstory))}
           ${section("Notable items", o.notable_items.length ? `<div class="chips">${o.notable_items.map((i) => chip(i)).join("")}</div>` : "")}
@@ -359,6 +527,7 @@
           ${o.answer ? `<div class="inset"><span class="eyebrow">Answer</span><span>${esc(o.answer)}</span></div>` : ""}
           ${section("Clues", o.clues.length ? `<div class="card">${o.clues.map((c) => `<div class="fact"><span style="min-width:32px">${sess([c.session])}</span><span>${esc(c.text)}</span></div>`).join("")}</div>` : `<p class="empty">No clues yet.</p>`)}
           ${section("Party theories", o.theories.map((t) => `<div class="inset"><b>${esc(t.by)}</b><span>${esc(t.text)}</span></div>`).join(""))}
+          ${hook("mystery", o)}
           ${section("Related", o.related.length ? `<div class="chips">${o.related.map((r) => chip(r)).join("")}</div>` : "")}`;
       case "item":
         return `${head}
@@ -514,6 +683,10 @@
       case "quests": html = quests(arg); break;
       case "codex": html = codex(arg); break;
       case "party": html = party(); break;
+      case "recap": html = recapPage(); tab = "home"; break;
+      case "prep": html = prepPage(); tab = "home"; break;
+      case "qotd": html = qotdPage(); tab = "home"; break;
+      case "quotes": html = quotesPage(); tab = "home"; break;
       case "sessions": html = sessionsList(); tab = "home"; break;
       case "s": html = sessionView(Number(arg)); tab = "home"; break;
       case "e": {
@@ -522,8 +695,12 @@
         tab = t === "character" ? "party" : t === "quest" ? "quests" : "codex";
         break;
       }
-      default: html = notFound();
+      default:
+        if (B.pages[page]) { const p = B.pages[page]; html = p.render(arg, parts); tab = p.tab || "home"; }
+        else html = notFound();
     }
+    if (page === "e" && ALL.has(arg)) markSeen([arg]);
+    if (page === "s") markSeen(["s:" + arg]);
     app.innerHTML = html;
     app.classList.toggle("swipeable", !!currentPC());
     slideInIfFlipped();
@@ -531,6 +708,7 @@
     const title = app.querySelector("h1")?.textContent;
     document.title = title && page ? `${title} · Brocettes` : "Brocettes Companion";
     if (page !== "search") window.scrollTo(0, 0);
+    B.after.forEach((f) => { try { f(page, arg); } catch (err) { console.error(err); } });
   }
 
   // ---------- boot ----------
@@ -543,6 +721,7 @@
       add("mystery", D.mysteries, "question"); add("item", D.items, "name"); add("location", D.locations, "name");
       add("faction", D.factions, "name"); add("lore", D.lore, "topic");
       window.addEventListener("hashchange", route);
+      B.ready = true;
       route();
     })
     .catch((err) => { app.innerHTML = `<h1>The tome won't open</h1><p>Couldn't load the campaign data (${esc(err.message)}). Try refreshing.</p>`; });

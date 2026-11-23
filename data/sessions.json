@@ -5,7 +5,12 @@
     "date": "2025-11-30",
     "overview": "No notes were recorded for this session. The party met at the Winter's Hearth.",
     "where_we_left_off": null,
-    "scenes": []
+    "scenes": [],
+    "recap": "Last time on Phandelver and Below: our adventurers came together for a rendezvous at the Winter's Hearth, where the whole story began. Sadly, no notes survive from that first night, so the details of who said what are lost to the mists. What we do know is that this was where the party first crossed paths, and the road ahead was about to get a lot more dangerous.",
+    "big_moments": [],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": []
   },
   {
     "number": 2,
@@ -20,6 +25,25 @@
       "Approaching the Cave Entrance",
       "Ambush at the Cave Mouth",
       "Retreating and Making Camp"
+    ],
+    "recap": "Last time, the party turned a roadside ambush into an unlikely friendship. Levon pinned the goblin Craig, Broc translated, and Craig spilled that the tiny dwarf and big armored guy had been dragged alive to Klarg's hideout to the north. Caine only healed him after Craig paid up with a joke. Francis and Broc hid the wagon and horses, and the group followed Craig up a trail he swore was heavily trapped. Francis spotted a snare and sprang a ten-foot pit. At the cave mouth, goblins burst from the shadows. Caine dragged Broc to safety with Healing Word, Francis made a fleeing goblin grovel with Command, Levon held the entrance, and the goblin boss hurled a minion into Vexhar's fire bolt. The ambushers broke, but with wolves lurking inside and everyone battered, the party pulled back to a forest camp to rest before returning at dawn.",
+    "big_moments": [
+      "Goblin Craig captured and agrees to guide the party",
+      "Goblin ambush at Klarg's cave mouth defeated"
+    ],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": [
+      {
+        "who": "Craig",
+        "text": "tiny dwarf and big armor guy",
+        "context": "describing the captives taken to Klarg"
+      },
+      {
+        "who": "Craig",
+        "text": "the path is heavily trapped",
+        "context": "warning the party on the goblin trail"
+      }
     ]
   },
   {
@@ -37,6 +61,30 @@
       "Giant Snake on the Cave Approach",
       "Flash Flood Trap Round",
       "Goblin Ambush and Sildar Standoff"
+    ],
+    "recap": "Last time, a night in the forest camp brought strange dreams. Caine was told to follow the ember, Francis saw his old captain walk away, Vexhar wandered an endless library, Levon saw a great tree split and fallen, and Broc stood on a dim stage as pink flame sparked in his hand. Craig dreamed Klarg made him into soup. Earlier, Vexhar's Mage Hand tripped Levon. Come morning, the party slipped into the cave, fed rations to three starving chained wolves, and spotted a goblin asleep on a rope bridge. Then a giant snake struck, and Francis drove his longsword through its neck. A flash flood roared through the tunnel, and Vexhar's clutch save kept him on his feet. Goblins hurled explosive bombs and shouted for Yeemik, and it ended on a ledge, with a goblin holding the bound Sildar and threatening to kill him if anyone moved.",
+    "big_moments": [
+      "Prophetic dreams visit the party",
+      "Captive Sildar found held hostage by goblins"
+    ],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": [
+      {
+        "who": "Whispering voice (Caine's dream)",
+        "text": "follow the ember",
+        "context": "Caine's dream"
+      },
+      {
+        "who": "Voice (Francis's dream)",
+        "text": "follow what he started or finish him",
+        "context": "Francis's dream"
+      },
+      {
+        "who": "Craig",
+        "text": "Craig dreamed Klarg eat Craig and soup. Bad soup",
+        "context": "talking in his sleep"
+      }
     ]
   },
   {
@@ -52,7 +100,17 @@
       "Securing Sildar",
       "The Inner Cave Fights",
       "The Bugbear Den"
-    ]
+    ],
+    "recap": "Last time, Yeemik held Sildar Hallwinter at knifepoint on a ledge, bleeding out and half over the drop. As the party bargained, Yeemik let slip that Klarg answered to King Grol and to a mysterious figure called the Spider. Then Caine slipped a Healing Word to Sildar under cover of Broc's Minor Illusion. Yeemik spotted it and slashed Sildar's throat! Levon raged up the ledge, Francis used Command to make Yeemik grovel and let go, and the party snatched Sildar back from the edge and stabilized him. Yeemik begged for his life and was tied up. Weak but stubborn, Sildar urged them to finish Klarg. The party fought through the tunnels into the bugbear's den, killed his wolf, and caught Klarg stuck in the chimney as he tried to flee. Klarg fell, the hideout was theirs, and the Spider's shadow loomed larger than ever.",
+    "big_moments": [
+      "Klarg the bugbear boss killed",
+      "Sildar Hallwinter rescued alive",
+      "The Spider revealed behind the Cragmaw goblins",
+      "Party takes control of Klarg's hideout"
+    ],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": []
   },
   {
     "number": 5,
@@ -66,7 +124,16 @@
       "Loading the Wagon and Sildar’s Truth",
       "Journey to Phandalin with Craig",
       "Redbrands at Barthen’s Provisions"
-    ]
+    ],
+    "recap": "Last time, the party picked through Klarg's den and found Lionshield Coster crates, a chest of coins, two healing potions and a jade statuette. One potion went straight into Francis, and eyebrows rose when Vexhar fed on Klarg's corpse. Klarg went down the chimney to the starving wolves, who were then freed and bolted past without a fight. Back at the wagon, Sildar promised fifty gold and finally came clean: Gundren had found the lost Wave Echo Cave, and Sildar was on a Lord's Alliance mission to find the missing wizard Iarno Albrek. Craig was dressed up as a halfling, Sildar headed off to the Stonehill Inn, and at Barthen's Provisions two red-cloaked thugs barged past. Elmina paid for the delivery and warned of the Redbrands' protection racket. The party stepped back into the street with Gundren, the Redbrands and Wave Echo Cave all on their minds.",
+    "big_moments": [
+      "Sildar reveals Gundren found the lost Wave Echo Cave",
+      "Klarg's treasure: coins, healing potions, jade statuette",
+      "Gundren's supplies delivered and paid for at Barthen's"
+    ],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": []
   },
   {
     "number": 6,
@@ -79,6 +146,19 @@
       "Lionshield Reward and Lead",
       "Banshee Quest at the Shrine",
       "Stonehill Inn News and Missing Gundren"
+    ],
+    "recap": "Last time, the party rolled their recovered crates into the Lionshield Coster, and Lenine Greywind paid them a 50 gold reward for being honest enough to bring them back. She blamed the Redbrands' boldness on weak town leadership and offered a 10% discount if they could get Harbin Wester to act. Someone suggested murdering them all, and there was some hasty backpedaling about lawful solutions. Looking for healing supplies, they visited the shrine, where they took on a task to find a vain banshee near Conyberry and win her over with a jeweled silver comb. That evening at the Stonehill Inn, Toblen and Sildar confirmed Gundren was truly missing. Then a woman carrying plates burst out that the Redbrands had murdered a man and stormed off. With no guards or watch in Phandalin, the party realized nobody else was going to deal with the Redbrands.",
+    "big_moments": [
+      "Lionshield crates returned for a 50 gp reward"
+    ],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": [
+      {
+        "who": "A party member",
+        "text": "murdering them all",
+        "context": "suggesting how to handle the Redbrands, to Lenine"
+      }
     ]
   },
   {
@@ -93,6 +173,34 @@
       "Sildar’s Updates and Harbin’s Bargain",
       "Planning the Redbrand Strike",
       "Battle at the Sleeping Giant"
+    ],
+    "recap": "Last time, the party visited Levon's father Alvin at his farm. Over bread and cheese, Levon admitted he had taken wood from a forbidden part of the forest and now owes that tree a debt. Alvin had never heard of the Spider, but reckoned the Redbrands would have their noses in anything important. At the Townmaster's Hall, Harbin Wester offered 100 gold to drive off marauders near Wyvern Tor and another 100 gold to end the Redbrand threat. He also let slip that they drink at the Sleeping Giant and hide out in old Tresendar Manor. Sildar added word of a strange long-headed goblin among the raiders. At the Sleeping Giant, red-cloaks mocked the party as little puppies and failed to shove Francis. Vexhar's witch bolt, Craig's sneak attack and Levon's head-splitting blow made short work of them, and Caine grabbed the last one to be questioned.",
+    "big_moments": [
+      "Harbin offers bounties on marauders and the Redbrands"
+    ],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": [
+      {
+        "who": "The players",
+        "text": "can be suicide",
+        "context": "on heading out late at night"
+      },
+      {
+        "who": "Levon",
+        "text": "owes that tree a debt",
+        "context": "telling Alvin about the forbidden tree"
+      },
+      {
+        "who": "Harbin Wester",
+        "text": "takes care of those who take care of it",
+        "context": "on Phandalin rewarding its helpers"
+      },
+      {
+        "who": "Harbin Wester",
+        "text": "more than I'm supposed to say",
+        "context": "after revealing the Redbrand hideout"
+      }
     ]
   },
   {
@@ -107,7 +215,16 @@
       "Fight in the Redbrand Barracks",
       "Freeing Prisoners and Crossing the Crevasse",
       "Skeleton Battle in the Crypt"
-    ]
+    ],
+    "recap": "Last time, the party spared their captured Redbrand, Johnny, and sentenced him to months of mucking stables for Elmina. Then, in stolen crimson cloaks, they slipped into the cellar under Tresendar Manor. Levon dove into a cistern and came up with a satchel of coins and potions, including one of invisibility. In the barracks the disguise fell apart. One ruffian locked Levon and Francis in a side room, Craig picked the lock, and Broc ended the fight with a burst of fire over the last bandit's head. They found captives in the cells and a chest of coin and gems, then roped across a crevasse, with Levon hauling a panicking Craig back up. In the family crypt, skeletons rose and went straight for Craig, who hit the floor with two failed death saves. Then he rolled a natural 20 and woke at one hit point, prone and surrounded.",
+    "big_moments": [
+      "Craig's natural 20 death save saves his life",
+      "Potion of invisibility found in the cistern",
+      "Strongbox of coin and gemstones recovered"
+    ],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": []
   },
   {
     "number": 9,
@@ -124,7 +241,22 @@
       "Smuggling Prisoners Out Through the Caves",
       "Looting the Armory and Finding a Secret",
       "Approaching the Crevasse and Unseen Voice"
-    ]
+    ],
+    "recap": "Last time, the party finally cracked the crypt's secret: the skeletons ignored anyone in a red cloak. Caine took off his cloak and stepped up with shield and mace to draw their fire, then poured a healing potion down Craig's throat. Vexhar blasted a guardian with chromatic orb, and Levon took off a skeleton's head. They barricaded the crypt with sarcophagus lids for a short rest, then pushed on to the cells. Vexhar's bluff failed with a Redbrand guard, so he hit him with another chromatic orb and Francis cut him down. Inside the cells they freed Mirna Dendrar and her children, Nilsa and Nars. Mirna told them of a family heirloom in Thundertree, and the party guided the family safely out. After looting the Redbrand armory, they found a secret door to the crevasse, where a voice spoke in their minds, complaining that they walked loudly.",
+    "big_moments": [
+      "Mirna Dendrar and her children freed and escorted out",
+      "Crypt skeleton guardians destroyed"
+    ],
+    "qotd": {
+      "question": null,
+      "answers": []
+    },
+    "recap_duty": {
+      "by": null,
+      "how": null,
+      "inspiration": null
+    },
+    "quotes": []
   },
   {
     "number": 10,
@@ -139,6 +271,21 @@
       "Treasure Chest and Tactical Debates",
       "Downtime in Town and Bugbear Greeting",
       "Bugbear and Redbrand Battle on Stairs"
+    ],
+    "recap": "Last time, the voice in the crevasse turned out to be Ssarnak, a hunched, one-eyed Nothic hungry for secrets and corpses. It forced Francis to relive an old failure and laughed off Caine's attempt to turn it. Broc climbed down and found warped goblin bodies it had been eating. Francis intimidated it into pointing to the wizard's study to the south and showing them a gleaming chest, but the truce didn't last. Vexhar's fire bolt started the fight, and Broc's Magic Missiles helped bring the Nothic down. In the chest were malachite gems, a healing potion and Talon, the +1 longsword of Aldith Tresendar,; Francis claimed it. After a long rest in town, where Broc brewed a potion, they went back in. Four bugbears saw through their new-recruit act. Caine smashed the leader Nosk's skull in one blow, but the staircase battle was still raging when we stopped.",
+    "big_moments": [
+      "Ssarnak the Nothic slain",
+      "Francis claims Talon, a legendary +1 longsword",
+      "Caine kills bugbear leader Nosk in one blow"
+    ],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": [
+      {
+        "who": "Ssarnak (Nothic)",
+        "text": "louder in here than you think",
+        "context": "telepathic greeting in the crevasse"
+      }
     ]
   },
   {
@@ -154,7 +301,16 @@
       "Drinking in the Common Room",
       "The Snoring Goblin Revealed",
       "Level Advancement"
-    ]
+    ],
+    "recap": "Last time, the battle on the hideout stairs finally ended. Caine held the front with shield and mace, Francis swung Talon beside him, Levon's axe owned the choke point, and Vexhar, Broc and Craig picked off the wounded until the last bugbears and red-cloaked thugs fell. But Glasstaff was gone, having slipped away while the party rested. In his quarters they found a letter from the Spider mentioning a \"drow arcanist\", which could only mean Vexhar, and that meant someone out there was watching. The party celebrated with the Redbrands' liquor: Francis drank like a champion and felt nothing, while Vexhar tried to keep up and ended up poisoned. Everyone reached Level 3. And at the very end, Francis crept into the southern room to find the source of that snoring: a goblin, tied up and fast asleep.",
+    "big_moments": [
+      "Redbrand hideout cleared; Glasstaff escapes",
+      "Spider's letter reveals someone knows about Vexhar",
+      "Party reaches Level 3"
+    ],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": []
   },
   {
     "number": 12,
@@ -168,7 +324,17 @@
       "Deciding the Next Destination",
       "Owlbear Encounter on the Road",
       "After the Owlbear Fight"
-    ]
+    ],
+    "recap": "Last time, the party freed the snoring prisoner, a goblin named Droop from the Scraptops, a clan of scavengers and tinkerers. Droop told them Glasstaff keeps a little imp, and that the Redbrands and Cragmaw goblins answer to a bigger outfit tied to Cragmaw Castle, somewhere north in the forest. Then he scampered off through the tunnels. With Glasstaff gone and no exact location for the castle, the group weighed their leads and chose to deal with the marauders near Wyvern Tor. On the road, an owlbear guarding two cubs charged them at a narrow bridge. Levon landed a brutal critical with his axe, and Broc's Phantasmal Force sent the beast chasing an illusory hunter, though his wild magic briefly zapped him to the Nine Hells and back. The owlbear fell, and the party stood at the bridge with the cubs hiding in a nearby cave.",
+    "big_moments": [
+      "Owlbear slain on the road to Wyvern Tor"
+    ],
+    "qotd": {
+      "question": null,
+      "answers": []
+    },
+    "recap_duty": null,
+    "quotes": []
   },
   {
     "number": 13,
@@ -180,7 +346,18 @@
       "Crossing the Broken Bridge",
       "Scouting the Cave Entrance",
       "Fight at the Wyvern Tor Cave"
-    ]
+    ],
+    "recap": "Last time, the party left the owlbear cubs in peace and jumped the broken bridge. Broc landed badly and nearly fell into the river, but Francis caught the rope and Levon helped haul him back up. After an hour on the slopes of Wyvern Tor, they found a smoky cave watched by a lone bugbear. The plan was for Craig to sneak into the bushes and throw a rock, but he crushed a bush and the bugbear yelled for help. Out came more bugbears, an ogre and an orc. Vexhar's Shatter hit most of them at once, Broc blasted the ogre, Caine pulled Francis back from unconsciousness, and Francis finished the ogre with Talon. But on the orc's orders, a bugbear dragged Caine into the cave. As Levon charged after them, the orc held a crossbow on Caine, and the party was left with a hostage standoff.",
+    "big_moments": [
+      "Ogre defeated at the Wyvern Tor cave",
+      "Caine taken hostage by the orc and bugbear"
+    ],
+    "qotd": {
+      "question": null,
+      "answers": []
+    },
+    "recap_duty": null,
+    "quotes": []
   },
   {
     "number": 14,
@@ -194,7 +371,16 @@
       "Searching the Wyvern Tor Cave",
       "Magic Items from the Chest",
       "Goblin Ambush Near Old Owl Well"
-    ]
+    ],
+    "recap": "Last time, the party talked their way out of the standoff at Wyvern Tor. The orc and bugbear let Caine go and fled north, but first the orc mentioned a red-robed man with undead at some ruins nearby. Then Caine said goodbye: his monastery still needed rebuilding, so he took his share of the gold and headed back down the trail. Inside the cave, the party found a wall drawing of a goblin with a crystal sticking out of its skull, and Craig opened a locked chest full of loot: a Sylvan Talon Dagger for Broc, a Cloak of the Manta Ray for Craig, Dust of Dryness for Francis, a Candle of the Deep for Levon and a Hat of Wizardry for Vexhar. After Francis javelined the leader of a goblin ambush, they stood only minutes from the ruins.",
+    "big_moments": [
+      "Caine leaves the party to rebuild his monastery",
+      "Chest of magic items looted at Wyvern Tor",
+      "Lead on a red-robed man with undead"
+    ],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": []
   },
   {
     "number": 15,
@@ -208,7 +394,16 @@
       "Cave Entrance and Common Room",
       "Fighting Through the Hideout",
       "Prison Cells Revealed"
-    ]
+    ],
+    "recap": "Last time, the party reached Old Owl Well and zombies came pouring out of the ruined tower. Levon and Choppy dropped one in a single swing and Vexhar's Shatter took out several. Then the red-robed Hamun Kost stepped out and called off his undead. He offered a deal: directions to a goblin cave if the party would seek out Agatha and bring back an answer for him. At the cave, Levon shouted at the goblin lookouts instead of sneaking past, so it was an open fight. Inside, the party held a doorway against wolves and raiders, and Broc vaporized a ballista operator with Chromatic Orb. In the prison they found two captives, Blue and Allyanna, and Allyanna fired Eldritch Blast straight out of her cell. Then a calm man with a staff stepped through an inner door, suggesting they should have stayed in Phandalin. Glasstaff had arrived.",
+    "big_moments": [
+      "Deal struck with the necromancer Hamun Kost",
+      "Blue and Allyanna found imprisoned",
+      "Glasstaff reappears"
+    ],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": []
   },
   {
     "number": 16,
@@ -220,7 +415,17 @@
       "Prison Chamber Showdown",
       "Pressing Glasstaff for Answers",
       "Droop and Craig’s Departure"
-    ]
+    ],
+    "recap": "Last time, Glasstaff finally joined the fight in the prison chamber, and he lost. Levon and Blue both shrugged off his spells. Blue insulted him, then charmed a drow guard into opening a cell. Broc used Mage Hand to grab the keys and freed Allyanna, who jumped straight into the fight. Levon grabbed Glasstaff and wouldn't let go, even after the wizard teleported. Cornered, Glasstaff admitted that Gundren was probably at Cragmaw Castle, northwest of the Triboar Trail in Neverwinter Wood, and with some magical pressure from Vexhar he marked it on a map. He warned that his operation wasn't the heart of the bigger threat. Then the party killed him. In the last cell they found Droop, captured again, and he invited Craig to come home to the Scraptops. Craig thanked everyone and left with Droop, and the party now had directions to Cragmaw Castle.",
+    "big_moments": [
+      "Glasstaff defeated and killed",
+      "Blue and Allyanna freed and join the party",
+      "Craig leaves with Droop to rejoin the Scraptops",
+      "Cragmaw Castle's location revealed"
+    ],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": []
   },
   {
     "number": 17,
@@ -232,7 +437,15 @@
       "Camp Rest and Character Moments",
       "Discussing Agatha and the Next Lead",
       "Preparing Questions and Strategy"
-    ]
+    ],
+    "recap": "Last time, after all the fighting under the hideout, the party finally made camp and took a long rest. It was a quieter night of talking, healing up and getting to know Blue and Allyanna, who settled into the group alongside everyone else. Talk soon turned to the job from Hamun Kost: finding the banshee Agatha. Since they would likely get only a short audience, the party argued over which questions mattered most. Should they ask about Cragmaw Castle, or about something bigger? They also talked about tone and how to avoid wasting the chance, and they agreed to stay careful around a supernatural being. By the end of the night they were rested, on the same page, and armed with a plan. Their next step was to find Agatha and see what she would tell them.",
+    "big_moments": [],
+    "qotd": {
+      "question": null,
+      "answers": []
+    },
+    "recap_duty": null,
+    "quotes": []
   },
   {
     "number": 18,
@@ -245,7 +458,18 @@
       "The Dry Well and Hamun",
       "Choosing Cragmaw Castle",
       "Battle at the Bridge"
-    ]
+    ],
+    "recap": "Last time, the party met the banshee Agatha in Conyberry. Vexhar suggested testing whether she could be ended, and she warned him not to try. Broc offered her the comb and asked about Bojental's spellbook. She said its secrets bored her, so she traded it to Tsarnaev of Erebor over a century ago, and she had no idea where it was now. When Allyanna kept asking for more, Agatha refused and ordered them out, so Hamun Kost's question went unanswered. Back at Old Owl Well, Hamun paid them sixty gold and fifteen silver for clearing the goblin hideout, gave Vexhar a scroll of Darkness, and offered to trade arcane insight for news of the spellbook. The party then hurried toward Cragmaw Castle and ran into hobgoblins at a bridge. The captain dropped Francis, Allyanna healed him, and the fight was still going with Levon toe to toe with the captain.",
+    "big_moments": [
+      "Agatha reveals the spellbook went to Tsarnaev of Erebor",
+      "Hamun pays the party and strikes a new deal"
+    ],
+    "qotd": {
+      "question": null,
+      "answers": []
+    },
+    "recap_duty": null,
+    "quotes": []
   },
   {
     "number": 19,
@@ -259,7 +483,15 @@
       "Approach to Cragmaw Castle",
       "Scouting the Arrow Slits and Phantasmal Force",
       "Combat in the Courtyard: Goblins Through the Arrow Slits"
-    ]
+    ],
+    "recap": "Last time, the party finished the hobgoblins at the bridge. Levon raged his way up a 20-foot cliff to cut one down, and Broc finished the last with Magic Missile, which left him with flaming hands for a minute. He touched the wooden gate, and soon the whole bridge burned to ash. After a short rest, they found Cragmaw Castle late at night and crept up the dark southern path. Vexhar found the big door locked but not trapped. At the arrow slits, Broc spotted four goblins arguing about the dishes. When one saw him, Broc's Phantasmal Force convinced it an ogre was outside, and it started acting like an ogre in front of its friends. Then Vexhar cast Shatter into the dining hall, killing a goblin and smashing the table. The whole castle was now awake, and one goblin had run to fetch someone called Yeag.",
+    "big_moments": [
+      "Hobgoblin captain's squad defeated; bridge burned to ash",
+      "Party reaches Cragmaw Castle"
+    ],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": []
   },
   {
     "number": 20,
@@ -275,7 +507,15 @@
       "Francis Pursues Into the Castle",
       "Levon Takes Heavy Fire and the Corridor Clears",
       "Broc Discovers the Reinforcements"
-    ]
+    ],
+    "recap": "Last time, the party broke into Cragmaw Castle. Allyanna sent Cloud of Daggers blindly through an arrow slit and caught a goblin, and Broc's Chromatic Orb hit one goblin for 27 thunder damage and bounced into a second, which a goblin boss had shoved into its path. When Blue picked the lock, Levon kicked the door open to face five goblins with bows ready, and between them they managed two points of damage. Francis chased Yeg, the goblin who had hurt him, into a hall leading to an old shrine, and Blue finished another goblin by insulting its mother. The banquet hall was cleared, though Levon took an arrow to the chest. Then Broc ran ahead into the north corridor and found the goblin still convinced there was an ogre, with a line of hobgoblins and goblin bosses behind it. Broc slammed the door shut as the next fight began.",
+    "big_moments": [
+      "Cragmaw Castle breached and banquet hall cleared",
+      "Hobgoblin and goblin boss reinforcements discovered"
+    ],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": []
   },
   {
     "number": 21,
@@ -289,6 +529,19 @@
       "Looting the Storage Room and the Shrine",
       "Short Rest in the Southwest Tower",
       "Combat: Hobgoblin Patrol in the Corridor"
+    ],
+    "recap": "Last time, deep in Cragmaw Castle, Francis was locked in a brawl with a wounded Grick when a goblin boss burst in with reinforcements. Francis tried to pass the party off as drink deliverers, which did not fool anyone, but Broc's Magic Missile sparked a Wild Magic surge that turned Francis, Levon and Allyanna invisible. Vexhar then blasted the Grick apart with a 44-damage critical Chromatic Orb, and Allyanna finished the last goblin. Afterward, Levon picked through a storeroom, Francis found a blood-soaked altar in a shrine, and Vexhar eyed a fresh corpse a little too fondly. The party ducked into the southwest tower for a short rest, but a goblin whispered \"they're in there\" and a hobgoblin patrol struck. Two brutal critical hits later, Francis was down to a single hit point, Allyanna lay unconscious from a poisoned arrow, and the hobgoblins were still coming.",
+    "big_moments": [
+      "Hobgoblin crits leave Francis at 1 HP and Allyanna unconscious"
+    ],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": [
+      {
+        "who": "Goblin",
+        "text": "they're in there",
+        "context": "whispered report outside the tower during the short rest"
+      }
     ]
   },
   {
@@ -307,6 +560,26 @@
       "Negotiating with King Grol",
       "King Grol's Chamber and the Deal's Collapse",
       "Combat in King Grol's Chamber"
+    ],
+    "recap": "Last time, the hobgoblin fight nearly broke the party. Broc's Mage Hand floated a healing potion to Allyanna, Francis cast Bane, and Blue faked a door with an illusion, but Allyanna went down again and Blue dropped to a 33-damage critical hit. Levon cut that hobgoblin down, and a battered Francis finished the last one, leaving his sword stuck in the body. Once Blue was patched up, she told Broc and Vexhar to go to hell. After a rest behind a barricade, Levon heard King Grol behind a north door. Broc, posing as an agent of the Black Spider, nearly bought Gundren back for 750 gold and a bracelet, until Vexhar fired a Spellfire Flare at Grol. Blue then mocked King Grol to death! Gundren lay unconscious on the floor, a direwolf was about to lunge, and a gray-skinned elvish woman watched from the wall.",
+    "big_moments": [
+      "Blue kills King Grol with Vicious Mockery",
+      "Gundren Rockseeker found alive in Grol's chamber",
+      "Blue dropped unconscious by a hobgoblin crit"
+    ],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": [
+      {
+        "who": "Vexhar",
+        "text": "murder",
+        "context": "shouted into the corridor while Levon listened at the door"
+      },
+      {
+        "who": "Gray-skinned elvish woman",
+        "text": "So much for negotiation.",
+        "context": "after Vexhar's Spellfire Flare broke the deal"
+      }
     ]
   },
   {
@@ -323,7 +596,16 @@
       "Return to Phandalin and Restocking",
       "Sister Garaele and the Shrine of Luck",
       "Reunion at the Townmaster's Hall"
-    ]
+    ],
+    "recap": "Last time, the party finished off King Grol's direwolf, Snarl, and Francis pinned the gray-skinned elvish woman before she could escape. She admitted she worked for the Spider and had business with Grol involving Gundren, but she wouldn't say more. Broc argued for mercy, and the party let her go. Levon found only about 10 gold on Grol's body, and Allyanna spent her last spell slot to wake Gundren, who confirmed that Iarno Albrek was the traitor Glasstaff. After a night's rest outside the castle, everyone reached level four! Back in Phandalin, Elmina greeted Gundren, the party sold loot for 175 gold, and Sister Garaele gave them three healing potions for news of Bowgentle's spellbook. At the townmaster's hall, Gundren and Sildar were reunited, but when Sildar asked about Gundren's brothers, Gundren admitted he didn't know what had happened to them.",
+    "big_moments": [
+      "Gundren Rockseeker rescued from Cragmaw Castle",
+      "Party reaches level 4",
+      "Gundren confirms Iarno Albrek was Glasstaff"
+    ],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": []
   },
   {
     "number": 24,
@@ -337,7 +619,16 @@
       "Phandalin Pays Its Debts",
       "Bargaining with Lenine at the Coster",
       "A Boisterous Night at the Stonehill Inn"
-    ]
+    ],
+    "recap": "Last time, Gundren finally explained what he was after: Wave Echo Cave, a lost dwarven and gnomish mine said to hold the Forge of Spells. He offered the party a 10% share of the mine's profits to help him find his missing brothers there. Francis and Broc broke the news to Sildar that Iarno was Glasstaff, and Sildar grieved over Iarno's silk pouch. Harbin paid the town's bounties, Sildar added 200 gold, and the party's purse climbed to 1,830 gold. Over at the Lion's Shield Coster, Francis talked Lenine into a standing 10% discount, then bought a +1 shield while Broc picked up a net. That night at the Stonehill Inn, Broc's drinking game ended with Vexhar climbing into a dirty bathing tub he thought was a hot tub, and Levon and Blue carried him to bed. The plan was to leave for Wave Echo Cave at first light.",
+    "big_moments": [
+      "Gundren reveals Wave Echo Cave and the Forge of Spells",
+      "Party offered a 10% share of the mine's profits",
+      "Bounties paid out; party reaches 1,830 gold"
+    ],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": []
   },
   {
     "number": 25,
@@ -353,7 +644,15 @@
       "Signs at the Cave Entrance",
       "Entering Wave Echo Cave",
       "Tharden's Body and Gundren's Grief"
-    ]
+    ],
+    "recap": "Last time, the party spent their last night in Phandalin training and taking on odd jobs. Most of it went nowhere, except Allyanna's lemon juggling, which earned seven gold. Vexhar and Levon visited the crypt under Tresendar Manor and found sealed letters, and Vexhar left a signet ring behind out of respect. At breakfast, Toblin asked what the company called itself, and Broc's suggestion, \"Broc and the Brocettes,\" got plenty of pushback. Gundren then led them about fifteen miles east into the Sword Mountains to the hidden mouth of Wave Echo Cave. Fresh boot prints, a smashed tree and recently moved stones showed that someone had been there, and Broc heard a strange dragging sound and a metallic clink deeper inside. Lit by Levon's glowing belt cheese, the party found an abandoned campsite, where Gundren discovered the body of his brother Tharden. Nundro was still missing somewhere in the cave.",
+    "big_moments": [
+      "Party reaches Wave Echo Cave",
+      "Gundren's brother Tharden found dead"
+    ],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": []
   },
   {
     "number": 26,
@@ -368,7 +667,15 @@
       "Stirge Swarm in the Miners' Cavern",
       "Two Doors and a Wrecked Barracks",
       "Undead Guardroom Ambush"
-    ]
+    ],
+    "recap": "Last time, the party climbed down a twenty-foot pit using rope and two ladders, with Gundren right behind them. At the bottom they found a strange dead goblin with an elongated skull and green-streaked skin. Heading east, they came into a miners' cavern full of skeletons, where six stirges dropped from the ceiling. Levon's lightning fried several of them the moment they latched on, which made him a living bug zapper. South of there, Levon pushed open a stone door, and eight corpses, two of them ogres, rose as zombies. Broc enlarged Levon, who hit one ogre zombie for 55 damage and another for 35, but Undead Fortitude kept them standing. Allyanna revealed a greatsword and took a dwarf zombie's head off, and Gundren shouted to pull zombies away from the wounded. Then the last ogre zombie landed a critical hit that knocked Francis unconscious.",
+    "big_moments": [
+      "Francis knocked unconscious by an ogre zombie's crit",
+      "Allyanna reveals her Pact of the Blade greatsword"
+    ],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": []
   },
   {
     "number": 27,
@@ -384,6 +691,27 @@
       "Blue's Flashback: Escape from the Coral Court",
       "Levon's Flashback: Mending the Fence",
       "Guardroom Ogre Zombies Finished Off"
+    ],
+    "recap": "Last time, before the guardroom fight resumed, each hero relived a memory from their past. Francis remembered staying with his squad after Captain Varron Maelor abandoned them. Allyanna recalled the night Solas, a herald of Lathander, turned one of her fake blessings into real magic. Vexhar remembered a forbidden ritual and the voice that answered it. Broc relived an opera triumph and a cloaked patron's warning. Blue remembered escaping Lintri's Coral Court, and Levon remembered mending a fence while his father Alvin told him he'd \"be fine.\" Each of them came away with a one-time Flashback Reroll. Back in the fight, Broc's Wild Magic briefly turned him into a potted plant, Blue's Healing Word got Francis back up, and Levon took the ogre zombie's head off. Vexhar's Chromatic Orb finished the last zombie, and the party stood together in the quiet guardroom.",
+    "big_moments": [
+      "Every hero relives a flashback and gains a Flashback Reroll",
+      "Guardroom undead cleared; Francis survives"
+    ],
+    "qotd": {
+      "question": null,
+      "answers": []
+    },
+    "recap_duty": {
+      "by": "Vexhar",
+      "how": "won a dice roll-off against Francis",
+      "inspiration": null
+    },
+    "quotes": [
+      {
+        "who": "Alvin",
+        "text": "be fine",
+        "context": "to Levon after he mended the fence, in the flashback"
+      }
     ]
   },
   {
@@ -402,7 +730,21 @@
       "Ghoul Ambush in the Old Barracks",
       "Tracking Drag Marks Through the Mining Tunnels",
       "Ochre Jelly Splits Apart in the Tunnels"
-    ]
+    ],
+    "recap": "Last time, Gundren gave the party Tharden's cloak. It turned out to be a Cloak of Protection, and Levon attuned to it during a short rest. Vexhar picked open a strongbox holding copper, silver, electrum and 60 gold. Burning a patch of glowing fungus seemed like a good idea until the puffballs burst into a choking green spore cloud and everyone ran. Behind a half-open door, Levon worried that \"Sloppy Joe\" was being eaten, and three ghouls noticed the party chatting outside. Vexhar's bouncing Chromatic Orb bloodied all three, and the party cut them down. Following drag marks into low mining tunnels, they were ambushed by an ochre jelly that split into smaller oozes every time it was hit. Blue took acid damage, Vexhar cast Shield for the first time, and two small fragments of jelly were still oozing toward the party.",
+    "big_moments": [
+      "Tharden's Cloak of Protection given to Levon"
+    ],
+    "qotd": {
+      "question": "How organized is your character?",
+      "answers": []
+    },
+    "recap_duty": {
+      "by": "Francis",
+      "how": "won a dice roll-off against Blue",
+      "inspiration": "Francis"
+    },
+    "quotes": []
   },
   {
     "number": 29,
@@ -418,6 +760,26 @@
       "Recovering the Rings and the Wand",
       "Listening at the Goblin Door",
       "Ambush on the Bugbear Den"
+    ],
+    "recap": "Last time, Levon worked out that the jelly needed a whack from the flat of Choppy, and Broc's frost and Francis's flat-bladed swing finished off the last fragments. Following drag marks, the party reached a black, mussel-lined pool, and their mage hands pulled three jeweled gold rings and a Wand of Magic Missiles off a sunken skeleton. That woke a giant snake, but Blue's illusory brown bear scared it underwater, and Broc convinced everyone to let it be. Up some stone stairs, Broc overheard bugbears arguing in Goblin about food. With the new wand in Levon's hands, the party burst in on six of them, but a bugbear slammed the door, trapping Francis and Levon inside. Two bugbears fell, and Blue's Sleep knocked out the captain. Three bugbears were still standing, and the last one awake was trying to shake his boss awake.",
+    "big_moments": [
+      "Recovered a Wand of Magic Missiles and three jeweled rings"
+    ],
+    "qotd": {
+      "question": null,
+      "answers": []
+    },
+    "recap_duty": {
+      "by": "Broc",
+      "how": "won a dice roll-off against Blue, who rolled a natural 1",
+      "inspiration": "Broc"
+    },
+    "quotes": [
+      {
+        "who": "Bugbear captain",
+        "text": "kill them",
+        "context": "as the party burst into the bugbear den"
+      }
     ]
   },
   {
@@ -433,7 +795,16 @@
       "Scouting the Northern Corridor",
       "Discovering the Drow's Camp",
       "The Ruined Forge and the Green Skull"
-    ]
+    ],
+    "recap": "Last time, the party finished the bugbears, though one grabbed Broc as a hostage until Broc blasted his way free with a point-blank Sorcerer's Burst. The tied-up captain revealed that a drow called the Spider, real name Nezznar, had hired his band and left them starving. Francis and Blue sent him off to protect a goblin commune, with Craig as his reference, and Blue faked a tracking spell to keep him honest. Before leaving, he warned that what lay behind the barricaded door was worse than the Spider. Then a familiar voice spoke in Vexhar's mind, his hand-sigil flared, and a dead bugbear rose as his zombie servant. Francis called it Vexhar's boyfriend. The zombie scouted ahead and found the Spider himself camped with two bugbears, but the worn-out party backed away. Behind the barricade was a ruined dwarven forge, and above it floated a skull wreathed in green flame.",
+    "big_moments": [
+      "The Spider identified as Nezznar, a drow, and spotted",
+      "Vexhar raises a bugbear zombie and turns to necromancy",
+      "Bugbear captain spared and sent to guard the goblin commune"
+    ],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": []
   },
   {
     "number": 31,
@@ -452,7 +823,19 @@
       "Retreat and Long Rest Outside the Cave",
       "Downtime and Watches at Camp",
       "Levon's Carved Sapling and Choppy's Upgrade"
-    ]
+    ],
+    "recap": "Last time, deep in Wave Echo Cave, the party crept past a floating green flameskull and took the stairs down into a cavern full of bones. The bones didn't stay still. Five ghouls lunged out of the rubble and dropped Francis before a natural-20 Eldritch Blast from Allyanna shattered the last one. Then more zombies rose, and the flameskull came for them, hurling a fireball and a rolling sphere of flame down the stairs. Broc's Witch Bolt latched on, Levon cracked its concentration with the Wand of Magic Missiles, and Allyanna blasted it apart. On Vexhar's advice they doused its remains in holy water so it couldn't come back. Gundren said the Forge of Spells lay deeper in, but finding Nundro came first. Battered, the party retreated to camp near Phandalin. On watch, Levon carved a strange little wooden tree, and afterward Choppy had become a warm +1 greataxe.",
+    "big_moments": [
+      "Flameskull destroyed and purified with holy water",
+      "Levon's greataxe Choppy becomes a +1 weapon"
+    ],
+    "qotd": null,
+    "recap_duty": {
+      "by": "Chris",
+      "how": null,
+      "inspiration": null
+    },
+    "quotes": []
   },
   {
     "number": 32,
@@ -468,7 +851,16 @@
       "Nezznar Singles Out Vexhar",
       "Battle With Nezznar the Spider",
       "Nundro Breaks Free"
-    ]
+    ],
+    "recap": "Last time, the party marched back into Wave Echo Cave at dawn with Gundren to take down Nezznar the Spider and save Nundro. They found the stretched-out goblin corpse in the pit still refusing to rot. In a pillared hall beneath a great emerald-eyed dwarf statue, Nezznar waited with two bugbears and a spider-topped staff. He threatened to kill Nundro, then dropped a bombshell: his people had flagged Vexhar long before the party arrived. Broc angrily shoved Vexhar out the door, Francis staged a shouting match, and Nezznar saw right through it and cast Web. What followed was chaos: Broc burned the webs away, Francis made the drow grovel, and Nezznar fled into darkness and invisibility. Francis grabbed him in a full nelson, and Allyanna finished him with Eldritch Blast. Then a battered dwarf came running, chased by bugbears. Gundren knew him at once: Nundro.",
+    "big_moments": [
+      "Nezznar the Spider killed",
+      "Nundro escapes and is reunited with Gundren",
+      "Nezznar reveals his operation had flagged Vexhar"
+    ],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": []
   },
   {
     "number": 33,
@@ -487,6 +879,27 @@
       "Doors of Green Light",
       "Guardian of the Forge",
       "The Burned Quarters"
+    ],
+    "recap": "Last time, Gundren walked his rescued brother back to the cave entrance, while the party looted Nezznar: a spider staff, a healing potion, gems, and an anvil-headed iron key. Blue used the key on the locked door, and behind it lay a second Nundro, bound and beaten. The party raced to the entrance, but the first Nundro had slipped outside and vanished, leaving only footprints. Back in the temple, the prisoner answered Gundren's test with their mother's nickname, Petunia, and the true Rockseeker brothers were reunited. Vexhar raised Nezznar as his new zombie. Then Levon and Francis broke open a hidden hatch, and the party followed a green glow to the Forge of Spells, guarded by a spectator that demanded credentials. Hunting for those credentials, they forced their way into a burned room, where a shadowy spirit rose and whispered into their minds: you'll leave something behind when you go.",
+    "big_moments": [
+      "The first Nundro was an impostor; the real Nundro freed",
+      "Forge of Spells found, guarded by a spectator",
+      "Vexhar raises Nezznar as his zombie",
+      "Party reaches 5th level"
+    ],
+    "qotd": null,
+    "recap_duty": null,
+    "quotes": [
+      {
+        "who": "Broc",
+        "text": "who are you?",
+        "context": "Message cast along the impostor's footprints"
+      },
+      {
+        "who": "Shadowy spirit",
+        "text": "Still warm. I'd forgotten what that looked like. You'll leave something behind when you go. They always do.",
+        "context": "Rising in the burned quarters"
+      }
     ]
   },
   {
@@ -504,6 +917,29 @@
       "Shield of Tyr and Gundren's Trust",
       "Vexhar Stays Behind",
       "Return to Phandalin"
+    ],
+    "recap": "Last time, the shadowy figure in the burned room turned out to be Mormesk, a wizard turned wraith. A lucky roll gave the party a free round, and they made it count: Broc's Witch Bolt and fiery Sorcerous Burst, Allyanna's double Eldritch Blasts, and one life-draining touch on Francis later, Levon finished Mormesk with Choppy. His last word was \"Finally.\" His chest held coins, gems, and a platinum-trimmed pipe for Francis. Behind a boarded door, Broc found the spectator's contract with Halvard Price: 101 years, signed in 1385, long expired. The spectator read it, declared itself free, and vanished. The party tested the Forge, and Broc's dagger came out glowing green as a temporary +1 blade. Francis found a +1 Shield of Tyr. Then Vexhar asked to stay behind and study the forge. With a warning not to put a body in it, the others carried Tharden home to Phandalin.",
+    "big_moments": [
+      "Wraith Mormesk destroyed",
+      "Spectator's expired contract frees it from the Forge",
+      "Francis finds a +1 Shield of Tyr",
+      "Forge of Spells tested: it temporarily enchants weapons"
+    ],
+    "qotd": {
+      "question": null,
+      "answers": []
+    },
+    "recap_duty": {
+      "by": "Levon",
+      "how": "Rolled lowest on the inspiration roll",
+      "inspiration": "Levon"
+    },
+    "quotes": [
+      {
+        "who": "Mormesk",
+        "text": "Finally",
+        "context": "Dissolving into smoke and ash"
+      }
     ]
   },
   {
@@ -525,6 +961,29 @@
       "Night’s End and Downtime",
       "Breakfast and the Apple Picking Vote",
       "Apple Picking at Daran’s Orchard"
+    ],
+    "recap": "Last time, Vexhar studied the Forge of Spells and learned it runs at only a quarter of its power, then found a ledger of lent and sealed items bearing Halvard Price's name. Four zombies and a ghoul crashed the party, tore apart his Nezznar zombie, and sent Vexhar fleeing through the darkness. In Phandalin, Sister Garaele took in Tharden's body for the night, and the Stonehill Inn went quiet when the heroes walked in. Drinks were free, Levon spilled his whole cider on Francis, Broc winked at a woman who turned out to be Toblen's wife, and a dusty Vexhar arrived with news of the zombies. Broc floated making Tresendar Manor their bastion, and Blue charmed Francis into bed. Next morning, to keep Harbin waiting longer, they went apple picking at Daran's orchard. Francis tore a tree out of the ground, and they walked back with six full baskets.",
+    "big_moments": [],
+    "qotd": {
+      "question": "Spicy food",
+      "answers": []
+    },
+    "recap_duty": {
+      "by": "Paul",
+      "how": "The DM gave it himself because the session followed the close of a chapter",
+      "inspiration": null
+    },
+    "quotes": [
+      {
+        "who": "Allyanna",
+        "text": "apples, apples, apples",
+        "context": "Cheering during apple picking"
+      },
+      {
+        "who": "Harbin's boy",
+        "text": "no rush",
+        "context": "Message relayed by Toblen at breakfast"
+      }
     ]
   },
   {
@@ -540,7 +999,22 @@
       "Descending into the Drains",
       "Combat: Rat Swarms in the Drains",
       "Exploring Damaged Pipes and the Flooded Chamber"
-    ]
+    ],
+    "recap": "Last time, the party dropped five baskets of apples at the Stonehill Inn, ordering pie and danishes in return, while Levon stashed his own basket in the sun to rot. At the Townmaster's Hall they told Sildar, Gundren, and Harbin everything about Wave Echo Cave. Then came the rewards: Harbin handed over the deed to Tresendar Manor, restoration already paid for, and Gundren promised them ten percent of everything the cave earns. Contractor Torra Ironwell toured the manor, took 150 gold for personalized rooms, then found a foul, dripping pipe and sent them into the drains. Down there, four swarms of rats burst out, and the party cut, blasted, and tolled them apart. They followed crushed pipes and a pale, freshly shed slime to a flooded chamber with a pool more than twenty feet deep. Then a voice spoke inside their minds, asking why they had come.",
+    "big_moments": [
+      "The party receives the deed to Tresendar Manor",
+      "Gundren promises 10% of Wave Echo Cave's profits"
+    ],
+    "qotd": {
+      "question": null,
+      "answers": []
+    },
+    "recap_duty": {
+      "by": "Broc",
+      "how": "Won the roll",
+      "inspiration": null
+    },
+    "quotes": []
   },
   {
     "number": 37,
@@ -557,7 +1031,23 @@
       "Sister Garaele Samples the Ichor",
       "Healing and Curse Removal Attempts Fail",
       "The Festival Arrives at Dusk"
-    ]
+    ],
+    "recap": "Last time, the voice beneath Tresendar Manor belonged to an aboleth, and it was not interested in plumbing. It ordered the party to serve it or learn how fragile they were. Broc even offered it the manor's basement river as a new home, but once Vexhar named the creature, Broc told it the pond was too shallow and brought the ceiling down on it with Shatter. The aboleth fought back hard, dragging Allyanna and Broc into reach and searing Francis's mind. Then Francis, still grappled, landed a critical hit with a doubled Divine Smite for 55 damage, and Allyanna finished it with her greatsword. Its last warning: what was broken will be remembered elsewhere. Blue dug a magical, humming pan flute out of the wreckage. But slimy ichor clung to Francis, blocking ordinary healing and rest. Sister Garaele took a sample, and as dusk fell, festival wagons rolled into Phandalin.",
+    "big_moments": [
+      "Aboleth beneath Tresendar Manor slain",
+      "Francis afflicted by the aboleth's ichor",
+      "Blue finds a magical pan flute"
+    ],
+    "qotd": {
+      "question": null,
+      "answers": []
+    },
+    "recap_duty": {
+      "by": "Blue",
+      "how": "The only one without inspiration, offered it in exchange for a recap",
+      "inspiration": "Blue"
+    },
+    "quotes": []
   },
   {
     "number": 38,
@@ -577,7 +1067,24 @@
       "Cooking Contest and Toblen’s Verdict",
       "Goat Bolts From the Mine Road",
       "Archery Contest Against Phelan the Red"
-    ]
+    ],
+    "recap": "Last time, the party laid Tharden Rockseeker to rest in the rain, beneath a grave marker Levon carved, which Gundren chose to keep. Three days passed. Blue attuned to her find: the Drowned Pan Flute, full of spells and always humming. Francis was not so lucky, waking at night to bursts of acid pain. Then Sister Garaele brought a scroll of Remove Curse and a secret: she is a Harper, and the Harpers want to meet Francis. Rather than end his suffering right away, Francis handed the scroll to Vexhar to copy into his spellbook. Then the festival opened! Madame Vane read their cards and pocketed most of their tickets, Levon somehow won the cooking contest, and Broc tied Phelan the Red at archery. Along the way, Francis took acid damage in front of Harbin, and a ribboned goat stared at the old mine road, shrieked, and bolted.",
+    "big_moments": [
+      "Sister Garaele reveals she is a Harper",
+      "Party receives a scroll of Remove Curse",
+      "Blue attunes to the Drowned Pan Flute",
+      "Tharden Rockseeker laid to rest"
+    ],
+    "qotd": {
+      "question": null,
+      "answers": []
+    },
+    "recap_duty": {
+      "by": "Paul",
+      "how": null,
+      "inspiration": null
+    },
+    "quotes": []
   },
   {
     "number": 39,
@@ -594,7 +1101,19 @@
       "Francis Discovers Mud Eases the Itching",
       "Novelty Tent Spending Spree",
       "Festival Awards and Closing Fireworks"
-    ]
+    ],
+    "recap": "Last time, the festival rolled on. On the carousel, Francis, Levon, and Blue snagged the gold ring while Allyanna and Broc tumbled into the hay. Blue spotted a humming dwarven woman with sigils on her arms who vanished from her crate, and told no one. At Fenwick's cups, Levon, Blue, and Francis came out ahead. Then came tug of war against Big Hollis's undefeated crew. Broc's Enlarge and a wild surge left him glowing blindingly bright, but Phandalin took the final pull. Afterward, Francis discovered that mud on his skin stops the curse's itching, so he wrapped himself in muddy bandages, manure and all. Prizes were bought, and Harbin handed out awards, naming Levon champion of the festival. The night ended with paper lanterns and fireworks, but one lantern turned against the breeze over the Old Mine Road and winked out.",
+    "big_moments": [
+      "Levon named champion of the festival",
+      "Francis learns mud eases his curse's itching"
+    ],
+    "qotd": null,
+    "recap_duty": {
+      "by": "Paul",
+      "how": null,
+      "inspiration": null
+    },
+    "quotes": []
   },
   {
     "number": 40,
@@ -618,6 +1137,23 @@
       "Bucket Brigade Contains the Fire",
       "The Bell Rings and a Voice Calls",
       "Allyanna Meets Solas"
-    ]
+    ],
+    "recap": "Last time, Caine came home. On the road, he found a ruined village with a black stone in a crater, healed a grieving woman named Nell Harrow, and saw his old friends reflected in a blessed puddle. He walked into the Stonehill Inn, asked to rejoin, and Broc said the empty chair was filled. Caine cast Remove Curse, and Francis's ichor crumbled to dust. A bell rang. Phandalin was burning under a red sky, the innkeepers were gone, and faceless soot figures walked in from the north. The party saved everyone they could: Levon chopped open the Sleeping Giant's door, Francis pulled children from Alderleaf Farm, and Blue started a bucket brigade. Then the bell rang again, everything froze, and a voice spoke their names. White light swallowed them. Allyanna met her patron Solas, who warned her of something wicked underground, and she woke to morning light, Phandalin untouched.",
+    "big_moments": [
+      "Caine returns and rejoins the party",
+      "Caine lifts Francis's curse with Remove Curse",
+      "Phandalin burns in a shared vision",
+      "Allyanna meets her patron Solas"
+    ],
+    "qotd": {
+      "question": null,
+      "answers": []
+    },
+    "recap_duty": {
+      "by": "Levon",
+      "how": "Levon started the recap and Paul finished it",
+      "inspiration": null
+    },
+    "quotes": []
   }
 ]
