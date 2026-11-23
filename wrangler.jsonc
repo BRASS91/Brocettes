@@ -1,0 +1,14 @@
+// Turns the static site into a Worker that also answers /api/theories (see docs/theory-board.md).
+{
+  "name": "brocettes",
+  "main": "worker/index.js",
+  "compatibility_date": "2025-11-01",
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  "kv_namespaces": [
+    { "binding": "THEORIES", "id": "5db480ba370a4b3abd4fcca062964eb2" }
+  ]
+}

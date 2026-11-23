@@ -21,7 +21,8 @@ session notes our bot writes to Google Docs.
 
 ## Deploying
 Cloudflare Workers is connected to this repo and redeploys the live site on every push to
-**`claude/dnd-campaign-companion-sca7i1`**.
+**`claude/dnd-campaign-companion-sca7i1`**. `wrangler.jsonc` serves the repo as static assets
+plus a small Worker (`worker/index.js`) for the shared theory board's `/api/theories`.
 
 ## Running it locally
 ```
