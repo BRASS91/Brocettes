@@ -69,7 +69,7 @@
   function close(restore = true) {
     if (sheet.hidden) return;
     sheet.classList.remove("open"); document.body.classList.remove("sheet-open");
-    timer = setTimeout(() => { sheet.hidden = true; resetSheet(); }, matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 260);
+    timer = setTimeout(() => { sheet.hidden = true; resetSheet(); }, (B.reducedMotion ? B.reducedMotion() : matchMedia("(prefers-reduced-motion: reduce)").matches) ? 0 : 260);
     if (restore) fab?.focus({ preventScroll: true });
   }
   const resetSheet = () => { if (sheet.querySelector(".fb-thanks")) sheet.querySelector(".fb-body").innerHTML = formHTML("fbs"); };

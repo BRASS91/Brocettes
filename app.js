@@ -365,7 +365,7 @@
     if (sheet.hidden) return;
     sheet.classList.remove("open");
     document.body.classList.remove("sheet-open");
-    sheetTimer = setTimeout(() => { sheet.hidden = true; }, matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 260);
+    sheetTimer = setTimeout(() => { sheet.hidden = true; }, (B.reducedMotion ? B.reducedMotion() : matchMedia("(prefers-reduced-motion: reduce)").matches) ? 0 : 260);
     if (restoreFocus) fab.focus({ preventScroll: true });
   }
   fab.addEventListener("click", () => openSearch());
@@ -487,7 +487,7 @@
     const list = (arr, who) => arr.map((x) => `<div class="card"><div class="between"><b>${esc(x.text)}</b><span>${sess(x.sessions)}</span></div>${x[who] ? `<span class="sub">${link(x[who])}</span>` : ""}</div>`).join("");
     return `<h1>The Party</h1>
       <span class="sub" style="margin-top:-10px">Level ${esc(L.level.value)} · ${esc(L.in_game_date.value)}</span>
-      <div class="party small">${pcs.map(pcLink).join("")}</div>
+      <div class="party small tab">${pcs.map(pcLink).join("")}</div>
       ${gone.length ? `<p class="sub">Former companions: ${gone.map((c) => link(c.id)).join(", ")}</p>` : ""}
       ${section("Owed to us", allPromises().filter((p) => p.dir === "owed to us").sort(byAge).map(promiseCard).join(""))}
       ${section("We owe", allPromises().filter((p) => p.dir === "we owe").sort(byAge).map(promiseCard).join(""))}
@@ -620,7 +620,7 @@
   // On a party member's page, swiping left/right (or the arrow keys, or the links at the
   // bottom) flips to the next/previous active character with a sliding-card animation.
   const cast = () => D.characters.filter((c) => c.status === "active");
-  const still = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const still = () => (B.reducedMotion ? B.reducedMotion() : matchMedia("(prefers-reduced-motion: reduce)").matches);
   let slideFrom = 0; // set before navigating: +1 = next page slides in from the right, -1 = from the left
   function neighbours(id) {
     const c = cast(), i = c.findIndex((x) => x.id === id);
