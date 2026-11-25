@@ -26,5 +26,7 @@
   { "id": "lore-gods", "topic": "Gods mentioned", "category": "religion",
     "text": "Lathander (Solas is his herald, and his statue stands in Cragmaw's shrine), Tyr (Francis's shield), the Earth Mother/Chauntea (Caine, through the Silver Needle sect), Mishakal (Broc's father), and Yggdrasil, the World Tree (its spirit lives in Levon).", "confidence": "confirmed", "sessions": [0, 3, 8, 10, 21, 27, 34, 40] },
   { "id": "lore-solas-warning", "topic": "Solas's warning", "category": "religion",
-    "text": "Solas's light is thin in the places the party is going. Something wicked lies under the ground and inside some people, and a listener has been listening to Phandalin for a long time.", "confidence": "claimed", "claimed_by": "Solas", "sessions": [40] }
+    "text": "Solas's light is thin in the places the party is going. Something wicked lies under the ground and inside some people, and a listener has been listening to Phandalin for a long time.", "confidence": "claimed", "claimed_by": "Solas", "sessions": [40] },
+  { "id": "lore-deck-of-many-things", "topic": "The Deck of Many Things", "category": "magic",
+    "text": "A legendary deck of cards. Senna Goodmeasure has hunted for one for 30 or 40 years. Vexhar has heard of it only in passing.", "confidence": "confirmed", "sessions": [41] }
 ]

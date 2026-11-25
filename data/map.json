@@ -28,6 +28,7 @@
     "old-mine-road": [905, 110],
     "edermath-orchard": [222, 292],
     "alderleaf-farm": [372, 128],
-    "tostig-farm": { "at": [110, 610], "approx": true }
+    "tostig-farm": { "at": [110, 610], "approx": true },
+    "town-green": { "at": [505, 285], "approx": true }
   }
 }

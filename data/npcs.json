@@ -53,9 +53,11 @@
       { "text": "Delivered a scroll of Remove Curse for Francis.", "confidence": "confirmed", "sessions": [38] },
       { "text": "Lit the paper lanterns released at the festival's close.", "confidence": "confirmed", "sessions": [39] },
       { "text": "The party has a meeting with her the day after the festival. Caine asked how she was doing.", "confidence": "confirmed", "sessions": [40] },
-      { "text": "Stood in the town square watching the party when the bell rang a second time in the vision of Phandalin burning.", "confidence": "confirmed", "sessions": [40] }
+      { "text": "Stood in the town square watching the party when the bell rang a second time in the vision of Phandalin burning.", "confidence": "confirmed", "sessions": [40] },
+      { "text": "Wasn't at the Shrine of Luck when the party came to meet her. Paul said no day or time was ever set for the meeting, so the party went to find her at her home.", "confidence": "confirmed", "sessions": [41] },
+      { "text": "Elmina has items in stock for her at Barthen's Provisions and asked Caine to pass that on.", "confidence": "confirmed", "sessions": [41] }
     ],
-    "first_session": 6, "last_session": 40
+    "first_session": 6, "last_session": 41
   },
   {
     "id": "harbin-wester", "name": "Harbin Wester", "aliases": [],
@@ -78,20 +80,23 @@
       { "text": "Comps the party's drinks and asks them to keep magic in the inn to a minimum.", "confidence": "confirmed", "sessions": [35] },
       { "text": "Judged the festival cooking contest and will serve Levon's winning dish at the inn.", "confidence": "confirmed", "sessions": [38] },
       { "text": "Gave Francis a room on the condition that he keep the mud on, and brought out Trilena's apple desserts.", "confidence": "confirmed", "sessions": [40] },
-      { "text": "Stood in the town square watching the party when the bell rang a second time in the vision of Phandalin burning.", "confidence": "confirmed", "sessions": [40] }
+      { "text": "Stood in the town square watching the party when the bell rang a second time in the vision of Phandalin burning.", "confidence": "confirmed", "sessions": [40] },
+      { "text": "Saw nothing wrong in the inn and was confused by talk of the shared dream.", "confidence": "confirmed", "sessions": [41] },
+      { "text": "Told the party a traveling merchant had set up at the town green, brought out a miners' cleaning spirit for the soot, and put everything on the house for the day after Broc said the party wants to make Phandalin home. He asked them to keep whatever they were doing outside.", "confidence": "confirmed", "sessions": [41] }
     ],
-    "first_session": 6, "last_session": 40
+    "first_session": 6, "last_session": 41
   },
   {
-    "id": "trilena-stonehill", "name": "Trilena Stonehill", "aliases": ["Trelenna", "Toblen's wife"],
-    "role": "Toblen's wife", "status": "alive", "attitude": "neutral", "location": "stonehill-inn", "factions": ["phandalin-folk"],
+    "id": "trilena-stonehill", "name": "Trilena Stonehill", "aliases": ["Trelenna", "Trelana", "Toblen's wife"],
+    "role": "Toblen's wife", "status": "alive", "attitude": "friendly", "location": "stonehill-inn", "factions": ["phandalin-folk"],
     "facts": [
       { "text": "Saw Redbrands kill a man in the street.", "confidence": "claimed", "claimed_by": "Trilena", "sessions": [6, 7] },
       { "text": "Was offended when Broc winked at her. Broc's sparking magic sent her back to her seat at the cooking contest.", "confidence": "confirmed", "sessions": [35, 37, 38] },
       { "text": "Baked apple desserts from the Edermath Orchard apples, including a small, shriveled turnover made just for Broc, then ducked back into the kitchen when people looked for her.", "confidence": "confirmed", "sessions": [40] },
-      { "text": "Stood in the town square watching the party when the bell rang a second time in the vision of Phandalin burning.", "confidence": "confirmed", "sessions": [40] }
+      { "text": "Stood in the town square watching the party when the bell rang a second time in the vision of Phandalin burning.", "confidence": "confirmed", "sessions": [40] },
+      { "text": "Accepted Broc's apology, said Toblen speaks highly of the party, and admitted her dessert was normal, only undercooked. They agreed they're even, and she sent Broc a turnover with \"thank you\" written in frosting.", "confidence": "confirmed", "sessions": [41] }
     ],
-    "first_session": 6, "last_session": 40
+    "first_session": 6, "last_session": 41
   },
   {
     "id": "torra-ironwell", "name": "Torra Ironwell", "aliases": ["Cora Ironwell"],
@@ -108,9 +113,10 @@
     "facts": [
       { "text": "Paid for Gundren's delivered supplies and kept his wagon and oxen safe.", "confidence": "confirmed", "sessions": [5, 23] },
       { "text": "Took the captured Redbrand Johnny as a stable hand for months as penance.", "confidence": "confirmed", "sessions": [8] },
-      { "text": "Stood in the town square watching the party when the bell rang a second time in the vision of Phandalin burning.", "confidence": "confirmed", "sessions": [40] }
+      { "text": "Stood in the town square watching the party when the bell rang a second time in the vision of Phandalin burning.", "confidence": "confirmed", "sessions": [40] },
+      { "text": "Thought Caine had left for his monastery. Asked Caine to tell Sister Garaele that her items are in stock.", "confidence": "confirmed", "sessions": [41] }
     ],
-    "first_session": 5, "last_session": 40
+    "first_session": 5, "last_session": 41
   },
   {
     "id": "lenine-graywind", "name": "Lenine Graywind", "aliases": ["Lenine Greywind"],
@@ -248,8 +254,11 @@
   {
     "id": "elsa", "name": "Elsa", "aliases": [],
     "role": "Phandalin resident", "status": "alive", "attitude": "unknown", "location": "phandalin", "factions": ["phandalin-folk"],
-    "facts": [{ "text": "Stood in the town square watching the party when the bell rang a second time in the vision of Phandalin burning.", "confidence": "confirmed", "sessions": [40] }],
-    "first_session": 40, "last_session": 40
+    "facts": [
+      { "text": "Stood in the town square watching the party when the bell rang a second time in the vision of Phandalin burning.", "confidence": "confirmed", "sessions": [40] },
+      { "text": "Brought drinks to the party's table at the Stonehill Inn.", "confidence": "confirmed", "sessions": [41] }
+    ],
+    "first_session": 40, "last_session": 41
   },
   {
     "id": "scringle-mcgruffle", "name": "Scringle McGruffle", "aliases": [],
@@ -289,10 +298,14 @@
     "first_session": 11, "last_session": 16
   },
   {
-    "id": "johnny", "name": "Johnny", "aliases": [],
-    "role": "Captured Redbrand, now mucking Elmina's stables", "status": "alive", "attitude": "neutral", "location": "barthens-provisions", "factions": ["redbrands"],
-    "facts": [{ "text": "Spared in exchange for directions into the Tresendar hideout and months of labor.", "confidence": "confirmed", "sessions": [8] }],
-    "first_session": 7, "last_session": 8
+    "id": "johnny", "name": "John", "aliases": ["Johnny"],
+    "role": "Former Redbrand, now working at Barthen's Provisions", "status": "alive", "attitude": "neutral", "location": "barthens-provisions", "factions": ["redbrands"],
+    "facts": [
+      { "text": "Spared in exchange for directions into the Tresendar hideout and months of labor.", "confidence": "confirmed", "sessions": [8] },
+      { "text": "Now goes by John and says he has turned his life around. He hopes to become operations manager at Barthen's and declined Broc's offer of renovation work at Tresendar Manor, but suggested its cellar become a real cellar.", "confidence": "confirmed", "sessions": [41] },
+      { "text": "Had no weird dreams. Caine cast Aid and Bless on him, Ander and Thistle for their shipment.", "confidence": "confirmed", "sessions": [41] }
+    ],
+    "first_session": 7, "last_session": 41
   },
   {
     "id": "yeemik", "name": "Yeemik", "aliases": ["Yimik"],
@@ -437,5 +450,34 @@
       { "text": "A drunk man at the Stonehill Inn matched the description but said he had no sister.", "confidence": "confirmed", "sessions": [40] }
     ],
     "first_session": 40, "last_session": 40
+  },
+  {
+    "id": "senna-goodmeasure", "name": "Senna Goodmeasure", "aliases": [],
+    "role": "Halfling merchant selling magic items from a cart", "status": "alive", "attitude": "friendly", "location": "town-green", "factions": [],
+    "facts": [
+      { "text": "Set up her cart of magic items on Phandalin's town green and refuses to haggle. Her wares included a Rope of Climbing, an immovable rod, a Bag of Holding, Bracers of Defense (4,000 gp) and a Pearl of Power (1,600 gp).", "confidence": "confirmed", "sessions": [41] },
+      { "text": "Sold the party the Wand of the War Mage, the Gloves of Thievery, four Potions of Healing and two Potions of Greater Healing, and bought their gems, rings and a dwarven ale mug.", "confidence": "confirmed", "sessions": [41] },
+      { "text": "Has hunted for a Deck of Many Things for 30 or 40 years. She offered a handsome reward and as many spell scrolls as Broc likes if he brings her the deck personally.", "confidence": "claimed", "claimed_by": "Senna Goodmeasure", "sessions": [41] },
+      { "text": "Will likely stay in Phandalin while the party goes to Neverwinter.", "confidence": "claimed", "claimed_by": "Senna Goodmeasure", "sessions": [41] }
+    ],
+    "first_session": 41, "last_session": 41
+  },
+  {
+    "id": "stephen", "name": "Stephen", "aliases": [],
+    "role": "Broc's fellow actor", "status": "missing", "attitude": "unknown", "location": "neverwinter", "factions": [],
+    "facts": [{ "text": "Vanished in Neverwinter after playing cards with a deck of ivory cards.", "confidence": "claimed", "claimed_by": "Broc", "sessions": [41] }],
+    "first_session": 41, "last_session": 41
+  },
+  {
+    "id": "ander", "name": "Ander", "aliases": [],
+    "role": "Worker at Barthen's Provisions", "status": "alive", "attitude": "unknown", "location": "barthens-provisions", "factions": ["phandalin-folk"],
+    "facts": [{ "text": "Stocked the sheds behind Barthen's with John and Thistle after a morning delivery. Caine cast Aid and Bless on him for their shipment.", "confidence": "confirmed", "sessions": [41] }],
+    "first_session": 41, "last_session": 41
+  },
+  {
+    "id": "thistle", "name": "Thistle", "aliases": [],
+    "role": "Worker at Barthen's Provisions", "status": "alive", "attitude": "unknown", "location": "barthens-provisions", "factions": ["phandalin-folk"],
+    "facts": [{ "text": "Stocked the sheds behind Barthen's with John and Ander after a morning delivery. Caine cast Aid and Bless on Thistle for their shipment.", "confidence": "confirmed", "sessions": [41] }],
+    "first_session": 41, "last_session": 41
   }
 ]

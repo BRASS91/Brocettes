@@ -1,5 +1,16 @@
 [
   {
+    "id": "deck-of-many-things", "title": "A Deck of Many Things for Senna", "type": "side", "storyline": null,
+    "status": "active", "giver": "senna-goodmeasure", "started": 41,
+    "summary": "Senna Goodmeasure has hunted for a Deck of Many Things for 30 or 40 years. Broc remembers a fellow actor, Stephen, who vanished in Neverwinter after playing cards with a deck of ivory cards. The party agreed to go to Neverwinter, and Paul says a time skip is coming.",
+    "objectives": [
+      { "text": "Travel to Neverwinter", "done": false },
+      { "text": "Follow Broc's lead on Stephen and the ivory cards", "done": false },
+      { "text": "Bring the deck to Senna personally (she'll likely stay in Phandalin)", "done": false }
+    ],
+    "reward": "A handsome reward and as many spell scrolls as Broc likes", "sessions": [41]
+  },
+  {
     "id": "caine-falling-fire", "title": "What fell from the sky", "type": "personal", "character": "caine", "storyline": null,
     "status": "active", "giver": null, "started": 0,
     "summary": "A blazing object fell from the sky and flattened the Monastery of the Dawnstar Path, killing everyone Caine grew up with. There were no tracks, survivors or answers. In session 40 he found a destroyed village with a black stone in a crater and said it had been destroyed in a way similar to his monastery.",
@@ -34,12 +45,13 @@
   {
     "id": "meet-the-harpers", "title": "Sit down with the Harpers", "type": "faction", "storyline": "harpers",
     "status": "active", "giver": "sister-garaele", "started": 38,
-    "summary": "The Harpers have taken an interest in the party and want to talk with Francis about joining or working alongside them. Francis agreed to meet. Keep Garaele's secret.",
+    "summary": "The Harpers have taken an interest in the party and want to talk with Francis about joining or working alongside them. Francis agreed to meet. Keep Garaele's secret. No day or time was ever set, and she wasn't at her shrine in session 41, so the party went to find her at her home.",
     "objectives": [
       { "text": "Meet Sister Garaele (set for the day after the festival)", "done": false },
+      { "text": "Ask her about the soot on Levon, Allyanna and Blue and the shared dream", "done": false },
       { "text": "Meet the Harpers", "done": false }
     ],
-    "reward": null, "sessions": [38, 39, 40]
+    "reward": null, "sessions": [38, 39, 40, 41]
   },
   {
     "id": "phandalin-festival", "title": "Phandalin's festival", "type": "side", "storyline": null,
@@ -59,7 +71,7 @@
   {
     "id": "restore-tresendar-manor", "title": "Restore Tresendar Manor as the party's bastion", "type": "party", "storyline": "tresendar-manor",
     "status": "active", "giver": "harbin-wester", "started": 35,
-    "summary": "The town gave the party the deed and pays for structural work. Torra Ironwell is building personalized rooms.",
+    "summary": "The town gave the party the deed and pays for structural work. Torra Ironwell is building personalized rooms. Some party money is set aside for renovations. John declined Broc's offer of renovation work but suggested the cellar become a real cellar.",
     "objectives": [
       { "text": "Receive the deed", "done": true },
       { "text": "Pay 150 gp for personalized rooms (woodshop, bar, training room, musician's study, alchemist study, sunroom)", "done": true },
@@ -67,7 +79,7 @@
       { "text": "Repair the pipes", "done": false },
       { "text": "Furnish with the Realm stock wood Torra found", "done": false }
     ],
-    "reward": "A home base", "sessions": [35, 36, 37, 38]
+    "reward": "A home base", "sessions": [35, 36, 37, 38, 41]
   },
   {
     "id": "clear-forge-undead", "title": "Clear the undead from the Forge of Spells", "type": "main", "storyline": "wave-echo-cave",
@@ -145,9 +157,9 @@
   {
     "id": "owlbear-cubs", "title": "The owlbear cubs' cave", "type": "side", "storyline": null,
     "status": "available", "giver": null, "started": 12,
-    "summary": "The party killed an owlbear by the bridge on the road to Wyvern Tor. Its cubs stayed in the cave nearby, and the party never went back to check on them.",
+    "summary": "The party killed an owlbear by the bridge on the road to Wyvern Tor. Its cubs stayed in the cave nearby, and the party never went back to check on them. Francis remembered the orphaned cubs in session 41.",
     "objectives": [{ "text": "Investigate the cave", "done": false }],
-    "reward": null, "sessions": [12]
+    "reward": null, "sessions": [12, 41]
   },
   {
     "id": "bury-tharden", "title": "Give Tharden a proper burial", "type": "main", "storyline": "wave-echo-cave",

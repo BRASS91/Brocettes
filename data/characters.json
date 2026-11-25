@@ -59,6 +59,12 @@
         "sessions": [
           3
         ]
+      },
+      {
+        "text": "A fellow actor named Stephen vanished in Neverwinter after playing cards with a deck of ivory cards.",
+        "sessions": [
+          41
+        ]
       }
     ],
     "notable_items": [
@@ -66,7 +72,8 @@
       "nezznar-spider-staff",
       "plus-one-shield",
       "singing-stone-broc",
-      "tin-whistle"
+      "tin-whistle",
+      "wand-of-the-war-mage"
     ],
     "personal_quests": [
       "broc-cloaked-patron"
@@ -114,6 +121,36 @@
         "text": "Said he suggested the name \"Broc and the Brocettes\" while drunk.",
         "sessions": [
           40
+        ]
+      },
+      {
+        "text": "Apologized to Trilena for his drunken behavior and for not recognizing her. She accepted, admitted her dessert was only undercooked, and they agreed they're even. She later sent him a turnover with \"thank you\" written in frosting.",
+        "sessions": [
+          41
+        ]
+      },
+      {
+        "text": "Told Toblen the party wants to make Phandalin their home, and Toblen put everything on the house for the day.",
+        "sessions": [
+          41
+        ]
+      },
+      {
+        "text": "Bought the Wand of the War Mage for 1,100 gp after a party vote, and sold the three jeweled rings at half value (75 gp each).",
+        "sessions": [
+          41
+        ]
+      },
+      {
+        "text": "Persuaded Senna Goodmeasure to hear his lead on a Deck of Many Things. She offered a handsome reward and as many spell scrolls as he likes if he brings her the deck personally.",
+        "sessions": [
+          41
+        ]
+      },
+      {
+        "text": "Pointed out that every party member except Blue and Allyanna carries a ladder, then went after Allyanna when she refused to carry one.",
+        "sessions": [
+          41
         ]
       }
     ],
@@ -301,7 +338,6 @@
       "shield-of-tyr",
       "dust-of-dryness",
       "platinum-filigree-pipe",
-      "fancy-ale-mug",
       "hollis-rope-bracelet",
       "unwavering-compass",
       "scringle-portrait"
@@ -361,6 +397,30 @@
         "text": "Toblen gave him a room at the Stonehill Inn on condition he keep the mud on. Broc later washed him with Astral Flood, which Paul ruled did no damage.",
         "sessions": [
           40
+        ]
+      },
+      {
+        "text": "Drank the leftover miners' cleaning spirit, failed to keep it down and vomited into the inn's flower bed. Broc rubbed his back and hosed him off.",
+        "sessions": [
+          41
+        ]
+      },
+      {
+        "text": "Kept the platinum-trimmed pipe after Vexhar and Levon objected to selling it, and sold a dwarven ale mug to Senna Goodmeasure for 40 gp.",
+        "sessions": [
+          41
+        ]
+      },
+      {
+        "text": "Recalled the orphaned owlbear cubs left in their cave.",
+        "sessions": [
+          41
+        ]
+      },
+      {
+        "text": "Surprised John and the Barthen's workers with a drawn sword as a joke, and told John the party is taking over Tresendar Manor.",
+        "sessions": [
+          41
         ]
       }
     ],
@@ -576,6 +636,18 @@
         "text": "Answered the voice calling the party's names out loud in the vision of Phandalin burning. Chopped the Sleeping Giant's door in half with Choppy and flew water barrels over the fires.",
         "sessions": [
           40
+        ]
+      },
+      {
+        "text": "Woke from the shared dream with soot on one palm that won't wash off.",
+        "sessions": [
+          41
+        ]
+      },
+      {
+        "text": "Caught Broc trying to steal his bacon (passive Perception 12) and let him take a strip.",
+        "sessions": [
+          41
         ]
       }
     ],
@@ -799,6 +871,24 @@
         "sessions": [
           40
         ]
+      },
+      {
+        "text": "Gave the smell of Francis's vomit a lavender scent with Prestidigitation.",
+        "sessions": [
+          41
+        ]
+      },
+      {
+        "text": "The only one who had heard of a Deck of Many Things, in passing and with nothing specific.",
+        "sessions": [
+          41
+        ]
+      },
+      {
+        "text": "Agreed to resume making healing potions with Caine.",
+        "sessions": [
+          41
+        ]
       }
     ],
     "first_session": 1,
@@ -954,7 +1044,8 @@
     ],
     "notable_items": [
       "drowned-pan-flute",
-      "owlbear-plush"
+      "owlbear-plush",
+      "gloves-of-thievery"
     ],
     "personal_quests": [
       "blue-feywild"
@@ -1001,6 +1092,24 @@
         "text": "Used the Drowned Pan Flute to give Levon a 60 ft flying speed with tiny ethereal wings.",
         "sessions": [
           40
+        ]
+      },
+      {
+        "text": "Woke from the shared dream with soot on one palm that won't rub off, unnerved that someone in her head used her real name.",
+        "sessions": [
+          41
+        ]
+      },
+      {
+        "text": "Bought the Gloves of Thievery for 500 gp from the party fund and sold the party's gems to Senna Goodmeasure. Reminded Francis that some of the money is for renovating the manor.",
+        "sessions": [
+          41
+        ]
+      },
+      {
+        "text": "Cast Minor Illusion church bells to cover Francis vomiting in the flower bed.",
+        "sessions": [
+          41
         ]
       }
     ],
@@ -1181,6 +1290,18 @@
         "text": "Alone in a white void, Solas told her he couldn't answer her call for Francis because a listener had stood between them, that his light is thin where the party is going, and that he might not answer next time.",
         "sessions": [
           40
+        ]
+      },
+      {
+        "text": "Woke from the shared dream with a small black smudge of soot in the center of her right palm. A miners' cleaning spirit cleaned the rest of her hand but left the soot untouched.",
+        "sessions": [
+          41
+        ]
+      },
+      {
+        "text": "Declined to carry a ladder and walked away from Barthen's.",
+        "sessions": [
+          41
         ]
       }
     ],
@@ -1396,6 +1517,36 @@
         "text": "Reminded Francis of a promise to live a long life.",
         "sessions": [
           40
+        ]
+      },
+      {
+        "text": "Gave about 110 gp of his share to the party fund, bringing it to 1,953 gp.",
+        "sessions": [
+          41
+        ]
+      },
+      {
+        "text": "Studied Blue's soot with Guidance (Arcana 23): no magic, and it doesn't feel like Francis's curse, but it isn't normal. He linked it to the shared dream and recommended asking Sister Garaele.",
+        "sessions": [
+          41
+        ]
+      },
+      {
+        "text": "Restored the flower bed Francis vomited in, and cast his flower spell at the Shrine of Luck again, raising a small, sweet-smelling pink flower.",
+        "sessions": [
+          41
+        ]
+      },
+      {
+        "text": "Agreed to resume making healing potions with Vexhar.",
+        "sessions": [
+          41
+        ]
+      },
+      {
+        "text": "Bought a ladder, rope, a piton, a tent and parchment at Barthen's, and cast Aid and Bless on John, Ander and Thistle for their shipment.",
+        "sessions": [
+          41
         ]
       }
     ],

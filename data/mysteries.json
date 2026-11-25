@@ -1,14 +1,32 @@
 [
   {
+    "id": "soot-palms", "question": "What is the soot on Levon's, Allyanna's and Blue's palms?", "status": "open", "raised": 41,
+    "clues": [
+      { "session": 41, "text": "Levon, Allyanna and Blue each woke from the shared dream with soot on one palm. Allyanna's is a small black smudge in the center of her right palm." },
+      { "session": 41, "text": "It won't rub or wash off. A pungent miners' cleaning spirit cleaned the rest of Allyanna's hand but left the soot untouched." },
+      { "session": 41, "text": "Caine (Guidance, Arcana 23) found no magic in it and said it doesn't feel like Francis's curse, though the marking isn't normal. His Insight tied it to the shared dream." }
+    ],
+    "theories": [{ "by": "Caine", "text": "It's linked to the shared dream. Ask Sister Garaele." }], "related": ["phandalin-burning", "levon", "allyanna", "blue", "sister-garaele"]
+  },
+  {
+    "id": "stephen-ivory-cards", "question": "What happened to Stephen, the actor who vanished in Neverwinter after a game with ivory cards?", "status": "open", "raised": 41,
+    "clues": [
+      { "session": 41, "text": "Broc remembers his fellow actor Stephen vanishing in Neverwinter after playing cards with a deck of ivory cards. He offered it to Senna Goodmeasure as a lead on the Deck of Many Things she is hunting." }
+    ],
+    "theories": [], "related": ["stephen", "broc", "neverwinter", "deck-of-many-things", "senna-goodmeasure"]
+  },
+  {
     "id": "phandalin-burning", "question": "Was the night Phandalin burned an omen, a shared premonition, or something else?", "status": "open", "raised": 40,
     "clues": [
       { "session": 40, "text": "A single bell woke the party to smoke and a dull red sky with no moon or stars. The inn was empty, with Toblen, Trilena and Pip gone. Blue's Detect Magic found nothing but her own pan flute." },
       { "session": 40, "text": "Caine sensed a dreadful evil presence that Paul said was not the same as the skeletons in the crypt." },
       { "session": 40, "text": "The fire started at the farm north of town. Tall, faceless figures of soot and ash walked down the north road. Web passed through them like smoke, but a cold Chromatic Orb shattered one." },
       { "session": 40, "text": "When the bell rang a second time everything stopped. Toblen, Trilena, Elsa, Elmina and Sister Garaele stood watching from the square, and a voice spoke all seven names. Broc, Caine, Allyanna, Francis and Vexhar held their tongues; Levon answered loudly and Blue answered to her true name." },
-      { "session": 40, "text": "The ground in the square split open and soundless white light rose. The party woke in their beds at the Stonehill Inn to morning light, a faint smell of smoke and an untouched town." }
+      { "session": 40, "text": "The ground in the square split open and soundless white light rose. The party woke in their beds at the Stonehill Inn to morning light, a faint smell of smoke and an untouched town." },
+      { "session": 41, "text": "Levon, Allyanna, Blue and Vexhar say they shared the dream; Francis thought it was just a bad dream. Toblen saw nothing wrong in the inn, and John had no weird dreams." },
+      { "session": 41, "text": "Levon, Allyanna and Blue each woke with soot on one palm (see the soot mystery). Blue was unnerved that someone in her head used her real name." }
     ],
-    "theories": [{ "by": "The table", "text": "An omen, or a premonition the whole party shared." }],
+    "theories": [{ "by": "The table", "text": "An omen, or a premonition the whole party shared." }, { "by": "Broc", "text": "A burned pastry caused it." }],
     "related": ["phandalin", "the-listener", "solas"]
   },
   {
