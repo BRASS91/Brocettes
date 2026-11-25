@@ -174,13 +174,13 @@ mark { background: var(--rumour-bg); color: inherit; border-radius: 3px; padding
 .web .edges line { stroke: var(--rule); stroke-width: 1.2; vector-effect: non-scaling-stroke; }
 .web .node { cursor: pointer; }
 .web .node text { font-family: var(--body); font-weight: 600; fill: var(--ink); text-anchor: middle; paint-order: stroke; stroke: var(--card); pointer-events: none; }
-.web .node text.lbl-hide { display: none; }
-.web .node circle { stroke: var(--card); stroke-width: 2; vector-effect: non-scaling-stroke; }
+.web .lbl text { font-family: var(--body); font-weight: 600; fill: var(--ink); text-anchor: middle; paint-order: stroke; stroke: var(--card); pointer-events: none; }
+.web .lbl.lbl-off text { visibility: hidden; }
+.web .node circle { stroke: var(--card); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
 .web .node.focus circle { stroke: var(--ink); stroke-width: 3; }
 .web.has-sel .node { opacity: .25; }
 .web.has-sel .edges line { opacity: .15; }
 .web.has-sel .node.sel, .web.has-sel .node.near { opacity: 1; }
-.web.has-sel .node.sel text, .web.has-sel .node.near text { display: block; }
 .web.has-sel .edges line.hot { opacity: 1; stroke: var(--red-2); stroke-width: 2; }
 .web .node.sel circle { stroke: var(--ink); stroke-width: 3; }
 .legend { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; font: inherit; font-size: 14px; }

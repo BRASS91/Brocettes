@@ -44,3 +44,8 @@ Options, simplest first:
 ## Backfill
 The existing campaign history is processed once, session by session in order,
 so later sessions are matched against entities created by earlier ones.
+
+## Quote wall rule
+Only add quotes spoken by player characters (the party, including companions like Craig) that are funny or a real
+stand-out moment. Skip NPC lines, dream voices, combat barks and anything without a clear PC speaker. Keep the
+wording as close to the notes as possible.

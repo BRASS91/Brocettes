@@ -33,7 +33,7 @@
     explore: [     // [href, title, subtitle] cards on the home page
       ["#/prep", "Before next session", "Promises, live quests and who might turn up"],
       ["#/qotd", "Questions & recaps", "Question of the Day and who gave each recap"],
-      ["#/quotes", "Quote wall", "Lines the notes caught word for word"],
+      ["#/quotes", "Quote wall", "The party's funniest and finest lines"],
     ],
     route: () => route(),
   };
@@ -197,7 +197,7 @@
   function quotesPage() {
     const qs = allQuotes().reverse();
     return `<a class="back" href="#/">‹ Home</a><h1>Quote wall</h1>
-      <p class="sub">Lines the session notes recorded word for word. ${qs.length} so far.</p>
+      <p class="sub">The party's funniest and finest lines, from the session notes. ${qs.length} so far.</p>
       <div class="quote-wall">${qs.map((q) => `<a class="card quote" href="#/s/${q.session}"><blockquote>“${esc(q.text)}”</blockquote><span class="sub">${esc(q.who)}${q.context ? ", " + esc(q.context) : ""} · S${q.session}</span></a>`).join("") || `<p class="empty">No quotes yet.</p>`}</div>`;
   }
 

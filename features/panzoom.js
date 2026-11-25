@@ -2,11 +2,11 @@
    Used by the map and the connections web. */
 (() => {
   const B = window.Brocettes;
-  B.panZoom = function panZoom(svg, g, { min = 0.4, max = 6 } = {}) {
+  B.panZoom = function panZoom(svg, g, { min = 0.4, max = 6, onChange } = {}) {
     let x = 0, y = 0, k = 1;
     const pts = new Map();
     let start = null, dragged = false;
-    const apply = () => g.setAttribute("transform", `translate(${x} ${y}) scale(${k})`);
+    const apply = () => { g.setAttribute("transform", `translate(${x} ${y}) scale(${k})`); onChange?.(k); };
     // Convert a screen point to the SVG's own coordinate space.
     const local = (cx, cy) => {
       const p = svg.createSVGPoint(); p.x = cx; p.y = cy;

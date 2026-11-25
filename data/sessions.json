@@ -33,18 +33,7 @@
     ],
     "qotd": null,
     "recap_duty": null,
-    "quotes": [
-      {
-        "who": "Craig",
-        "text": "tiny dwarf and big armor guy",
-        "context": "describing the captives taken to Klarg"
-      },
-      {
-        "who": "Craig",
-        "text": "the path is heavily trapped",
-        "context": "warning the party on the goblin trail"
-      }
-    ]
+    "quotes": []
   },
   {
     "number": 3,
@@ -71,19 +60,9 @@
     "recap_duty": null,
     "quotes": [
       {
-        "who": "Whispering voice (Caine's dream)",
-        "text": "follow the ember",
-        "context": "Caine's dream"
-      },
-      {
-        "who": "Voice (Francis's dream)",
-        "text": "follow what he started or finish him",
-        "context": "Francis's dream"
-      },
-      {
         "who": "Craig",
-        "text": "Craig dreamed Klarg eat Craig and soup. Bad soup",
-        "context": "talking in his sleep"
+        "context": "talking in his sleep on the goblin trail",
+        "text": "Craig dreamed Klarg eat Craig and soup. Bad soup."
       }
     ]
   },
@@ -153,13 +132,7 @@
     ],
     "qotd": null,
     "recap_duty": null,
-    "quotes": [
-      {
-        "who": "A party member",
-        "text": "murdering them all",
-        "context": "suggesting how to handle the Redbrands, to Lenine"
-      }
-    ]
+    "quotes": []
   },
   {
     "number": 7,
@@ -182,24 +155,9 @@
     "recap_duty": null,
     "quotes": [
       {
-        "who": "The players",
-        "text": "can be suicide",
-        "context": "on heading out late at night"
-      },
-      {
         "who": "Levon",
-        "text": "owes that tree a debt",
-        "context": "telling Alvin about the forbidden tree"
-      },
-      {
-        "who": "Harbin Wester",
-        "text": "takes care of those who take care of it",
-        "context": "on Phandalin rewarding its helpers"
-      },
-      {
-        "who": "Harbin Wester",
-        "text": "more than I'm supposed to say",
-        "context": "after revealing the Redbrand hideout"
+        "context": "explaining his changing eyes to his father Alvin",
+        "text": "I owe that tree a debt."
       }
     ]
   },
@@ -280,13 +238,7 @@
     ],
     "qotd": null,
     "recap_duty": null,
-    "quotes": [
-      {
-        "who": "Ssarnak (Nothic)",
-        "text": "louder in here than you think",
-        "context": "telepathic greeting in the crevasse"
-      }
-    ]
+    "quotes": []
   },
   {
     "number": 11,
@@ -536,13 +488,7 @@
     ],
     "qotd": null,
     "recap_duty": null,
-    "quotes": [
-      {
-        "who": "Goblin",
-        "text": "they're in there",
-        "context": "whispered report outside the tower during the short rest"
-      }
-    ]
+    "quotes": []
   },
   {
     "number": 22,
@@ -572,13 +518,13 @@
     "quotes": [
       {
         "who": "Vexhar",
-        "text": "murder",
-        "context": "shouted into the corridor while Levon listened at the door"
+        "context": "shouted into the corridor while Levon was listening at King Grol's door",
+        "text": "Murder!"
       },
       {
-        "who": "Gray-skinned elvish woman",
-        "text": "So much for negotiation.",
-        "context": "after Vexhar's Spellfire Flare broke the deal"
+        "who": "Blue",
+        "context": "waking up from a 33-damage crit, to Broc and Vexhar",
+        "text": "Go to hell."
       }
     ]
   },
@@ -652,7 +598,13 @@
     ],
     "qotd": null,
     "recap_duty": null,
-    "quotes": []
+    "quotes": [
+      {
+        "who": "Broc",
+        "context": "naming the company for Toblen",
+        "text": "Broc and the Brocettes!"
+      }
+    ]
   },
   {
     "number": 26,
@@ -706,13 +658,7 @@
       "how": "won a dice roll-off against Francis",
       "inspiration": null
     },
-    "quotes": [
-      {
-        "who": "Alvin",
-        "text": "be fine",
-        "context": "to Levon after he mended the fence, in the flashback"
-      }
-    ]
+    "quotes": []
   },
   {
     "number": 28,
@@ -744,7 +690,13 @@
       "how": "won a dice roll-off against Blue",
       "inspiration": "Francis"
     },
-    "quotes": []
+    "quotes": [
+      {
+        "who": "Levon",
+        "context": "on Gundren's missing brother, who he insists he meant as a sandwich",
+        "text": "Sloppy Joe"
+      }
+    ]
   },
   {
     "number": 29,
@@ -774,13 +726,7 @@
       "how": "won a dice roll-off against Blue, who rolled a natural 1",
       "inspiration": "Broc"
     },
-    "quotes": [
-      {
-        "who": "Bugbear captain",
-        "text": "kill them",
-        "context": "as the party burst into the bugbear den"
-      }
-    ]
+    "quotes": []
   },
   {
     "number": 30,
@@ -804,7 +750,13 @@
     ],
     "qotd": null,
     "recap_duty": null,
-    "quotes": []
+    "quotes": [
+      {
+        "who": "Francis",
+        "context": "greeting Vexhar's freshly raised bugbear zombie",
+        "text": "Vexhar's boyfriend!"
+      }
+    ]
   },
   {
     "number": 31,
@@ -891,14 +843,9 @@
     "recap_duty": null,
     "quotes": [
       {
-        "who": "Broc",
-        "text": "who are you?",
-        "context": "Message cast along the impostor's footprints"
-      },
-      {
-        "who": "Shadowy spirit",
-        "text": "Still warm. I'd forgotten what that looked like. You'll leave something behind when you go. They always do.",
-        "context": "Rising in the burned quarters"
+        "who": "Blue",
+        "context": "trying to open a hidden seam in the Wave Echo masonry",
+        "text": "Open sesame!"
       }
     ]
   },
@@ -934,13 +881,7 @@
       "how": "Rolled lowest on the inspiration roll",
       "inspiration": "Levon"
     },
-    "quotes": [
-      {
-        "who": "Mormesk",
-        "text": "Finally",
-        "context": "Dissolving into smoke and ash"
-      }
-    ]
+    "quotes": []
   },
   {
     "number": 35,
@@ -976,13 +917,8 @@
     "quotes": [
       {
         "who": "Allyanna",
-        "text": "apples, apples, apples",
-        "context": "Cheering during apple picking"
-      },
-      {
-        "who": "Harbin's boy",
-        "text": "no rush",
-        "context": "Message relayed by Toblen at breakfast"
+        "context": "her DC 13 Performance cheer at Daran's orchard",
+        "text": "Apples, apples, apples!"
       }
     ]
   },
@@ -1084,7 +1020,13 @@
       "how": null,
       "inspiration": null
     },
-    "quotes": []
+    "quotes": [
+      {
+        "who": "Blue",
+        "context": "after tossing her festival meatballs under a table",
+        "text": "The fire ate them."
+      }
+    ]
   },
   {
     "number": 39,
