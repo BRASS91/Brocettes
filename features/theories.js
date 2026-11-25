@@ -21,7 +21,9 @@
   }
   async function post(body, method = "POST", path = "") {
     if (shared) {
-      const r = await fetch(API + path, { method, headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
+      // Pass this device's push endpoint along so it isn't notified about its own theory.
+      const sub = method === "POST" && !path && B.pushEndpoint ? await B.pushEndpoint() : "";
+      const r = await fetch(API + path, { method, headers: { "content-type": "application/json" }, body: JSON.stringify(sub ? { ...body, sub } : body) });
       if (!r.ok) throw new Error((await r.json().catch(() => ({}))).error || "Couldn't save that");
       return r.json();
     }

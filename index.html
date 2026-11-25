@@ -18,7 +18,10 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body>
-<button type="button" class="search-fab" aria-label="Search the campaign" aria-haspopup="dialog" aria-controls="search-sheet"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<div class="top-actions">
+  <button type="button" class="feedback-fab" aria-label="Suggest something for the app" aria-haspopup="dialog" aria-controls="feedback-sheet"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8.5 9.5h7M8.5 12.5h4"/></svg></button>
+  <button type="button" class="search-fab" aria-label="Search the campaign" aria-haspopup="dialog" aria-controls="search-sheet"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+</div>
 <div id="search-sheet" class="search-sheet" role="dialog" aria-modal="true" aria-label="Search the campaign" hidden>
   <div class="search-backdrop" data-close-search></div>
   <div class="search-panel">
@@ -43,6 +46,8 @@
 <script src="features/web.js"></script>
 <script src="features/map.js"></script>
 <script src="features/table.js"></script>
+<script src="features/notify.js"></script>
 <script src="features/theories.js"></script>
+<script src="features/feedback.js"></script>
 </body>
 </html>

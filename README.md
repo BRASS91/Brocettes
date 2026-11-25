@@ -22,7 +22,8 @@ session notes our bot writes to Google Docs.
 ## Deploying
 Cloudflare Workers is connected to this repo and redeploys the live site on every push to
 **`claude/dnd-campaign-companion-sca7i1`**. `wrangler.jsonc` serves the repo as static assets
-plus a small Worker (`worker/index.js`) for the shared theory board's `/api/theories`.
+plus a small Worker (`worker/index.js`) for the shared theory board, player suggestions and push
+notifications (`/api/*`), with two scheduled jobs (new-notes check, game-night reminder).
 
 ## Running it locally
 ```
@@ -34,3 +35,4 @@ then open http://localhost:8000.
 - [`docs/data-model.md`](docs/data-model.md) — what we track and why
 - [`docs/ingestion.md`](docs/ingestion.md) — how the weekly Google Doc import will work
 - [`docs/theory-board.md`](docs/theory-board.md) — switching on shared theories (Cloudflare KV)
+- [`docs/notifications.md`](docs/notifications.md) — notifications, the feedback board, and how pushes are sent

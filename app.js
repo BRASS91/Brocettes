@@ -637,14 +637,26 @@
     const m = location.hash.match(/^#\/e\/([^/]+)$/), id = m && decodeURIComponent(m[1]);
     return id && neighbours(id) ? id : null;
   }
+  // What a sideways swipe leads to from here: the next/previous party member (looping), or on a
+  // tab's main page the neighbouring tab (Home, Quests, Codex, Party; no looping). Null = no swiping.
+  const TAB_PAGES = ["#/", "#/quests", "#/codex", "#/party"];
+  function pager() {
+    const id = currentPC();
+    if (id) { const n = neighbours(id); return { prev: `#/e/${encodeURIComponent(n.prev.id)}`, next: `#/e/${encodeURIComponent(n.next.id)}` }; }
+    const parts = location.hash.replace(/^#\/?/, "").split("/");
+    const i = ["", "quests", "codex", "party"].indexOf(parts[0]);
+    if (i < 0 || (parts.length > (i === 1 || i === 2 ? 2 : 1))) return null; // sub-pages (sessions, entries…) don't swipe tabs
+    return { prev: TAB_PAGES[i - 1] || null, next: TAB_PAGES[i + 1] || null };
+  }
   // Card follows the finger; the pivot is the middle of what's on screen so tall pages don't swing wildly.
   const cardPose = (dx) => `translateX(${dx}px) rotate(${Math.max(-6, Math.min(6, dx / 60))}deg)`;
   const pivot = () => { app.classList.add("flipping"); app.style.transformOrigin = `50% ${window.scrollY + innerHeight * 0.6 - app.offsetTop}px`; };
   function flip(dir, fromX = 0) {
-    const id = currentPC();
-    if (!id) return;
-    const target = neighbours(id)[dir > 0 ? "next" : "prev"];
-    const go = () => { slideFrom = dir; location.hash = `#/e/${encodeURIComponent(target.id)}`; };
+    const pg = pager();
+    if (!pg) return;
+    const target = pg[dir > 0 ? "next" : "prev"];
+    if (!target) return settle(fromX); // first or last tab: bounce back
+    const go = () => { slideFrom = dir; location.hash = target; };
     if (still()) return go();
     pivot();
     const w = innerWidth;
@@ -667,7 +679,8 @@
   let drag = null;
   app.addEventListener("touchstart", (e) => {
     drag = null;
-    if (e.touches.length !== 1 || !currentPC()) return;
+    if (e.touches.length !== 1 || !pager()) return;
+    if (e.target.closest?.("input, textarea, select, svg.web, svg.map, .draw")) return;
     const t = e.touches[0];
     if (t.clientX < 24 || t.clientX > innerWidth - 24) return; // leave the screen edges to the browser's own back/forward swipe
     drag = { x: t.clientX, y: t.clientY, at: Date.now(), dx: 0, axis: null };
@@ -681,20 +694,25 @@
       if (drag.axis === "x") pivot();
     }
     if (drag.axis !== "x") return;
-    drag.dx = dx;
-    app.style.transform = cardPose(dx);
+    const pg = pager(), open = pg && pg[dx < 0 ? "next" : "prev"];
+    drag.dx = open ? dx : dx * 0.3; // resist at the first and last tab
+    app.style.transform = cardPose(drag.dx);
     app.style.opacity = String(1 - Math.min(Math.abs(dx) / innerWidth, 1) * 0.4);
   }, { passive: true });
   const endDrag = () => {
     const d = drag; drag = null;
     if (!d || d.axis !== "x") return;
     const fast = Math.abs(d.dx) / Math.max(1, Date.now() - d.at) > 0.5;
-    if (Math.abs(d.dx) > innerWidth * 0.25 || (fast && Math.abs(d.dx) > 40)) return flip(d.dx < 0 ? 1 : -1, d.dx);
-    const back = app.animate([{ transform: cardPose(d.dx), opacity: app.style.opacity || 1 }, { transform: "none", opacity: 1 }],
+    const pg = pager(), open = pg && pg[d.dx < 0 ? "next" : "prev"];
+    if (open && (Math.abs(d.dx) > innerWidth * 0.25 || (fast && Math.abs(d.dx) > 40))) return flip(d.dx < 0 ? 1 : -1, d.dx);
+    settle(d.dx);
+  };
+  function settle(dx) { // spring back to where it was
+    const back = app.animate([{ transform: cardPose(dx), opacity: app.style.opacity || 1 }, { transform: "none", opacity: 1 }],
                              { duration: still() ? 0 : 180, easing: "ease-out" });
     app.style.transform = ""; app.style.opacity = "";
     back.onfinish = () => { back.cancel(); app.classList.remove("flipping"); };
-  };
+  }
   app.addEventListener("touchend", endDrag);
   app.addEventListener("touchcancel", endDrag);
   app.addEventListener("click", (e) => {
@@ -705,7 +723,7 @@
   document.addEventListener("keydown", (e) => {
     if ((e.key !== "ArrowLeft" && e.key !== "ArrowRight") || e.altKey || e.metaKey || e.ctrlKey) return;
     if (e.target.closest?.("input, textarea, select, [contenteditable]")) return;
-    if (currentPC()) flip(e.key === "ArrowRight" ? 1 : -1);
+    if (pager()) flip(e.key === "ArrowRight" ? 1 : -1);
   });
 
   // ---------- router ----------
@@ -739,7 +757,7 @@
     if (page === "e" && ALL.has(arg)) markSeen([arg]);
     if (page === "s") markSeen(["s:" + arg]);
     app.innerHTML = html;
-    app.classList.toggle("swipeable", !!currentPC());
+    app.classList.toggle("swipeable", !!pager());
     slideInIfFlipped();
     document.querySelectorAll(".tabs a").forEach((a) => a.setAttribute("aria-current", a.dataset.tab === tab ? "page" : "false"));
     const title = app.querySelector("h1")?.textContent;
