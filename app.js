@@ -465,7 +465,7 @@
     const list = (arr, who) => arr.map((x) => `<div class="card"><div class="between"><b>${esc(x.text)}</b><span>${sess(x.sessions)}</span></div>${x[who] ? `<span class="sub">${link(x[who])}</span>` : ""}</div>`).join("");
     return `<h1>The Party</h1>
       <span class="sub" style="margin-top:-10px">Level ${esc(L.level.value)} · ${esc(L.in_game_date.value)}</span>
-      <div class="party big">${pcs.map(pcLink).join("")}</div>
+      <div class="party small">${pcs.map(pcLink).join("")}</div>
       ${gone.length ? `<p class="sub">Former companions: ${gone.map((c) => link(c.id)).join(", ")}</p>` : ""}
       ${section("Owed to us", allPromises().filter((p) => p.dir === "owed to us").sort(byAge).map(promiseCard).join(""))}
       ${section("We owe", allPromises().filter((p) => p.dir === "we owe").sort(byAge).map(promiseCard).join(""))}

@@ -177,17 +177,6 @@
       }
     },
     {
-      "from": "harbin-wester",
-      "text": "An apology, in the party's opinion",
-      "sessions": [
-        35
-      ],
-      "source": {
-        "session": 35,
-        "scene": "Bastion Plans for Tresendar Manor"
-      }
-    },
-    {
       "from": "senna-goodmeasure",
       "text": "A handsome reward and as many spell scrolls as Broc likes, if he brings her a Deck of Many Things personally",
       "sessions": [
