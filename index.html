@@ -18,10 +18,22 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body>
+<button type="button" class="search-fab" aria-label="Search the campaign" aria-haspopup="dialog" aria-controls="search-sheet"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<div id="search-sheet" class="search-sheet" role="dialog" aria-modal="true" aria-label="Search the campaign" hidden>
+  <div class="search-backdrop" data-close-search></div>
+  <div class="search-panel">
+    <div class="row">
+      <label class="search"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr">Search the campaign</span>
+        <input id="q" type="search" autocomplete="off" enterkeyhint="search" placeholder="Name, place, item, anything…"></label>
+      <button type="button" class="search-close" data-close-search>Cancel</button>
+    </div>
+    <div id="results" class="stack search-results"></div>
+  </div>
+</div>
 <main id="app" aria-live="polite"><p class="loading">Opening the tome…</p></main>
 <nav class="tabs" aria-label="Main">
   <a href="#/" data-tab="home"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"/></svg>Home</a>
-  <a href="#/search" data-tab="search"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Search</a>
   <a href="#/quests" data-tab="quests"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 21V4h12l-2 4 2 4H5"/></svg>Quests</a>
   <a href="#/codex" data-tab="codex"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 4h6a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H4zM20 4h-6a2 2 0 0 0-2 2v14a2 2 0 0 1 2-2h6z"/></svg>Codex</a>
   <a href="#/party" data-tab="party"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6"/></svg>Party</a>

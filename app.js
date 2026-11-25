@@ -347,24 +347,46 @@
     });
   }
 
-  function search(q = "") {
-    setTimeout(() => {
-      const input = document.getElementById("q");
-      if (!input) return;
-      input.focus();
-      input.setSelectionRange(input.value.length, input.value.length);
-      input.addEventListener("input", () => {
-        history.replaceState(null, "", "#/search/" + encodeURIComponent(input.value));
-        document.getElementById("results").innerHTML = results(input.value);
-      });
-    });
-    return `
-      <h1>Who was that?</h1>
-      <label class="search"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <span class="sr" style="position:absolute;left:-9999px">Search the campaign</span>
-        <input id="q" type="search" autocomplete="off" placeholder="Name, place, item, anything…" value="${esc(q)}"></label>
-      <div id="results" class="stack">${results(q)}</div>`;
+  // ---------- search sheet: opened from the magnifying glass on every tab ----------
+  const sheet = document.getElementById("search-sheet"), fab = document.querySelector(".search-fab");
+  const qIn = document.getElementById("q"), resBox = document.getElementById("results");
+  let sheetTimer = null;
+  function openSearch(q) {
+    clearTimeout(sheetTimer);
+    if (typeof q === "string") qIn.value = q;
+    resBox.innerHTML = results(qIn.value);
+    sheet.hidden = false;
+    document.body.classList.add("sheet-open");
+    requestAnimationFrame(() => requestAnimationFrame(() => sheet.classList.add("open"))); // let it paint closed first so it can animate
+    qIn.focus({ preventScroll: true });
+    qIn.select();
   }
+  function closeSearch({ restoreFocus = true } = {}) {
+    if (sheet.hidden) return;
+    sheet.classList.remove("open");
+    document.body.classList.remove("sheet-open");
+    sheetTimer = setTimeout(() => { sheet.hidden = true; }, matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 260);
+    if (restoreFocus) fab.focus({ preventScroll: true });
+  }
+  fab.addEventListener("click", () => openSearch());
+  qIn.addEventListener("input", () => { resBox.innerHTML = results(qIn.value); resBox.scrollTop = 0; });
+  sheet.addEventListener("click", (e) => {
+    if (e.target.closest("[data-close-search]")) closeSearch();
+    else if (e.target.closest("a[href^='#']")) closeSearch({ restoreFocus: false }); // following a result
+  });
+  document.addEventListener("keydown", (e) => {
+    if (!sheet.hidden && e.key === "Escape") { e.preventDefault(); closeSearch(); return; }
+    if (!sheet.hidden && e.key === "Tab") { // keep focus inside the sheet
+      const f = [...sheet.querySelectorAll("input, button, a[href]")].filter((x) => x.offsetParent);
+      if (f.length && e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
+      else if (f.length && !e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
+      return;
+    }
+    const typing = e.target.closest?.("input, textarea, select, [contenteditable]");
+    if (sheet.hidden && ((e.key === "/" && !typing) || (e.key.toLowerCase() === "k" && (e.metaKey || e.ctrlKey)))) { e.preventDefault(); openSearch(); }
+  });
+  window.addEventListener("hashchange", () => closeSearch({ restoreFocus: false })); // back button etc.
+  B.openSearch = openSearch;
 
   function hl(text, q) {
     const t = esc(text);
@@ -693,7 +715,8 @@
     let html, tab = page || "home";
     switch (page) {
       case "": case undefined: html = home(); tab = "home"; break;
-      case "search": html = search(arg || ""); break;
+      case "search": // old links: show home underneath and open the search sheet
+        history.replaceState(null, "", "#/"); html = home(); tab = "home"; setTimeout(() => openSearch(arg || "")); break;
       case "quests": html = quests(arg); break;
       case "codex": html = codex(arg); break;
       case "party": html = party(); break;
