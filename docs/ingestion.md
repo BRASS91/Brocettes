@@ -49,3 +49,10 @@ so later sessions are matched against entities created by earlier ones.
 Only add quotes spoken by player characters (the party, including companions like Craig) that are funny or a real
 stand-out moment. Skip NPC lines, dream voices, combat barks and anything without a clear PC speaker. Keep the
 wording as close to the notes as possible.
+
+## Promises and discounts
+- **Promises** (`ledger.json` → `party_owes`, `owed_to_party`) are things someone at the table actually promised or is owed.
+  A character's personal goal or backstory debt belongs in their personal quest instead, not here.
+- **Discounts** (`ledger.json` → `discounts`) are standing deals the party haggled, kept separate from promises.
+- Each promise and discount carries `source: {session, scene}`, naming the notes heading where it happened, so tapping it
+  opens that part of the notes. `scripts/validate.py` checks the heading exists.

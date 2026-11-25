@@ -50,6 +50,16 @@ for kind in ("region", "town"):
 for s in sessions:
     for k in ("recap", "big_moments", "qotd", "recap_duty", "quotes"):
         if k not in s: errs.append(f"session {s['number']}: missing {k!r}")
+import re as _re
+for key in ("owed_to_party", "party_owes", "discounts"):
+    for x in ledger.get(key, []):
+        for r in (x.get("from"), x.get("to"), x.get("where")):
+            if r and r not in ids and r != "the-voice": errs.append(f"ledger {key}: unknown ref {r!r}")
+        src = x.get("source")
+        if src:
+            f = D / "notes" / f"{src['session']}.md"
+            heads = [h.replace("**", "").strip() for h in _re.findall(r"^#{2,6}\s+(.*)$", f.read_text(encoding="utf-8"), _re.M)] if f.exists() else []
+            if src["scene"] not in heads: errs.append(f"ledger {key}: no section {src['scene']!r} in session {src['session']} notes")
 for s in sessions:
     if not (D / "notes" / f"{s['number']}.md").exists(): errs.append(f"session {s['number']}: missing data/notes/{s['number']}.md")
 print("\n".join(errs) or f"OK: {len(sessions)} sessions, {len(chars)} characters, {len(npcs)} NPCs, {len(quests)} quests, {len(myst)} mysteries, {len(items)} items, {len(locs)} locations, {len(facs)} factions, {len(lore)} lore entries")

@@ -142,8 +142,18 @@
     const kind = p.age >= 6 ? "b-dead" : p.age >= 3 ? "b-rumoured" : "b-plain";
     return `<span class="badge ${kind}" title="Last came up in session ${p.last}">${p.age} session${p.age === 1 ? "" : "s"} ago</span>`;
   }
-  const promiseCard = (p) => `<div class="card"><div class="between"><b>${esc(p.text)}</b>${ageBadge(p)}</div>
-    <span class="sub">${p.who ? link(p.who) + " · " : ""}${sess(p.sessions)}</span></div>`;
+  // Tapping a promise opens the session where it was made, scrolled to and highlighting that part of the notes.
+  const sceneHref = (src) => `#/s/${src.session}/${encodeURIComponent(src.scene)}`;
+  const promiseCard = (p) => {
+    const where = p.source ? `Session ${p.source.session} · ${esc(p.source.scene)}` : p.last === 0 ? "Session zero backstory" : "";
+    const body = `<div class="between"><b>${esc(p.text)}</b>${ageBadge(p)}</div>
+      <span class="sub">${p.who ? esc(nameOf(p.who)) + (where ? " · " : "") : ""}${where}</span>`;
+    return p.source ? `<a class="card promise" href="${sceneHref(p.source)}">${body}</a>`
+      : p.who && ALL.has(p.who) ? `<a class="card promise" href="#/e/${encodeURIComponent(p.who)}">${body}</a>` : `<div class="card">${body}</div>`;
+  };
+  const discountCard = (d) => `<a class="card promise" href="${d.source ? sceneHref(d.source) : "#/e/" + encodeURIComponent(d.from)}">
+      <div class="between"><b>${esc(d.amount)} off at ${esc(nameOf(d.where))}</b><span class="badge b-confirmed">Permanent</span></div>
+      <span class="sub">${esc(d.text)} · from ${esc(nameOf(d.from))}${d.source ? ` · Session ${d.source.session}` : ""}</span></a>`;
   const byAge = (a, b) => (a.last === 0) - (b.last === 0) || b.age - a.age;
 
   // ---------- next-session prep ----------
@@ -317,12 +327,15 @@
     const hide = e.target.closest?.("[data-hide-notes]");
     if (hide) { const f = hide.closest(".notes-fold"); f.open = false; f.scrollIntoView({ block: "nearest" }); return; }
     const b = e.target.closest?.("[data-scene]");
-    if (!b) return;
+    if (b) jumpToScene(b.dataset.scene);
+  });
+  // Open the full notes, highlight the section with this heading, and scroll it into view.
+  function jumpToScene(want) {
     const fold = app.querySelector(".notes-fold");
     if (!fold) return;
     fold.open = true;
     loadNotes(fold).then(() => {
-      const want = b.dataset.scene, alt = want.replace(/^recap and /i, "");
+      const alt = want.replace(/^recap and /i, "");
       const heads = [...fold.querySelectorAll("h3[data-title]")];
       const h = heads.find((x) => x.dataset.title === want) || heads.find((x) => x.dataset.title === alt);
       const scene = h?.closest(".scene");
@@ -332,7 +345,7 @@
       const fits = scene && scene.offsetHeight < window.innerHeight - 120;
       (scene || fold).scrollIntoView({ behavior: "smooth", block: fits ? "center" : "start" });
     });
-  });
+  }
 
   function search(q = "") {
     setTimeout(() => {
@@ -456,7 +469,8 @@
       ${gone.length ? `<p class="sub">Former companions: ${gone.map((c) => link(c.id)).join(", ")}</p>` : ""}
       ${section("Owed to us", allPromises().filter((p) => p.dir === "owed to us").sort(byAge).map(promiseCard).join(""))}
       ${section("We owe", allPromises().filter((p) => p.dir === "we owe").sort(byAge).map(promiseCard).join(""))}
-      <p class="sub">Badges show how many sessions since a promise last came up: amber after 3, red after 6.</p>
+      <p class="sub">Badges show how many sessions since a promise last came up: amber after 3, red after 6. Tap one to read where it was made.</p>
+      ${section("Discounts", (L.discounts || []).length ? L.discounts.map(discountCard).join("") : `<p class="empty">No standing discounts yet. Haggle harder.</p>`)}
       ${section("Property", L.property.map((p) => `<div class="card"><div class="between"><b>${esc(p.text)}</b><span>${sess(p.sessions)}</span></div></div>`).join(""))}
       ${section("Gold log", `<div class="card">${L.gold_log.map((g) => `<div class="between"><span>${esc(g.text)}</span><span style="white-space:nowrap;color:${g.amount_gp < 0 ? "var(--bad)" : "var(--ok)"}">${g.amount_gp > 0 ? "+" : ""}${g.amount_gp} gp <a class="sess" href="#/s/${g.session}">S${g.session}</a></span></div>`).join("")}</div>`)}
       ${L.party_name ? `<p class="sub">${esc(L.party_name.note)}</p>` : ""}`;
@@ -688,7 +702,7 @@
       case "qotd": html = qotdPage(); tab = "home"; break;
       case "quotes": html = quotesPage(); tab = "home"; break;
       case "sessions": html = sessionsList(); tab = "home"; break;
-      case "s": html = sessionView(Number(arg)); tab = "home"; break;
+      case "s": html = sessionView(Number(arg)); tab = "home"; break; // #/s/<n>/<scene title> also jumps to that part of the notes
       case "e": {
         html = entity(arg);
         const t = ALL.get(arg)?.type;
@@ -709,6 +723,7 @@
     document.title = title && page ? `${title} · Brocettes` : "Brocettes Companion";
     if (page !== "search") window.scrollTo(0, 0);
     B.after.forEach((f) => { try { f(page, arg); } catch (err) { console.error(err); } });
+    if (page === "s" && parts[2]) jumpToScene(parts[2]);
   }
 
   // ---------- boot ----------

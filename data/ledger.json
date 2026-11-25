@@ -1,54 +1,343 @@
 {
-  "party_name": { "value": null, "note": "Broc proposed \"Broc and the Brocettes\". The rest of the party objected, and it remains an unresolved joke. The group joked again that they've become the Brocettes, a name Broc says he suggested while drunk.", "sessions": [25, 40] },
-  "level": { "value": 5, "history": [ { "level": 3, "session": 11 }, { "level": 4, "session": 23 }, { "level": 5, "session": 33 } ] },
-  "in_game_date": { "value": "19th of Hammer, 1491 DR", "sessions": [34, 38] },
+  "party_name": {
+    "value": null,
+    "note": "Broc proposed \"Broc and the Brocettes\". The rest of the party objected, and it remains an unresolved joke. The group joked again that they've become the Brocettes, a name Broc says he suggested while drunk.",
+    "sessions": [
+      25,
+      40
+    ]
+  },
+  "level": {
+    "value": 5,
+    "history": [
+      {
+        "level": 3,
+        "session": 11
+      },
+      {
+        "level": 4,
+        "session": 23
+      },
+      {
+        "level": 5,
+        "session": 33
+      }
+    ]
+  },
+  "in_game_date": {
+    "value": "19th of Hammer, 1491 DR",
+    "sessions": [
+      34,
+      38
+    ]
+  },
   "gold_log": [
-    { "session": 5, "amount_gp": 50, "text": "Sildar's escort payment (promised)" },
-    { "session": 6, "amount_gp": 50, "text": "Lenine: returned Lionshield crates" },
-    { "session": 18, "amount_gp": 60.15, "text": "Hamun Kost: goblin cave (60 gp 15 sp)" },
-    { "session": 23, "amount_gp": 175, "text": "Sold jewelry and beaver pelts at Barthen's" },
-    { "session": 24, "amount_gp": 700, "text": "Harbin's bounties (Cragmaw 500, Redbrands 100, Wyvern Tor 100). The party fund reached 1,830 gp." },
-    { "session": 24, "amount_gp": 200, "text": "Sildar: search for Iarno" },
-    { "session": 24, "amount_gp": 75, "text": "Lenine: Redbrands (50 plus 25 negotiated)" },
-    { "session": 25, "amount_gp": 7, "text": "Allyanna juggling lemons" },
-    { "session": 28, "amount_gp": 129, "text": "Strongbox: 600 cp, 180 sp, 90 ep, 60 gp" },
-    { "session": 34, "amount_gp": 28.6, "text": "Mormesk's chest: about 1,100 cp, 160 sp, gold chunks, plus 5 gems and the pipe" },
-    { "session": 36, "amount_gp": -150, "text": "Torra Ironwell: personalized manor rooms" },
-    { "session": 41, "amount_gp": 110, "text": "Caine added about 110 gp of his share. The party fund reached 1,953 gp." },
-    { "session": 41, "amount_gp": -500, "text": "Senna Goodmeasure: Gloves of Thievery (Blue)" },
-    { "session": 41, "amount_gp": -1100, "text": "Senna Goodmeasure: Wand of the War Mage (Broc)" },
-    { "session": 41, "amount_gp": 225, "text": "Sold the three jeweled rings at half value (75 gp each)" },
-    { "session": 41, "amount_gp": 40, "text": "Francis sold a dwarven ale mug" },
-    { "session": 41, "amount_gp": 165, "text": "Blue sold the party's gems (amount not stated; 165 gp is what the totals imply)" },
-    { "session": 41, "amount_gp": -200, "text": "Senna Goodmeasure: four Potions of Healing" },
-    { "session": 41, "amount_gp": -583, "text": "Senna Goodmeasure: two Potions of Greater Healing for the rest of the fund. The party is out of gold." }
+    {
+      "session": 5,
+      "amount_gp": 50,
+      "text": "Sildar's escort payment (promised)"
+    },
+    {
+      "session": 6,
+      "amount_gp": 50,
+      "text": "Lenine: returned Lionshield crates"
+    },
+    {
+      "session": 18,
+      "amount_gp": 60.15,
+      "text": "Hamun Kost: goblin cave (60 gp 15 sp)"
+    },
+    {
+      "session": 23,
+      "amount_gp": 175,
+      "text": "Sold jewelry and beaver pelts at Barthen's"
+    },
+    {
+      "session": 24,
+      "amount_gp": 700,
+      "text": "Harbin's bounties (Cragmaw 500, Redbrands 100, Wyvern Tor 100). The party fund reached 1,830 gp."
+    },
+    {
+      "session": 24,
+      "amount_gp": 200,
+      "text": "Sildar: search for Iarno"
+    },
+    {
+      "session": 24,
+      "amount_gp": 75,
+      "text": "Lenine: Redbrands (50 plus 25 negotiated)"
+    },
+    {
+      "session": 25,
+      "amount_gp": 7,
+      "text": "Allyanna juggling lemons"
+    },
+    {
+      "session": 28,
+      "amount_gp": 129,
+      "text": "Strongbox: 600 cp, 180 sp, 90 ep, 60 gp"
+    },
+    {
+      "session": 34,
+      "amount_gp": 28.6,
+      "text": "Mormesk's chest: about 1,100 cp, 160 sp, gold chunks, plus 5 gems and the pipe"
+    },
+    {
+      "session": 36,
+      "amount_gp": -150,
+      "text": "Torra Ironwell: personalized manor rooms"
+    },
+    {
+      "session": 41,
+      "amount_gp": 110,
+      "text": "Caine added about 110 gp of his share. The party fund reached 1,953 gp."
+    },
+    {
+      "session": 41,
+      "amount_gp": -500,
+      "text": "Senna Goodmeasure: Gloves of Thievery (Blue)"
+    },
+    {
+      "session": 41,
+      "amount_gp": -1100,
+      "text": "Senna Goodmeasure: Wand of the War Mage (Broc)"
+    },
+    {
+      "session": 41,
+      "amount_gp": 225,
+      "text": "Sold the three jeweled rings at half value (75 gp each)"
+    },
+    {
+      "session": 41,
+      "amount_gp": 40,
+      "text": "Francis sold a dwarven ale mug"
+    },
+    {
+      "session": 41,
+      "amount_gp": 165,
+      "text": "Blue sold the party's gems (amount not stated; 165 gp is what the totals imply)"
+    },
+    {
+      "session": 41,
+      "amount_gp": -200,
+      "text": "Senna Goodmeasure: four Potions of Healing"
+    },
+    {
+      "session": 41,
+      "amount_gp": -583,
+      "text": "Senna Goodmeasure: two Potions of Greater Healing for the rest of the fund. The party is out of gold."
+    }
   ],
   "owed_to_party": [
-    { "from": "gundren-rockseeker", "text": "10% of everything Wave Echo Cave earns once it's running", "sessions": [24, 34, 36] },
-    { "from": "lenine-graywind", "text": "Standing 10% discount at the Lion's Shield Coster", "sessions": [24] },
-    { "from": "mirna-dendrar", "text": "A reward for recovering her heirloom from Thundertree", "sessions": [9] },
-    { "from": "hamun-kost", "text": "Arcane insight in exchange for news of Bowgentle's spellbook or the necromancer", "sessions": [18] },
-    { "from": "bugbear-captain", "text": "Protect Craig's goblin commune, in exchange for his life", "sessions": [30, 31] },
-    { "from": "harbin-wester", "text": "An apology, in the party's opinion", "sessions": [35] },
-    { "from": "senna-goodmeasure", "text": "A handsome reward and as many spell scrolls as Broc likes, if he brings her a Deck of Many Things personally", "sessions": [41] }
+    {
+      "from": "gundren-rockseeker",
+      "text": "10% of everything Wave Echo Cave earns once it's running",
+      "sessions": [
+        24,
+        34,
+        36
+      ],
+      "source": {
+        "session": 24,
+        "scene": "Gundren Reveals Wave Echo Cave's Secret"
+      }
+    },
+    {
+      "from": "mirna-dendrar",
+      "text": "A reward for recovering her heirloom from Thundertree",
+      "sessions": [
+        9
+      ],
+      "source": {
+        "session": 9,
+        "scene": "Freeing Mirna and Her Children"
+      }
+    },
+    {
+      "from": "hamun-kost",
+      "text": "Arcane insight in exchange for news of Bowgentle's spellbook or the necromancer",
+      "sessions": [
+        18
+      ],
+      "source": {
+        "session": 18,
+        "scene": "The Dry Well and Hamun"
+      }
+    },
+    {
+      "from": "bugbear-captain",
+      "text": "Protect Craig's goblin commune, in exchange for his life",
+      "sessions": [
+        30,
+        31
+      ],
+      "source": {
+        "session": 30,
+        "scene": "Interrogating the Bugbear Captain"
+      }
+    },
+    {
+      "from": "harbin-wester",
+      "text": "An apology, in the party's opinion",
+      "sessions": [
+        35
+      ],
+      "source": {
+        "session": 35,
+        "scene": "Bastion Plans for Tresendar Manor"
+      }
+    },
+    {
+      "from": "senna-goodmeasure",
+      "text": "A handsome reward and as many spell scrolls as Broc likes, if he brings her a Deck of Many Things personally",
+      "sessions": [
+        41
+      ],
+      "source": {
+        "session": 41,
+        "scene": "Deck of Many Things Lead"
+      }
+    }
   ],
   "party_owes": [
-    { "to": "elmina", "text": "Caine to tell Sister Garaele that her items are in stock at Barthen's", "sessions": [41] },
-    { "to": "nell-harrow", "text": "Caine promised to pass on word to her brother Killthorn Harrow if he sees him", "sessions": [40] },
-    { "to": "caine", "text": "Caine reminded Francis of a promise to live a long life", "sessions": [40] },
-    { "to": "vexhar", "text": "Francis owes Vexhar a favor for the Remove Curse scroll: keep him alive", "sessions": [38] },
-    { "to": "blue", "text": "Broc and Levon promised nobody will drag Blue back to the Feywild", "sessions": [35] },
-    { "to": "sister-garaele", "text": "Keep her Harper identity secret", "sessions": [38] },
-    { "to": "gundren-rockseeker", "text": "Answer for any trouble caused by Craig's goblins guarding the mine", "sessions": [34] },
-    { "to": "tharden-rockseeker", "text": "Levon promised to maintain the grave marker", "sessions": [38] },
-    { "to": "the-tree", "text": "Levon owes a tree a debt", "sessions": [7] },
-    { "to": "the-voice", "text": "Vexhar owes future acknowledgment that knowledge isn't free", "sessions": [27] },
-    { "to": "lillith", "text": "Vexhar sold his soul to Lillith for power and knowledge, and means to win it back", "sessions": [0] }
+    {
+      "to": "elmina",
+      "text": "Caine to tell Sister Garaele that her items are in stock at Barthen's",
+      "sessions": [
+        41
+      ],
+      "source": {
+        "session": 41,
+        "scene": "Ladders and Shopping at Barthen's Provisions"
+      }
+    },
+    {
+      "to": "nell-harrow",
+      "text": "Caine promised to pass on word to her brother Killthorn Harrow if he sees him",
+      "sessions": [
+        40
+      ],
+      "source": {
+        "session": 40,
+        "scene": "Caine Meets Nell Harrow"
+      }
+    },
+    {
+      "to": "caine",
+      "text": "Caine reminded Francis of a promise to live a long life",
+      "sessions": [
+        40
+      ],
+      "source": {
+        "session": 40,
+        "scene": "Caine Asks About Killthorn"
+      }
+    },
+    {
+      "to": "vexhar",
+      "text": "Francis owes Vexhar a favor for the Remove Curse scroll: keep him alive",
+      "sessions": [
+        38
+      ],
+      "source": {
+        "session": 38,
+        "scene": "Deciding Whether to Cast or Copy"
+      }
+    },
+    {
+      "to": "blue",
+      "text": "Broc and Levon promised nobody will drag Blue back to the Feywild",
+      "sessions": [
+        35
+      ],
+      "source": {
+        "session": 35,
+        "scene": "Broc and Blue Talk About the Feywild"
+      }
+    },
+    {
+      "to": "sister-garaele",
+      "text": "Keep her Harper identity secret",
+      "sessions": [
+        38
+      ],
+      "source": {
+        "session": 38,
+        "scene": "Garaele Delivers Scroll and Harper Secret"
+      }
+    },
+    {
+      "to": "gundren-rockseeker",
+      "text": "Answer for any trouble caused by Craig's goblins guarding the mine",
+      "sessions": [
+        34
+      ],
+      "source": {
+        "session": 34,
+        "scene": "Shield of Tyr and Gundren's Trust"
+      }
+    },
+    {
+      "to": "tharden-rockseeker",
+      "text": "Levon promised to maintain the grave marker",
+      "sessions": [
+        38
+      ],
+      "source": {
+        "session": 38,
+        "scene": "Tharden’s Funeral"
+      }
+    },
+    {
+      "to": "the-voice",
+      "text": "Vexhar owes future acknowledgment that knowledge isn't free",
+      "sessions": [
+        27
+      ],
+      "source": {
+        "session": 27,
+        "scene": "Vexhar's Flashback: The Ritual Door"
+      }
+    },
+    {
+      "to": "lillith",
+      "text": "Vexhar sold his soul to Lillith for power and knowledge, and means to win it back",
+      "sessions": [
+        0
+      ]
+    }
+  ],
+  "discounts": [
+    {
+      "from": "lenine-graywind",
+      "where": "lions-shield-coster",
+      "amount": "10%",
+      "text": "Francis talked Lenine into it on top of the Redbrand reward",
+      "sessions": [
+        24
+      ],
+      "source": {
+        "session": 24,
+        "scene": "Bargaining with Lenine at the Coster"
+      }
+    }
   ],
   "property": [
-    { "text": "Tresendar Manor (deed from the town; restoration underway). Some party money is set aside for renovating it.", "sessions": [36, 41] }
+    {
+      "text": "Tresendar Manor (deed from the town; restoration underway). Some party money is set aside for renovating it.",
+      "sessions": [
+        36,
+        41
+      ]
+    }
   ],
   "standings": [
-    { "text": "Final festival tickets: Levon 29 (festival champion), Blue 26, Francis 25, Broc 21, Vexhar 20, Allyanna 19", "sessions": [38, 39] }
+    {
+      "text": "Final festival tickets: Levon 29 (festival champion), Blue 26, Francis 25, Broc 21, Vexhar 20, Allyanna 19",
+      "sessions": [
+        38,
+        39
+      ]
+    }
   ]
 }
